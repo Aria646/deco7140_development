@@ -1,0 +1,29 @@
+body {
+    font-family: "Urbanist", sans-serif;
+}
+
+/* font-size(ren) */
+h1 {
+    font-size: 2rem;
+    color: var(--primary)
+} /* 32px */
+h2 {
+    font-size: 1.5rem;
+} /* 24px */
+h3 {
+    font-size: 1.25rem;
+} /* 20px */
+h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+} /* 18px + bold */
+h5 {
+    font-size: 1rem;
+    font-weight: 700;
+} /* 16px + bold */
+p {
+    font-size: 1rem;
+} /* 16px */
+
+
+h1, h2, h3, h4, h5, p { line-height: 1.5; }

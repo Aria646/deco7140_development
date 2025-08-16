@@ -1,0 +1,7 @@
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center; /* Center cards */
+    gap: 1rem; /* Add space between cards */
+    padding: 1rem;
+}
