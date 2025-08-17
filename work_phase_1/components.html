@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- CSS Linking -->
-		<Link rel="stylesheet" href="css/reset.css" />
-		<Link rel="stylesheet" href="css/base.css" />
-		<Link rel="stylesheet" href="css/layout.css" />
-		<Link rel="stylesheet" href="css/components.css" />
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
 
         <title>Style Guide - Components</title>
-	</head>
-	<body>
+    </head>
+    <body>
         <header></header>
-		
-		<div class="container">
-		    <h1>Style Guide</h1>
-		    <section>
-			    <h2>Components</h2>
-			    <p>
-				    This is the components page for this website.
-			    </p>
-		    </section>
-		    <section>
-			    <h2>Links</h2>
-			    <a href="./index.html">Work Phase 1 Home</a>
-		    </section>
-		</div>
 
-        <!-- Linking External JavaScript-->
-		<script type="module" src="js/components.js"></script>
+        <div class="container">
+            <h1>Style Guide</h1>
+            <section>
+                <h2>Components</h2>
+                <h3>Button</h3>
+                <p>This is a showcase of the different buttons styles.</p>
+                <div class="card-container">
+                    <div class="simple-card">
+                        <h4>Primary Button</h4>
+                        <button class="button button-primary">Primary</button>
+                    </div>
+                    <div class="simple-card">
+                        <h4>Secondary Button</h4>
+                        <button class="button button-secondary">
+                            Secondary
+                        </button>
+                    </div>
+                    <div class="simple-card">
+                        <h4>Dark Button</h4>
+                        <button class="button button-dark">Dark</button>
+                    </div>
+                    <div class="simple-card">
+                        <h4>Bright Button</h4>
+                        <button class="button button-bright">Bright</button>
+                    </div>
+                </div>
+                Your page should look like this:
+            </section>
+
+            <section>
+                <h2>Links</h2>
+                <a class="button button-primary" href="index.html">WP1 Home</a>
+                <a class="button button-primary" href="typography.html"
+                    >Style Guide - Typography</a
+                >
+            </section>
+        </div>
+
+        <!-- Temperature Widget Container -->
+        <div id="temperature-widget" class="temperature-widget">
+            <p>
+                Current Temperature: <span id="temperature-value">-- </span>°C
+            </p>
+        </div>
+        <script type="module" src="js/components.js"></script>
     </body>
 </html>
