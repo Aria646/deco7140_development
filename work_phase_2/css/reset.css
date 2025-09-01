@@ -1,158 +1,32 @@
-/* 
-  Comprehensive CSS Reset
-  Resets all default styles including animations and transitions
-  Provides a blank slate for custom styling
-*/
-
-/* Base reset */
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Remove default list styles */
-ul,
-ol,
-li {
-    list-style: none;
+/* Reset margins, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-/* Remove default hyperlink styles */
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-
-/* Remove default heading styles */
+/* Reset typography for headings and paragraphs */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-/* Remove default font styles for form elements */
-input,
-button,
-textarea,
-select {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
-/* Remove default button styles */
-button {
-    cursor: pointer;
-}
-
-/* Remove default image border and spacing */
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Remove default table styles */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* Remove default quote styles */
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-    content: "";
-    content: none;
-}
-
-/* Reset animation and transition properties */
-* {
-    animation: none !important;
-    animation-delay: 0s !important;
-    animation-direction: normal !important;
-    animation-duration: 0s !important;
-    animation-fill-mode: none !important;
-    animation-iteration-count: 1 !important;
-    animation-name: none !important;
-    animation-play-state: running !important;
-    animation-timing-function: ease !important;
-
-    transition: none !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
-    transition-property: none !important;
-    transition-timing-function: ease !important;
-
-    transform: none !important;
-    transform-origin: 50% 50% 0 !important;
-}
-
-/* Set base font properties */
-html {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.15;
-}
-
-/* Remove default outline styles (use with caution - add custom focus styles) */
-:focus {
-    outline: none !important;
-}
-
-/* Remove default scrollbar styles (cross-browser) */
-::-webkit-scrollbar {
-    display: none;
-}
-
-* {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Reset HTML5 display-role for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-/* Reset body margins and padding */
-body {
+h6,
+p {
     margin: 0;
     padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1;
+}
+/* Remove list styles */
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
