@@ -1,14 +1,21 @@
-body {
-    font-family: "Nunito", sans-serif; /* new */
-    color: var(--text-color);
-    background-color: var(--background-color);
-    font-size: 16px;
-    line-height: 1.6;
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #f5f5f5;
 }
 
-/* Typography (Using Golden Ratio) */
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
 h1 {
-    font-size: 4.2rem; /* 2.6 x 1.618 rounded */
+    font-size: 4rem;
     color: var(--primary-color);
 }
 
@@ -45,89 +52,3 @@ p {
     line-height: 1.5;
 }
 
-:root {
-    --space-0: 0;
-    --space-1: 0.25rem; /* 4px */
-    --space-2: 0.5rem; /* 8px */
-    --space-3: 1rem; /* 16px */
-    --space-4: 1.5rem; /* 24px */
-    --space-5: 2rem; /* 32px */
-}
-
-/* All sides */
-.m-0 {
-    margin: var(--space-0);
-}
-.m-1 {
-    margin: var(--space-1);
-}
-.m-2 {
-    margin: var(--space-2);
-}
-.m-3 {
-    margin: var(--space-3);
-}
-.m-4 {
-    margin: var(--space-4);
-}
-.m-5 {
-    margin: var(--space-5);
-}
-
-/* Top / Bottom / Start / End */
-.m-t-1 {
-    margin-top: var(--space-1);
-}
-.m-b-1 {
-    margin-bottom: var(--space-1);
-}
-.m-s-1 {
-    margin-inline-start: var(--space-1);
-} /* RTL-safe */
-.m-e-1 {
-    margin-inline-end: var(--space-1);
-}
-
-/* X (left + right), Y (top + bottom) */
-.m-x-1 {
-    margin-inline-start: var(--space-1);
-    margin-inline-end: var(--space-1);
-}
-.m-y-1 {
-    margin-top: var(--space-1);
-    margin-bottom: var(--space-1);
-}
-
-/* Repeat above for 0–5 */
-/* All sides */
-.p-0 {
-    padding: var(--space-0);
-}
-.p-1 {
-    padding: var(--space-1);
-}
-/* etc. */
-
-/* Top / Bottom / Start / End */
-.p-t-1 {
-    padding-top: var(--space-1);
-}
-.p-b-1 {
-    padding-bottom: var(--space-1);
-}
-.p-s-1 {
-    padding-inline-start: var(--space-1);
-}
-.p-e-1 {
-    padding-inline-end: var(--space-1);
-}
-
-/* X / Y */
-.p-x-1 {
-    padding-inline-start: var(--space-1);
-    padding-inline-end: var(--space-1);
-}
-.p-y-1 {
-    padding-top: var(--space-1);
-    padding-bottom: var(--space-1);
-}

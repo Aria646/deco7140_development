@@ -1,33 +1,91 @@
-/* Layout */
 .container {
     height: 100%;
-    /* Full viewport height */
     width: 80vw;
-    /* 80% of the viewport width */
     margin: 0 auto;
-    /* Centers the container horizontally */
-    background-color: #FFFDD0
-    /* Light background for contrast */
+    background-color: var(--background-color);
 }
 
-/* Larger screens (e.g., tablets or desktops) */
 @media (min-width: 768px) {
     .container {
         width: 60vw;
-        /* 60% of the viewport width */
     }
 }
 
-/* CSS Variables to Define Colour Scheme */
 :root {
-    --primary-color: #2c3e50; /* Dark Blue */
-    --secondary-color: #3498db; /* Bright Blue */
-    --accent-color: #e74c3c; /* Red */
-    --text-color: #333; /* Dark Grey */
-    --background-color: #f5f5f5; /* Light Grey */
+    --space-0: 0;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 3rem;
 }
 
-body {
-    color: var(--text-color); /* color applies to text */
-    background-color: var(--background-color);
+.m-0 {
+    margin: var(--space-0);
+}
+.m-1 {
+    margin: var(--space-1);
+}
+.m-2 {
+    margin: var(--space-2);
+}
+.m-3 {
+    margin: var(--space-3);
+}
+.m-4 {
+    margin: var(--space-4);
+}
+.m-5 {
+    margin: var(--space-5);
+}
+
+.m-t-1 {
+    margin-top: var(--space-1);
+}
+.m-b-1 {
+    margin-bottom: var(--space-1);
+}
+.m-s-1 {
+    margin-inline-start: var(--space-1);
+}
+.m-e-1 {
+    margin-inline-end: var(--space-1);
+}
+
+.m-x-1 {
+    margin-inline-start: var(--space-1);
+    margin-inline-end: var(--space-1);
+}
+.m-y-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
+}
+
+.p-0 {
+    padding: var(--space-0);
+}
+.p-1 {
+    padding: var(--space-1);
+}
+
+.p-t-1 {
+    padding-top: var(--space-1);
+}
+.p-b-1 {
+    padding-bottom: var(--space-1);
+}
+.p-s-1 {
+    padding-inline-start: var(--space-1);
+}
+.p-e-1 {
+    padding-inline-end: var(--space-1);
+}
+
+.p-x-1 {
+    padding-inline-start: var(--space-1);
+    padding-inline-end: var(--space-1);
+}
+.p-y-1 {
+    padding-top: var(--space-1);
+    padding-bottom: var(--space-1);
 }
