@@ -31,46 +31,109 @@
         <header>
             <h1>Genai Mt Acknowledgment</h1>
         </header>
+
         <section class="reflection">
-            <h2 class="header">
-                <strong>
-                    [describe your suggested feature here]
-                </strong>
-            </h2>
+            <h2 class="header"><strong>Acknowledgement of Tools Used</strong></h2>
             <div class="content p-x-3">
-                <p class="m-y-3">
-                    [describe your suggested feature here]
-                </p>
+                <p class="m-y-3"> <strong>ChatGPT</strong>: Primarily used in this project for generating JavaScript
+                    examples, explaining CSS syntax, debugging navigation bar issues, and providing suggestions for
+                    layout optimization and responsive design.</p>
+                <p class="m-y-3"><strong>Grammarly</strong>: Used to improve the fluency, coherence, and tone of my
+                    writing, ensuring professional expression in documentation.</p>
             </div>
-            <h2 class="header">
-                <strong>
-                    [describe your suggested feature here]
-                </strong>
-            </h2>
+            <h2 class="header"><strong>Prompts and Interaction Process</strong></h2>
             <div class="content p-x-3">
-                <p class="m-y-3">
-                    [describe your suggested feature here]
+                <p class="m-y-3">I adopted a <strong>multi-step prompting strategy</strong> when working with AI tools.
                 </p>
+                <p class="m-y-3">For example, when I wanted to implement a <strong>mobile collapsible navigation
+                        bar</strong>, I provided my existing HTML and CSS files to ChatGPT and asked:<br><em>“How can I
+                        make a mobile-friendly collapsible navigation bar? Is my current HTML and CSS setup feasible?
+                        Please give me some JavaScript examples.”</em></p>
+                <p class="m-y-3">At times, ChatGPT provided incorrect answers or altered parts of the code that were
+                    already correct. In such cases, I usually attempted manual modifications and verification first. If
+                    the issue remained unresolved, I followed up with another question, such as:<br> <em>"Why doesn't my
+                        navigation bar open? The JavaScript doesn't seem to be working. Please explain in detail why
+                        this error occurs and provide examples."</em></p>
+                <p class="m-y-3">Eventually, I discovered that the root cause was a <strong>spelling error in the
+                        JavaScript file path</strong>, which prevented the script from being loaded properly. This
+                    experience reinforced the importance of combining AI advice with manual verification.</p>
+                <p class="m-y-3">In addition, <strong>layout issues</strong> were the most frequent topics I consulted
+                    ChatGPT about:</p>
+                <ul class="m-y-3 p-x-3">
+                    <li><em>“This card is too wide. Please suggest improvements.”</em></li>
+                    <li><em>“How can I adjust the spacing between text elements?”</em></li>
+                    <li><em>“How can I adapt the layout for mobile devices?”</em></li>
+                </ul>
+                <p class="m-y-3">In these scenarios, ChatGPT's responses were often very useful. As the project
+                    progressed, I became capable of independently debugging and optimizing layouts without needing
+                    further AI assistance.</p>
             </div>
-            <h2 class="header">
-                <strong>
-                    [describe your suggested feature here]
-                </strong>
-            </h2>
+
+            <h2 class="header"><strong>Critical Evaluation of AI Outputs</strong></h2>
             <div class="content p-x-3">
-                <p class="m-y-3">
-                    [describe your suggested feature here]
-                </p>
+                <p class="m-y-3">AI outputs are not always reliable, so I maintained a practice of <strong>critical
+                        evaluation</strong>:</p>
+                <ul class="m-y-3 p-x-3">
+                    <li>I never applied ChatGPT's suggestions blindly. Instead, I used the browser's <strong>Inspect
+                            tool</strong> to cross-check DOM and CSS information. This allowed me to test modifications
+                        directly in the browser. If the results were satisfactory, I then applied them to my actual
+                        code.</li>
+                    <li>This method was especially effective for <strong>layout adjustments</strong>, since browser
+                        changes reset upon refresh, avoiding the risk of permanent negative effects.</li>
+                    <li>Without critical thinking, following ChatGPT's suggestions could easily lead to more complicated
+                        or incorrect outcomes.</li>
+                </ul>
+                <p class="m-y-3">In terms of <strong>color scheme suggestions</strong>, ChatGPT performed poorly. The
+                    palettes it suggested were visually unappealing and failed to meet <strong>WCAG 2.2 accessibility
+                        standards</strong>. As a result, I chose to reference professional websites for color design
+                    rather than adopting AI outputs.</p>
+                <p class="m-y-3">During the writing process, I relied more on <strong>Grammarly</strong> to refine
+                    clarity and professionalism. In contrast, ChatGPT's summaries often contained <strong>inaccuracies
+                        or fabricated details</strong>. Even when provided with all relevant files, its outputs lacked
+                    depth and insight, and sometimes hindered my critical thinking. Therefore, I treated AI-generated
+                    text only as inspiration, not as final results.</p>
             </div>
-            <h2 class="header">
-                <strong>
-                    [describe your suggested feature here]
-                </strong>
-            </h2>
+
+            <h2 class="header"><strong>Challenges and How I Addressed Them</strong></h2>
             <div class="content p-x-3">
-                <p class="m-y-3">
-                    [describe your suggested feature here]
+                <p class="m-y-3">The biggest challenge I faced was that <strong>ChatGPT occasionally fabricated
+                        answers</strong> based on the information I provided.</p>
+                <p class="m-y-3">To address this, I developed two main solutions:</p>
+                <ul class="m-y-3 p-x-3">
+                    <li><strong>Rephrasing questions</strong>: If the issue stemmed from ambiguous wording, I cleared
+                        the conversation history and asked the question again with clearer phrasing.</li>
+                    <li><strong>Manual code inspection</strong>: If the problem persisted, I manually reviewed the HTML
+                        and CSS files. In practice, <strong>broken file links</strong> were among the most common
+                        causes, and manual checking almost always resolved the issue.</li>
+                </ul>
+                <p class="m-y-3">These two steps were sufficient to handle most errors and allowed me to quickly
+                    identify the root cause.</p>
+            </div>
+
+            <h2 class="header"><strong>Impact on Productivity and Creativity</strong></h2>
+            <div class="content p-x-3">
+                <p class="m-y-3">Despite these challenges, <strong>ChatGPT significantly improved my workflow</strong>:
                 </p>
+                <ul class="m-y-3 p-x-3">
+                    <li>In the early stages, when I was not yet familiar with CSS, ChatGPT provided suggestions
+                        thathelped <strong>simplify lengthy CSS code</strong> and taught me to <strong>reuse common
+                            patterns</strong>, which saved considerable time.</li>
+                    <li>It reduced the time I spent on repetitive debugging and styling, enabling me to focus on
+                        <strong>accessibility design and higher-level functionality</strong>.
+                    </li>
+                    <li>Over time, I developed stronger <strong>critical thinking skills</strong> when evaluating AI
+                        outputs, which not only improved efficiency but also enhanced my creativity and independence in
+                        problem-solving.</li>
+                </ul>
+            </div>
+
+            <h2 class="header"><strong>Integrity Statement</strong></h2>
+            <div class="content p-x-3">
+                <p class="m-y-3">I confirm that all uses of <strong>Generative AI and Machine Translation tools</strong>
+                    in this project were conducted in accordance with the <strong>GenAI & MT Usage Framework</strong>.
+                    All AI-generated content was critically reviewed, tested, and modified before integration. I upheld
+                    the principles of <strong>academic integrity, ethical responsibility, and transparency</strong>
+                    throughout this project.</p>
             </div>
         </section>
     </div>

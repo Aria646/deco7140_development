@@ -34,111 +34,216 @@
         <main>
             <section class="accessibility">
                 <h2 class="header">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Text Readability</strong>
                 </h2>
                 <h3 class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Potential Issues</strong>
                 </h3>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">The website uses very small font sizes with tight line spacing, and colour contrast
+                        between text and background is often too low (for example, light grey on white). In many places,
+                        colour is the only means of conveying information, such as using red for “spicy” and green for
+                        “healthy.” This makes it difficult for users with visual impairments and also reduces clarity
+                        for everyone in low-light environments.</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Expectations of Users</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Users expect text to be adjustable in size and to meet contrast standards. Busy
+                        parents want to be able to quickly identify nutritional or timing labels even when glancing at a
+                        screen in a dimly lit kitchen. Visually impaired users expect a one-tap option to switch to a
+                        high-contrast theme with enlarged fonts.</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Improvement Suggestions</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Body text should be at least 16px with a line height of 1.5 and paragraph spacing
+                        double the text height. Text must be scalable up to 200% without overlapping or loss of
+                        functionality (<strong>WCAG 1.4.4 Resize Text</strong>). Normal text should have a contrast
+                        ratio of at least 4.5:1, while large text (18pt bold or 24pt regular) should have at least 3:1
+                        (<strong>WCAG 1.4.3 Contrast Minimum</strong>, <strong>1.4.11 Non-text Contrast</strong>). Do
+                        not rely on colour alone: add icons or text labels, such as “Spice Level 🌶️ x2” (<strong>WCAG
+                            1.4.1 Use of Colour</strong>). Provide a high-contrast theme and one-tap large-text mode
+                        that remembers user preferences.</p>
                 </div>
+            </section>
+            <section class="accessibility">
                 <h2 class="header">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Non-Text Content</strong>
                 </h2>
                 <h3 class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Potential Issues</strong>
                 </h3>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Images of recipe steps and finished dishes often lack descriptive alt text, or are
+                        labelled only as “image.” Videos and animations usually do not include subtitles or audio/text
+                        descriptions of key actions. Nutritional information is often presented only as static images,
+                        which screen readers cannot interpret.</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Expectations of Users</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Users want step-by-step visuals with meaningful text. Busy parents need clear
+                        pictures with short captions. Visually impaired users depend on alt text and screen readers to
+                        understand actions such as “onions turning translucent.”</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Improvement Suggestions</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">All meaningful images must have descriptive alt text explaining actions, states,
+                        and outcomes, while decorative images should use empty alt attributes (<strong>WCAG 1.1.1
+                            Non-text Content</strong>). Videos must include subtitles, and any visual-only information
+                        should have audio or text descriptions (<strong>WCAG 1.2 Captions and Audio
+                            Description</strong>). Nutritional data and ingredient lists should be coded as semantic
+                        HTML tables (<strong>WCAG 1.3.1 Info and Relationships</strong>), and large-print PDF versions
+                        should be made available.</p>
                 </div>
-                <h2 class="header"><strong>[describe your suggested feature here]</strong></h2>
+            </section>
+            <section class="accessibility">
+                <h2 class="header">
+                    <strong>Information Structure and Understandability</strong>
+                </h2>
                 <h3 class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Potential Issues</strong>
                 </h3>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Some pages lack &lt;h1&gt; headings, or heading levels are skipped, breaking the
+                        logical order for screen readers. Recipe instructions are often written in long paragraphs
+                        instead of short, numbered steps, and they lack labels such as “Prep,” “Cook,” or “Note.” For
+                        multilingual content, the absence of language attributes (<code>lang</code>) causes incorrect
+                        screen reader pronunciation.</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Expectations of Users</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Busy professionals expect clear workflows of no more than six steps, with the
+                        ability to do tasks in parallel. Visually impaired users need short, numbered instructions with
+                        clear labels so that the screen reader reads them in a logical order.</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Improvement Suggestions</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Use semantic structure with one &lt;h1&gt; per page and a proper hierarchy of h2
+                        and h3 (<strong>WCAG 1.3.1 Info and Relationships</strong>, <strong>2.4.6 Headings and
+                            Labels</strong>). Provide a “skip to content” link for efficiency (<strong>WCAG 2.4.1 Bypass
+                            Blocks</strong>). Break instructions into no more than two sentences per step, prefixed with
+                        labels such as [Prep], [Cook], or [Note] (<strong>WCAG 3.1.5 Reading Level</strong>). Use bullet
+                        points or subsections for parallel actions. Add correct <code>lang</code> attributes for
+                        multilingual text so that screen readers pronounce it accurately (<strong>WCAG 3.1.2 Language of
+                            Parts</strong>).</p>
                 </div>
-                <h2 class="header"><strong>[describe your suggested feature here]</strong></h2>
+            </section>
+            <section class="accessibility">
+                <h2 class="header">
+                    <strong>Keyboard Navigation and Focus</strong>
+                </h2>
                 <h3 class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Potential Issues</strong>
                 </h3>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">Interactive elements such as filters, workflow panels, and pop-ups often cannot be
+                        used without a mouse, and modals cannot be closed with the Esc key. Focus indicators are weak or
+                        become hidden behind sticky headers or overlays, making it hard to track navigation. The tab
+                        sequence often does not follow the visual layout, confusing screen reader users.</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Expectations of Users</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
-                    </p>
+                    <p class="m-y-3">All users expect to complete tasks using only the keyboard, including opening
+                        filters, setting options, reviewing results, and closing dialogs. Visually impaired users in
+                        particular need strong, visible focus indicators and a predictable tab order.</p>
                 </div>
                 <p class="subtitle m-y-3">
-                    <strong>[describe your suggested feature here]</strong>
+                    <strong>Improvement Suggestions</strong>
                 </p>
                 <div class="content p-x-3">
-                    <p class="m-y-3">
-                        [describe your suggested feature here]
+                    <p class="m-y-3">Ensure the entire site is keyboard operable, with no keyboard traps (<strong>WCAG
+                            2.1.1 Keyboard</strong>, <strong>2.1.2 No Keyboard Trap</strong>). All modals should close
+                        with Esc. Focus indicators must be visible and unobstructed, with at least a 3px high-contrast
+                        outline (<strong>WCAG 2.4.7 Focus Visible</strong>, <strong>2.4.11 Focus Appearance</strong>).
+                        The DOM order should match the visual order, and tabindex should be managed carefully. Add “skip
+                        to filter” and “skip to results” links (<strong>WCAG 2.4.1 Bypass Blocks</strong>).</p>
+                </div>
+
+            </section>
+            <section class="accessibility">
+                <h2 class="header">
+                    <strong>Forms and Interaction</strong>
+                </h2>
+                <h3 class="subtitle m-y-3">
+                    <strong>Potential Issues</strong>
+                </h3>
+                <div class="content p-x-3">
+                    <p class="m-y-3">Form controls such as checkboxes, toggles, or dropdowns often lack visible labels
+                        or accessible <code>aria-label</code>s. Error messages are shown only with colour and are not
+                        linked to input fields. Login and comment forms sometimes require solving CAPTCHAs or memory
+                        tasks, creating unnecessary cognitive load.</p>
+                </div>
+                <p class="subtitle m-y-3">
+                    <strong>Expectations of Users</strong>
+                </p>
+                <div class="content p-x-3">
+                    <p class="m-y-3">Busy parents and professionals want fast, forgiving forms. Visually impaired users
+                        expect labels that screen readers can read, error messages that point to the correct field, and
+                        accessible authentication methods.</p>
+                </div>
+                <p class="subtitle m-y-3">
+                    <strong>Improvement Suggestions</strong>
+                </p>
+                <div class="content p-x-3">
+                    <p class="m-y-3">Every input must have a label, either visible or via <code>aria-labelledby</code>
+                        (<strong>WCAG 3.3.2 Labels or Instructions</strong>). Required fields should be indicated with
+                        text, not colour alone (<strong>WCAG 1.4.1 Use of Colour</strong>). Error messages must be
+                        linked to fields using <code>aria-describedby</code> and provide clear instructions for
+                        correction (<strong>WCAG 3.3.1 Error Identification</strong>). Replace puzzle-based
+                        authentication with accessible alternatives such as email magic links, biometrics, or Passkeys
+                        (<strong>WCAG 3.3.7 Accessible Authentication</strong>, <strong>3.3.8 Redundant Entry</strong>).
+                        Provide options to show or hide passwords.</p>
+                </div>
+            </section>
+            <section class="accessibility">
+                <h2 class="header">
+                    <strong>Touch Targets and Drag Alternatives</strong>
+                </h2>
+                <h3 class="subtitle m-y-3">
+                    <strong>Potential Issues</strong>
+                </h3>
+                <div class="content p-x-3">
+                    <p class="m-y-3">On mobile devices, buttons are often too small and too close together, leading to
+                        frequent mis-taps. Some interactions, such as reordering steps, rely only on drag-and-drop with
+                        no alternative method. Cooking timers cannot be paused, stopped, or reset, and they lack
+                        auditory or textual status feedback.</p>
+                </div>
+                <p class="subtitle m-y-3">
+                    <strong>Expectations of Users</strong>
+                </p>
+                <div class="content p-x-3">
+                    <p class="m-y-3">Busy users operating the site one-handed need larger, easier-to-hit targets.
+                        Visually impaired users need non-drag alternatives and feedback through sound or text to
+                        understand timer status.</p>
+                </div>
+                <p class="subtitle m-y-3">
+                    <strong>Improvement Suggestions</strong>
+                </p>
+                <div class="content p-x-3">
+                    <p class="m-y-3">Touch targets should be at least 24*24px with 8-12px spacing between elements
+                        (<strong>WCAG 2.5.8 Target Size</strong>). All drag-and-drop interactions must have button
+                        alternatives such as “move up,” “move down,” or “move to position N” (<strong>WCAG 2.5.7
+                            Dragging Movements</strong>). Timers should include pause, stop, and reset functions, with
+                        ARIA live regions announcing status updates (<strong>WCAG 2.2.1 Timing Adjustable</strong>,
+                        <strong>4.1.3 Status Messages</strong>).
                     </p>
                 </div>
             </section>
         </main>
+
     </div>
     <script type="module" src="js/accessibility_assessment.js"></script>
 </body>
