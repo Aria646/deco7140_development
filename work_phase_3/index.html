@@ -4,6 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- CSS Linking -->
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
@@ -34,18 +40,64 @@
         <link rel="manifest" href="/site.webmanifest" />
     </head>
     <body>
-        <!-- START PAGE STRUCTURE -->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <header>
+            <!-- Mobile Navigation -->
+            <nav id="nav-mobile" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="index.html"
+                            ><span class="icon">🏠</span> Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="site_map.html"
+                            ><span class="icon">🗺️</span> Site Map</a
+                        >
+                    </li>
+                    <li>
+                        <a href="style_guide.html"
+                            ><span class="icon">📘</span> Style Guide</a
+                        >
+                    </li>
+                    <li>
+                        <a href="ethical_response.html"
+                            ><span class="icon">⚖️</span> Ethics Analysis</a
+                        >
+                    </li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html"
+                            ><span class="icon">🤖</span> GenAI MT
+                            Acknowledgement</a
+                        >
+                    </li>
+                </ul>
+            </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+            <!-- Desktop Navigation -->
+            <nav id="nav-desktop" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="site_map.html">Site Map</a></li>
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><a href="ethical_response.html">Ethics Response</a></li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html">GenAI MT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="container">
-            <!-- page title and hero text -->
-            <h1 class="page-title text-center">Urban Food</h1>
-            <p class="hero-text m-y-2 text-center">
+        <main class="container">
+            <h1 class="page-title">Urban Food</h1>
+            <p class="hero-text m-y-2">
                 A proposal for a website that connects urban food producers
                 concerned about sustainability.
             </p>
-        </div>
+            <p class="hero-text">
+                The Urban Food website is a proposal for the Connect Communities
+                Initiative. This website contains details of the website
+                structure, styles and functionality for Urban Foods.
+            </p>
+        </main>
     </body>
 </html>
