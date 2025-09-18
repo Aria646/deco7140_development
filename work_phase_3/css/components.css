@@ -1,0 +1,25 @@
+/* Page title can be applied to any H1 */
+.page-title {
+    color: var(--primary-color);
+    letter-spacing: 0.3px;
+}
+
+/* HERO ELEMENT */
+/* Hero text (mobile first) */
+.hero-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--muted-text-color);
+    text-align: center; /* centered on mobile */
+}
+
+/* Desktop overrides scoped to components */
+@media (min-width: 768px) {
+    .page-title {
+        text-align: left;
+    }
+    .hero-text {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+}

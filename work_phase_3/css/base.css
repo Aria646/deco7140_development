@@ -1,0 +1,68 @@
+/* 1) Google Font (top of file) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+/* 2) Color variables (meaningful names) */
+:root {
+    --primary-color: #2b4c7e;
+    --secondary-color: #4f86c6;
+    --accent-color: #f0b429;
+
+    --background-color: #f4f4ea;
+    --surface-color: #ffffff;
+
+    --text-color: #202124;
+    --muted-text-color: #6b7280;
+}
+
+/* 3) Base resets / typography */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+} /* easier rem math */
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+    margin: 0;
+}
+
+/* 4) Headings (mobile first) */
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    margin: 0;
+    color: var(--text-color);
+}
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.375rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* Desktop overrides for headings */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.375rem;
+    }
+}

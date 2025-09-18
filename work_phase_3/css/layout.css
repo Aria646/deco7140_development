@@ -1,0 +1,24 @@
+/* PAGE CONTAINER (mobile first) */
+.container {
+  min-height: 100vh;   /* at least full screen height */
+  width: 90vw;         /* 90% viewport width on mobile */
+  margin: 0 auto;      /* center horizontally */
+  background: transparent; /* remove the temporary gray */
+}
+
+/* Helpers: margins, paddings, alignment */
+.m-y-1 { margin-top: .5rem;  margin-bottom: .5rem; }
+.m-y-2 { margin-top: 1rem;   margin-bottom: 1rem;  }
+.m-y-3 { margin-top: 1.5rem; margin-bottom: 1.5rem;}
+
+.p-x-1 { padding-left: .5rem;  padding-right: .5rem;  }
+.p-x-2 { padding-left: 1rem;   padding-right: 1rem;   }
+.p-x-3 { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+
+/* Desktop width for container */
+@media (min-width: 768px) {
+  .container { width: 70vw; }
+}
