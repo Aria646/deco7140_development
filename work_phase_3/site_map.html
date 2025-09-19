@@ -1,49 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Map</title>
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Page header -->
-    <header>
-        <h1>Site Map</h1>
-        <p>This page provides an overview of the site structure for easier navigation.</p>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Mobile navigation menu -->
-    <nav id="nav-mobile" aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html"><span class="icon">🏠</span> Home</a></li>
-            <li><a href="site_map.html" aria-current="page"><span class="icon">🗺️</span> Site Map</a></li>
-            <li><a href="style_guide.html"><span class="icon">📘</span> Style Guide</a></li>
-            <li><a href="ethical_response.html"><span class="icon">⚖️</span> Ethics Response</a></li>
-            <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span> GenAI MT Acknowledgement</a></li>
-        </ul>
-    </nav>
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- NEW -->
+        <title>Site Map</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+    </head>
+    <body>
+        <!-- Mobile navigation menu -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span> Home</a>
+                </li>
+                <li>
+                    <a href="site_map.html" aria-current="page"
+                        ><span class="icon">🗺️</span> Site Map</a
+                    >
+                </li>
+                <li>
+                    <a href="style_guide.html"
+                        ><span class="icon">📘</span> Style Guide</a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span> Ethics Response</a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span> GenAI MT
+                        Acknowledgement</a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-    <!-- Desktop navigation menu -->
-    <nav id="nav-desktop" aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html">WP3 Home</a></li>
-            <li><a href="site_map.html" aria-current="page">Site Map</a></li>
-            <li><a href="style_guide.html">Style Guide</a></li>
-            <li><a href="ethical_response.html">Ethics Response</a></li>
-            <li><a href="genai_mt_acknowledgement.html">GenAI MT Acknowledgement</a></li>
-        </ul>
-    </nav>
+        <!-- Desktop navigation menu -->
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li>
+                    <a href="site_map.html" aria-current="page">Site Map</a>
+                </li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI MT Acknowledgement</a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-    <!-- Main content -->
-    <main>
-        <div class="container">
-            <h1>Site Map</h1>
-        </div>
-        <h2>Site Structure</h2>
-        <p>This accordion-based site map will help users navigate complex content without being overwhelmed.</p>
-        <!-- Accordion elements can be added here later -->
-    </main>
-</body>
+        <!-- Main content -->
+        <main>
+            <div class="container">
+                <header>
+                    <h1>Site Map</h1>
+                    <p>
+                        This page provides an overview of the site structure for
+                        easier navigation.
+                    </p>
+                </header>
+                <figure class="sitemap-photo">
+                    <img
+                        src="assets/site_map.jpg"
+                        alt="Site map, showing grouped pages such as Home, Recipes, Community and Events."
+                        class="responsive-img"
+                    />
+                    <figcaption>
+                        The website centers on a Home page with a nearby Login
+                        entry, and organizes content into five main areas:
+                        Recipes, Ingredients, Food News, Forum/Chat, and About.
+                        Recipes features discovery paths such as Weekly Hot
+                        Picks, Popular Dishes, and Homestyle Recipes.
+                        Ingredients is broken down by type—Meat, Seafood, and
+                        Vegetables. Food News highlights what’s trending now and
+                        provides links to social media. The community area
+                        blends a Forum and real-time Chat, where users can
+                        showcase their recipes, join a discussion board, find
+                        people around me, and follow events; it also includes a
+                        resources stream to share, link to, and filter useful
+                        materials. About covers About Us, community values and
+                        rules, and a channel to report a problem with the site.
+                        Overall, the structure guides visitors from discovery to
+                        participation and community support.
+                    </figcaption>
+                </figure>
+            </div>
+        </main>
+    </body>
 </html>

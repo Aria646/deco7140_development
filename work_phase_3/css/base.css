@@ -3,14 +3,14 @@
 
 /* 2) Color variables (meaningful names) */
 :root {
-    --primary-color: #2b4c7e;
-    --secondary-color: #4f86c6;
-    --accent-color: #f0b429;
+    --primary-color: #6AA58B;
+    --secondary-color: #89C2D9;
+    --accent-color: #FF6F91;
 
-    --background-color: #f4f4ea;
-    --surface-color: #ffffff;
+    --background-color: #FAFAFA;
+    --surface-color: #FFFFFF;
 
-    --text-color: #202124;
+    --text-color: #1F29377;
     --muted-text-color: #6b7280;
 }
 

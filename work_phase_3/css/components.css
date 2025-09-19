@@ -24,6 +24,12 @@
     }
 }
 
+.responsive-img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
 /* === MENUS === */
 /* Base styles for nav menus */
 nav ul {
@@ -114,9 +120,7 @@ nav ul li a:focus {
     #nav-desktop ul {
         gap: 0;
     } /* optional: remove gaps */
-    #nav-desktop ul li {
-        flex: 1;
-    } /* each item takes equal width */
+    /* each item takes equal width */
     #nav-desktop ul li a {
         display: block; /* fill the whole <li> */
         width: 100%;
