@@ -1,20 +1,3 @@
-@import './component_skeletons/accordion.css';
-
-/* Page title can be applied to any H1 */
-.page-title {
-    color: var(--primary-color);
-    letter-spacing: 0.3px;
-}
-
-/* HERO ELEMENT */
-/* Hero text (mobile first) */
-.hero-text {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--muted-text-color);
-    text-align: center; /* centered on mobile */
-}
-
 /* Desktop overrides scoped to components */
 @media (min-width: 768px) {
     .page-title {
@@ -26,14 +9,6 @@
     }
 }
 
-.responsive-img {
-display: block;
-max-width: 100%;
-height: auto;
-}
-
-/* === MENUS === */
-/* Base styles for nav menus */
 nav ul {
     display: flex; /* make ul a flex container */
     flex-direction: row; /* align list items horizontally */
@@ -43,7 +18,6 @@ nav ul {
     margin: 0; /* remove default margin */
 }
 
-/* Navigation Links (desktop/top nav or generic links) */
 nav ul li a {
     text-decoration: none;
     color: var(--text-color);
