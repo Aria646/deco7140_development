@@ -2,7 +2,7 @@
  * IMPORTS
  * Keep track of external modules being used
  * --------------------------------------*/
-// import { initAccordion } from './modules/accordion.js';  // example
+import { initAccordion } from "./modules/accordion.js";
 
 /** ---------------------------------------
  * CONSTANTS
@@ -10,7 +10,7 @@
  * --------------------------------------*/
 const PAGE_TITLE = "Site Map";
 const SELECTORS = {
-    accordion: "#site-accordion", // example selector if you add an accordion
+  accordion: "#site-accordion",
 };
 
 /** ---------------------------------------
@@ -18,8 +18,7 @@ const SELECTORS = {
  * Define values that will change e.g. user inputs, counters, etc.
  * --------------------------------------*/
 let state = {
-    // put runtime values here, e.g. counters, toggles…
-    openedCount: 0,
+  openedCount: 0,
 };
 
 /** ---------------------------------------
@@ -27,10 +26,10 @@ let state = {
  * Group code into functions to make it reusable
  * --------------------------------------*/
 function initPage() {
-    // Initialize modules or page features here
-    // initAccordion(SELECTORS.accordion);   // uncomment if you use the module
+  // 只初始化本页所需模块
+  initAccordion(SELECTORS.accordion);
 
-    console.info("[site_map] page ready");
+  console.info("[site_map] page ready");
 }
 
 /** ---------------------------------------
@@ -38,7 +37,7 @@ function initPage() {
  * The code that runs when a user interacts with the page
  * --------------------------------------*/
 document.addEventListener("click", (e) => {
-    // handle click interactions if needed
+  // 可按需扩展
 });
 
 // when the page fully loads
