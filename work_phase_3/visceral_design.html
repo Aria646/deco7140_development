@@ -3,47 +3,95 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Visceral Design</title>
 
-        <!-- CSS Linking -->
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/base.css" />
-        <link rel="stylesheet" href="css/layout.css" />
+        <!-- 站点通用样式 -->
         <link rel="stylesheet" href="css/components.css" />
 
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- NEW -->
-
-        <title>Visceral Design</title>
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
+        <!-- 本页样式（内部会 @import 骨架） -->
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
     </head>
     <body>
-        <!-- START PAGE STRUCTURE -->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <!-- 你现有的导航（示例） -->
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI MT</a></li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <!-- 面包屑（返回路径：Style Guide → Visceral） -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li aria-current="page">Visceral Design</li>
+            </ol>
+        </nav>
 
-        <main>
-            <div class="container">
-                <h1>Visceral Design</h1>
-            </div>
+        <main class="container">
+            <h1 class="page-title">Visceral Design</h1>
+            <p class="hero-text">
+                The focus of the visceral section is to ensure users get a
+                strong first impression.
+            </p>
+
+            <!-- ① Page Layouts（线框图画廊 + 右侧查看器） -->
+            <article class="m-y-6">
+                <h2>Page Layouts</h2>
+
+                <!-- 画廊：放你的 Miro 导出线框图 -->
+                <section class="gallery m-t-3" aria-label="Wireframe gallery">
+                    <img
+                        src="assets/wireframes/home-mobile.png"
+                        alt="Home (mobile): primary CTA above the fold; supports user story U1."
+                    />
+                    <img
+                        src="assets/wireframes/home-desktop.png"
+                        alt="Home (desktop): 12-col grid; search prominence; WCAG contrast ≥4.5:1."
+                    />
+                    <img
+                        src="assets/wireframes/recipe-detail-mobile.png"
+                        alt="Recipe detail (mobile): large tap targets ≥44px; clear step-by-step."
+                    />
+                    <img
+                        src="assets/wireframes/recipe-detail-desktop.png"
+                        alt="Recipe detail (desktop): ingredients in fixed column; reading width ~66ch."
+                    />
+                </section>
+
+                <!-- 右侧查看器：初始隐藏，点击图片后滑出 -->
+                <aside class="viewer" id="viewer" aria-hidden="true">
+                    <button id="close-viewer" aria-label="Close image viewer">
+                        ✖
+                    </button>
+                    <img id="viewer-img" src="" alt="" />
+                    <p id="viewer-caption"></p>
+                </aside>
+            </article>
+
+            <!-- ② 颜色方案（占位，稍后补内容） -->
+            <article class="m-y-6">
+                <h2>Colour Scheme</h2>
+                <p>
+                    Define primary/secondary, neutrals and states. Include
+                    contrast notes.
+                </p>
+            </article>
+
+            <!-- ③ 字体排版（占位，稍后补内容） -->
+            <article class="m-y-6">
+                <h2>Typography</h2>
+                <p>
+                    Type scale, weights, line-height and mapping to elements
+                    (h1–h6, p, buttons...)
+                </p>
+            </article>
         </main>
-        <!-- END PAGE STRUCTURE -->
+
+        <!-- 页面入口脚本 -->
+        <script type="module" src="js/visceral_design.js"></script>
     </body>
 </html>

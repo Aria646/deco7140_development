@@ -1,0 +1,57 @@
+/* 导入画廊与查看器“骨架” */
+@import url("../component_skeletons/gallery.css");
+@import url("../component_skeletons/viewer.css");
+
+/* 页面标题与导语（可按你的设计变量调整） */
+.page-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--primary-color, #3b7c6b);
+    margin: 2rem 0 0.75rem;
+}
+.hero-text {
+    color: var(--muted-text-color, #333);
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+}
+
+/* 面包屑（简洁版） */
+.breadcrumbs {
+    position: sticky;
+    top: 0; /* 也可去掉 sticky */
+    background: var(--page-bg, #f5f7f6);
+    padding: 0.5rem 1rem;
+    z-index: 10; /* 低于主导航，避免遮挡 */
+}
+.breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+.breadcrumbs li + li::before {
+    content: "›";
+    margin: 0 0.25rem;
+    color: #888;
+}
+
+/* 根据你之前需求：图片 hover 不放大，避免遮挡 */
+.gallery img {
+    transition: none;
+}
+.gallery img:hover {
+    transform: none;
+}
+
+/* 可选：右侧查看器的层级别压过主导航 */
+.viewer {
+    z-index: 20;
+}
+#nav-desktop {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    background: var(--nav-bg, #9ec3d1);
+}
