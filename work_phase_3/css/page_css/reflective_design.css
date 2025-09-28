@@ -1,0 +1,122 @@
+/* 反思层页面基础 */
+.section-nav {
+    position: sticky;
+    top: 56px;
+    z-index: 5;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+.section-nav ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    list-style: none;
+}
+.section-nav a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.section-nav a[aria-current="true"] {
+    background: color-mix(in srgb, var(--secondary-color) 25%, #0000);
+}
+
+.block {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.note {
+    color: var(--muted-text-color);
+    font-size: 0.95rem;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th,
+.table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.6rem;
+    vertical-align: top;
+}
+.table th {
+    background: #f9fafb;
+    text-align: left;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+.gallery figure {
+    margin: 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+.gallery figcaption {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    color: var(--muted-text-color);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.card:where(:hover, :focus-within) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.card-body {
+    padding: 1rem;
+}
+.card-title {
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+}
+
+.member-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+.member-media img {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    display: block;
+}
+
+.live {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+.live.ok {
+    color: #047857;
+}
+.live.error {
+    color: #b91c1c;
+}

@@ -3,47 +3,413 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Behavioural Guide</title>
 
-        <!-- CSS Linking -->
-        <link rel="stylesheet" href="css/reset.css" />
+        <!-- 站点通用样式（你项目里已有） -->
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
 
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- NEW -->
-
-        <title>Behavioural Design</title>
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
+        <!-- 本页样式（上一条消息已提供文件内容） -->
+        <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
     </head>
     <body>
-        <!-- START PAGE STRUCTURE -->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <!-- ===== 顶部站点导航（示例；按你的站点结构微调链接） ===== -->
+        <header>
+            <nav id="nav-desktop" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="site_map.html">Site Map</a></li>
+                    <li><a href="style_guide.html">Style Guide</a></li>
+                    <li><a href="ethical_response.html">Ethics Response</a></li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html">GenAI MT</a>
+                    </li>
+                    <li><a href="visceral_design.html">Visceral Guide</a></li>
+                    <li>
+                        <a href="behavioural_design.html" aria-current="page"
+                            >Behavioural Guide</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <main class="container p-x-2">
+            <h1 class="page-title m-y-2">Style Guide – Behavioural Design</h1>
+            <p class="hero-text m-y-1">
+                This page presents <strong>behavioural-level</strong> design:
+                link styles, navigation patterns, cards, buttons (with states),
+                and forms including API submission &amp; feedback.
+                <br />（本页展示行为层设计：链接/导航/卡片/按钮状态/表单与 API
+                提交）
+            </p>
 
-        <main>
-            <div class="container">
-                <h1>Behavioural Design</h1>
-            </div>
+            <!-- ===== 粘性分区导航（自动高亮当前分区；由 behavioural_design.js 激活） ===== -->
+            <nav class="section-nav m-y-2" aria-label="Section Navigation">
+                <ul>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#navigation">Navigation</a></li>
+                    <li><a href="#cards">Cards</a></li>
+                    <li><a href="#button-styles">Buttons</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===== Links 分区 ===== -->
+            <section
+                id="links"
+                class="block m-y-3"
+                aria-labelledby="links-title"
+            >
+                <h2 id="links-title" class="m-y-2">Link Styles（链接样式）</h2>
+                <div class="demo-row">
+                    <a class="demo-link" href="#cards">Internal Link</a>
+                    <a
+                        class="demo-link external"
+                        href="https://www.example.com"
+                        target="_blank"
+                        rel="noopener"
+                        >External Link</a
+                    >
+                    <a class="demo-link" href="#forms">Jump to Forms</a>
+                </div>
+                <p class="note m-y-1">
+                    下划线与下划线偏移保证可识别；键盘聚焦有可见焦点环；外链以“↗”提示并标注“开新标签”以提升可达性。
+                </p>
+
+                <!-- Figma 样机占位（把你的组件截图放在 assets/mockups 下，然后替换 src） -->
+                <figure class="mock">
+                    <img
+                        class="img-fluid"
+                        src="assets/mockups/link-states.png"
+                        alt="Link states mockup: default, hover, visited"
+                    />
+                    <figcaption class="note">
+                        Figma
+                        样机：不同状态（默认/悬停/访问过）色彩与下划线策略。
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- ===== Navigation 分区 ===== -->
+            <section
+                id="navigation"
+                class="block m-y-3"
+                aria-labelledby="nav-title"
+            >
+                <h2 id="nav-title" class="m-y-2">Navigation（导航样式）</h2>
+                <ul
+                    class="mini-menu"
+                    role="menubar"
+                    aria-label="Mini navigation example"
+                >
+                    <li role="none">
+                        <a role="menuitem" href="#links">Links</a>
+                    </li>
+                    <li role="none">
+                        <a
+                            role="menuitem"
+                            href="#navigation"
+                            aria-current="true"
+                            >Navigation</a
+                        >
+                    </li>
+                    <li role="none">
+                        <a role="menuitem" href="#cards">Cards</a>
+                    </li>
+                    <li role="none">
+                        <a role="menuitem" href="#button-styles">Buttons</a>
+                    </li>
+                    <li role="none">
+                        <a role="menuitem" href="#forms">Forms</a>
+                    </li>
+                </ul>
+                <p class="note m-y-1">
+                    使用轻量边框与高亮边框表达当前项；命名简洁且与信息架构一致，可预测用户将去往的内容区域。
+                </p>
+
+                <figure class="mock">
+                    <img
+                        class="img-fluid"
+                        src="assets/mockups/nav-variants.png"
+                        alt="Navigation pills and tabs mockup"
+                    />
+                    <figcaption class="note">
+                        Figma
+                        样机：标签式与胶囊式导航对比；当前项与悬停态对比清晰。
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- ===== Cards 分区 ===== -->
+            <section
+                id="cards"
+                class="block m-y-3"
+                aria-labelledby="cards-title"
+            >
+                <h2 id="cards-title" class="m-y-2">Cards（卡片组件）</h2>
+
+                <div class="card-grid">
+                    <!-- Card 1 -->
+                    <article class="card" tabindex="0" aria-label="Recipe card">
+                        <div
+                            class="card-media"
+                            style="background: #eef3ff; height: 140px"
+                            aria-hidden="true"
+                        ></div>
+                        <div class="card-body">
+                            <h3 class="card-title">Quick Pasta</h3>
+                            <p class="note">
+                                简洁信息层级：标题→简述→CTA；卡片 hover
+                                轻微抬升，focus 有可见环。
+                            </p>
+                            <a
+                                class="button ghost"
+                                href="#"
+                                aria-label="Read more about Quick Pasta"
+                                >Read More</a
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article
+                        class="card"
+                        tabindex="0"
+                        aria-label="Community story card"
+                    >
+                        <div
+                            class="card-media"
+                            style="background: #fff5e8; height: 140px"
+                            aria-hidden="true"
+                        ></div>
+                        <div class="card-body">
+                            <h3 class="card-title">Community Story</h3>
+                            <p class="note">
+                                一致的内边距/圆角与阴影梯度；CTA
+                                位置一致利于扫读。
+                            </p>
+                            <a
+                                class="button primary"
+                                href="#"
+                                aria-label="Join the community"
+                                >Join Now</a
+                            >
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card" tabindex="0" aria-label="Tips card">
+                        <div
+                            class="card-media"
+                            style="background: #eaf8f1; height: 140px"
+                            aria-hidden="true"
+                        ></div>
+                        <div class="card-body">
+                            <h3 class="card-title">Cooking Tips</h3>
+                            <p class="note">
+                                颜色与密度区分内容类型，避免视觉噪音。
+                            </p>
+                            <a
+                                class="button"
+                                href="#"
+                                aria-label="Explore cooking tips"
+                                >Explore</a
+                            >
+                        </div>
+                    </article>
+                </div>
+
+                <figure class="mock">
+                    <img
+                        class="img-fluid"
+                        src="assets/mockups/card-variants.png"
+                        alt="Card variants mockup"
+                    />
+                    <figcaption class="note">
+                        Figma 样机：图文卡片的图片比例、标题字号与 CTA
+                        位置的一致性。
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- ===== Buttons 分区（IA3 要求） ===== -->
+            <section
+                id="button-styles"
+                class="block m-y-3"
+                aria-labelledby="btn-title"
+            >
+                <h2 id="btn-title" class="m-y-2">
+                    Button Styles（按钮样式与状态）
+                </h2>
+
+                <!-- Primary -->
+                <div class="button-example m-y-2">
+                    <h3>Primary Button（主要行动）</h3>
+                    <div class="demo-row">
+                        <button class="button primary" type="button">
+                            Join Now
+                        </button>
+                        <button class="button primary" type="button" disabled>
+                            Join Now
+                        </button>
+                    </div>
+                    <p class="note">
+                        主按钮使用高对比色与轻阴影，Hover/Active
+                        提供即时反馈；语义化文案体现指示性。
+                    </p>
+                </div>
+
+                <!-- Secondary / Ghost -->
+                <div class="button-example m-y-2">
+                    <h3>Secondary / Ghost（次要行动）</h3>
+                    <div class="demo-row">
+                        <button class="button" type="button">Read More</button>
+                        <a
+                            class="button ghost"
+                            href="#forms"
+                            role="button"
+                            aria-label="Jump to forms section"
+                            >See Form</a
+                        >
+                    </div>
+                    <p class="note">
+                        次要按钮降低视觉权重以避免与主 CTA 竞争；Ghost
+                        用于卡片内部的轻量动作。
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== Forms 分区（IA4 要求：含 Demo 与 Community API 表单） ===== -->
+            <section
+                id="forms"
+                class="block m-y-3"
+                aria-labelledby="forms-title"
+            >
+                <h2 id="forms-title" class="m-y-2">
+                    Forms（表单：校验 / 提交 / 反馈）
+                </h2>
+
+                <!-- Demo Form：仅演示浏览器校验与前端反馈 -->
+                <article class="m-y-2" aria-labelledby="demo-form-title">
+                    <h3 id="demo-form-title">Demo Form（前端校验演示）</h3>
+                    <form id="demo-form" novalidate>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                required
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                required
+                                minlength="6"
+                            />
+                        </div>
+                        <div class="actions">
+                            <button class="button primary" type="submit">
+                                Submit
+                            </button>
+                            <button class="button" id="failBtn" type="button">
+                                Simulate Error
+                            </button>
+                        </div>
+                        <p
+                            id="formMessage"
+                            class="live"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </form>
+                    <p class="note">
+                        使用浏览器内置校验（required/email/minlength）；成功/失败消息通过
+                        `aria-live` 公告。
+                    </p>
+                </article>
+
+                <!-- Community API Form：真实提交（请在 behavioural_design.js 中替换 ENDPOINT/HEADERS） -->
+                <article class="m-y-2" aria-labelledby="api-form-title">
+                    <h3 id="api-form-title">Community Form（提交至 API）</h3>
+                    <form id="community-form" enctype="multipart/form-data">
+                        <div class="field">
+                            <label for="name">Full Name</label>
+                            <input id="name" name="name" type="text" required />
+                        </div>
+                        <div class="field">
+                            <label for="email2">Email</label>
+                            <input
+                                id="email2"
+                                name="email"
+                                type="email"
+                                required
+                                autocomplete="email"
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <input
+                                id="message"
+                                name="message"
+                                type="text"
+                                required
+                                minlength="5"
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="photo">Photo (optional)</label>
+                            <input
+                                id="photo"
+                                name="photo"
+                                type="file"
+                                accept="image/*"
+                            />
+                            <small class="help"
+                                >如上传文件，需保持表单
+                                `enctype="multipart/form-data"`。</small
+                            >
+                        </div>
+                        <div class="actions">
+                            <button class="button primary" type="submit">
+                                Join the Community
+                            </button>
+                        </div>
+                    </form>
+                    <p
+                        id="form-feedback"
+                        class="live"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                    <p class="note">
+                        提交逻辑见 <code>js/modules/postFormData.js</code> 与
+                        <code>js/behavioural_design.js</code>。请在
+                        <strong>behavioural_design.js</strong> 中替换
+                        <em>ENDPOINT</em> 与
+                        <em>HEADERS（student_number / uqcloud_zone_id）</em>
+                        为你的真实值。
+                    </p>
+                </article>
+            </section>
+
+            <footer class="m-y-3">
+                <p class="note">
+                    © 2025 Behavioural Design Showcase · Components, states, and
+                    accessible patterns.
+                </p>
+            </footer>
         </main>
-        <!-- END PAGE STRUCTURE -->
+
+        <!-- 本页脚本（上一条消息已提供文件内容；注意必须 type="module"） -->
+        <script type="module" src="js/behavioural_design.js"></script>
     </body>
 </html>
