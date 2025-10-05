@@ -1,163 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Google Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-            rel="stylesheet"
-        />
-        <!-- CSS Linking -->
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/base.css" />
-        <link rel="stylesheet" href="css/layout.css" />
-        <link rel="stylesheet" href="css/components.css" />
 
-        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <title>Style Guide</title>
-        <!-- favicons (optional) ... -->
-    </head>
-    <body>
-        <header>
-            <!-- Mobile Navigation -->
-            <nav id="nav-mobile" aria-label="Main Navigation">
-                <ul>
-                    <li>
-                        <a href="index.html"
-                            ><span class="icon">🏠</span> Home</a
-                        >
-                    </li>
-                    <li>
-                        <a href="site_map.html"
-                            ><span class="icon">🗺️</span> Site Map</a
-                        >
-                    </li>
-                    <li>
-                        <a href="style_guide.html" aria-current="page"
-                            ><span class="icon">📘</span> Style Guide</a
-                        >
-                    </li>
-                    <li>
-                        <a href="ethical_response.html"
-                            ><span class="icon">⚖️</span> Ethics Analysis</a
-                        >
-                    </li>
-                    <li>
-                        <a href="genai_mt_acknowledgement.html"
-                            ><span class="icon">🤖</span> GenAI MT
-                            Acknowledgement</a
-                        >
-                    </li>
-                </ul>
-            </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-            <!-- Desktop Navigation -->
-            <nav id="nav-desktop" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="site_map.html">Site Map</a></li>
-                    <li>
-                        <a href="style_guide.html" aria-current="page"
-                            >Style Guide</a
-                        >
-                    </li>
-                    <li><a href="ethical_response.html">Ethics Response</a></li>
-                    <li>
-                        <a href="genai_mt_acknowledgement.html">GenAI MT</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/style_guide.css" />
 
-        <main class="container">
-            <h1 class="page-title">Style Guide</h1>
-            <p class="hero-text m-y-2">
-                This page documents reusable UI components and page-specific
-                styles used across the site.
-            </p>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-            <!-- 卡片容器：仅一层，且 id 唯一 -->
-            <section
-                id="style-cards"
-                class="card-container"
-                aria-label="Style Guide Cards"
-            >
-                <!-- Card 1 -->
-                <article class="card">
-                    <img
-                        class="card-media"
-                        src="https://picsum.photos/seed/visceral/640/360"
-                        alt="Abstract colorful artwork"
-                    />
-                    <div class="card-body">
-                        <h2 class="card-title">Visceral</h2>
-                        <p class="card-text">
-                            Use bold colour and contrast for strong first
-                            impressions.
-                        </p>
-                        <!-- 用链接而不是 button，满足“主页需链接 3 子页”的要求 -->
-                        <a
-                            class="card-btn"
-                            href="visceral_design.html"
-                            aria-label="Open Visceral Design"
-                            >Learn More</a
-                        >
-                    </div>
-                </article>
+    <title>Style Guide</title>
+</head>
 
-                <!-- Card 2 -->
-                <article class="card">
-                    <img
-                        class="card-media"
-                        src="https://picsum.photos/seed/behavioral/640/360"
-                        alt="Geometric patterns"
-                    />
-                    <div class="card-body">
-                        <h2 class="card-title">Behavioural</h2>
-                        <p class="card-text">
-                            Clear hierarchy and affordances guide user actions
-                            smoothly.
-                        </p>
-                        <a
-                            class="card-btn"
-                            href="behavioural_design.html"
-                            aria-label="Open Behavioural Design"
-                            >Learn More</a
-                        >
-                    </div>
-                </article>
+<body>
+    <header>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li><a href="../index.html"><span class="icon">🏠</span> Home</a></li>
+                <li><a href="site_map.html"><span class="icon">🗺️</span> Site Map</a></li>
+                <li><a href="style_guide.html"><span class="icon">📘</span> Style Guide</a></li>
+                <li><a href="ethical_response.html"><span class="icon">⚖️</span> Ethics Analysis</a></li>
+                <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span> GenAI MT Acknowledgement</a>
+                </li>
+            </ul>
+        </nav>
 
-                <!-- Card 3 -->
-                <article class="card">
-                    <img
-                        class="card-media"
-                        src="https://picsum.photos/seed/reflective/640/360"
-                        alt="Calm pastel composition"
-                    />
-                    <div class="card-body">
-                        <h2 class="card-title">Reflective</h2>
-                        <p class="card-text">
-                            Subtle motion and soft shadows support meaning and
-                            recall.
-                        </p>
-                        <a
-                            class="card-btn"
-                            href="reflective_design.html"
-                            aria-label="Open Reflective Design"
-                            >Learn More</a
-                        >
-                    </div>
-                </article>
-            </section>
-        </main>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="../index.html" aria-current="page">Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledge.html">GenAI MT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- 页面入口脚本：只保留这一处 -->
-        <script type="module" src="js/style_guide.js"></script>
+    <main class="container">
+        <h1 class="page-title">Style Guide</h1>
+        <p class="hero-text m-y-2"> This page documents reusable UI components and page-specific styles used across the
+            site.</p>
 
-        <!--  page JS -->
-        <script type="module" src="js/style_guide.js"></script>
-    </body>
+        <section id="style-cards" class="card-container" aria-label="Style Guide Cards">
+            <article class="card">
+                <img class="card-media" src="assets/Visceral.png" alt="The instinctive impulse" />
+                <div class="card-body">
+                    <h2 class="card-title">Visceral</h2>
+                    <p class="card-text">Use bold colour and contrast for strong first impressions.</p>
+                    <a class="card-btn" href="visceral_design.html" aria-label="Open Visceral Design">Learn More</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="card-media" src="assets/Behavioural.png" alt="The rhythm of actions" />
+                <div class="card-body">
+                    <h2 class="card-title">Behavioural</h2>
+                    <p class="card-text">Clear hierarchy and affordances guide user actions smoothly.</p>
+                    <a class="card-btn" href="behavioural_design.html" aria-label="Open Behavioural Design">Learn
+                        More</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img class="card-media" src="assets/Reflective.png" alt="The glow of thought" />
+                <div class="card-body">
+                    <h2 class="card-title">Reflective</h2>
+                    <p class="card-text"> Subtle motion and soft shadows support meaning and recall.</p>
+                    <a class="card-btn" href="reflective_design.html" aria-label="Open Reflective Design">Learn More</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script type="module" src="js/style_guide.js"></script>
+</body>
+
 </html>

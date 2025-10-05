@@ -1,97 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Visceral Design</title>
 
-        <!-- 站点通用样式 -->
-        <link rel="stylesheet" href="css/components.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- 本页样式（内部会 @import 骨架） -->
-        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
-    </head>
-    <body>
-        <!-- 你现有的导航（示例） -->
-        <nav id="nav-desktop" aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="site_map.html">Site Map</a></li>
-                <li><a href="style_guide.html">Style Guide</a></li>
-                <li><a href="ethical_response.html">Ethics Response</a></li>
-                <li><a href="genai_mt_acknowledgement.html">GenAI MT</a></li>
-            </ul>
-        </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-        <!-- 面包屑（返回路径：Style Guide → Visceral） -->
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Visceral Design</title>
+</head>
+
+<body>
+    <nav id="nav-desktop" aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="site_map.html">Site Map</a></li>
+            <li><a href="style_guide.html">Style Guide</a></li>
+            <li><a href="ethical_response.html">Ethics Response</a></li>
+            <li><a href="genai_mt_acknowledgement.html">GenAI MT</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
             <ol>
-                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="index.html"> WP3 Home</a></li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                </li>
                 <li aria-current="page">Visceral Design</li>
             </ol>
         </nav>
-
-        <main class="container">
-            <h1 class="page-title">Visceral Design</h1>
-            <p class="hero-text">
-                The focus of the visceral section is to ensure users get a
-                strong first impression.
-            </p>
-
-            <!-- ① Page Layouts（线框图画廊 + 右侧查看器） -->
-            <article class="m-y-6">
-                <h2>Page Layouts</h2>
-
-                <!-- 画廊：放你的 Miro 导出线框图 -->
-                <section class="gallery m-t-3" aria-label="Wireframe gallery">
-                    <img
-                        src="assets/wireframes/home-mobile.png"
-                        alt="Home (mobile): primary CTA above the fold; supports user story U1."
-                    />
-                    <img
-                        src="assets/wireframes/home-desktop.png"
-                        alt="Home (desktop): 12-col grid; search prominence; WCAG contrast ≥4.5:1."
-                    />
-                    <img
-                        src="assets/wireframes/recipe-detail-mobile.png"
-                        alt="Recipe detail (mobile): large tap targets ≥44px; clear step-by-step."
-                    />
-                    <img
-                        src="assets/wireframes/recipe-detail-desktop.png"
-                        alt="Recipe detail (desktop): ingredients in fixed column; reading width ~66ch."
-                    />
-                </section>
-
-                <!-- 右侧查看器：初始隐藏，点击图片后滑出 -->
-                <aside class="viewer" id="viewer" aria-hidden="true">
-                    <button id="close-viewer" aria-label="Close image viewer">
-                        ✖
-                    </button>
-                    <img id="viewer-img" src="" alt="" />
-                    <p id="viewer-caption"></p>
-                </aside>
-            </article>
-
-            <!-- ② 颜色方案（占位，稍后补内容） -->
-            <article class="m-y-6">
+        <h1>Visceral Design</h1>
+        <p>Visceral design emphasizes the immediate emotional reaction users have when they first encounter a platform.
+            By leveraging visual elements such as color, typography, and layout, it aims to evoke an instinctive
+            attraction and establish a strong initial appeal for the recipe search and community website.</p>
+        <article class="m-y-6">
+            <h2>Page Layouts</h2>
+            <section class="gallery m-t-3" aria-label="Wireframe gallery">
+                <img src="assets/mobliehomepage.jpg"
+                    alt="A simplified vertical version of the homepage, optimized for mobile screens with central text and prominent “Get Started” and “Sign Up” buttons." />
+                <img src="assets/moblierecipes.jpg"
+                    alt="A scrollable recipe listing for mobile users, highlighting products, blogs, and newsletters in a stacked, touch-friendly layout." />
+                <img src="assets/desktophomepage.jpg"
+                    alt="A clean hero-image layout introducing the recipe and community website, with a call-to-action “Get Started” button." />
+                <img src="assets/desktoprecipes.jpg"
+                    alt="Organized recipe categories such as “Newcomer Recipes” and “Popular Now,” each paired with large visuals and “More” buttons." />
+                <img src="assets/desktoingredients.jpg"
+                    alt="A structured four-card layout introducing different ingredients with brief descriptions and action buttons." />
+                <img src="assets/desktopforum.jpg"
+                    alt="Displays a grid of trending and recent posts, each with an image, short description, and clear hierarchy between popular and latest content." />
+                <img src="assets/desktopfoodnews.jpg"
+                    alt="A sectioned layout showing the latest food-related updates and featured articles with image placeholders and brief summaries." />
+                <img src="assets/desktopaboutus.jpg"
+                    alt="Combines team profiles, company introduction, contact form, and location map to give visitors complete organizational and contact information." />
+            </section>
+            <p class="m-y-1">These wireframes illustrate the comprehensive structure of the recipe and community
+                website, highlighting clear navigation, functional layouts, and visually balanced content
+                organization. The homepage features a hero banner with an introduction and "Get Started" button,
+                guiding users to explore recipes and community content. The food news and forum pages focus on
+                dynamic content, showcasing the latest updates, trending posts, and featured discussions in grid
+                layouts. The recipes and ingredients pages provide categorized recipe displays, ingredient details,
+                and action buttons for user interaction. The about us page presents team introductions, company
+                background, and a contact section with a form and map for accessibility. The mobile versions adapt
+                these layouts into a single-column format, ensuring smooth navigation and readability on smaller
+                screens. Together, these wireframes demonstrate a cohesive design system that emphasizes clarity,
+                usability, and community engagement.</p>
+            <aside class="viewer" id="viewer" aria-hidden="true">
+                <button id="close-viewer" aria-label="Close image viewer">
+                    ✖
+                </button>
+                <img id="viewer-img" src="" alt="" />
+                <p id="viewer-caption"></p>
+            </aside>
+        </article>
+        <article class="m-y-6">
+            <section>
                 <h2>Colour Scheme</h2>
-                <p>
-                    Define primary/secondary, neutrals and states. Include
-                    contrast notes.
-                </p>
-            </article>
-
-            <!-- ③ 字体排版（占位，稍后补内容） -->
-            <article class="m-y-6">
+                <section class="card-grid">
+                    <div class="card card-Red">
+                        <h3>Primary color</h3>
+                    </div>
+                    <div class="card card-Orange">
+                        <h3>Secondary color</h3>
+                    </div>
+                    <div class="card card-Brown">
+                        <h3>Text color</h3>
+                    </div>
+                    <div class="card card-Beige">
+                        <h3>Background color</h3>
+                    </div>
+                </section>
+                <p class="m-t-1">The reason for choosing Warm Tomato Red (#E74C3C) as the primary color is that it
+                    evokes strong sensory appeal and emotional warmth. Psychologically, red is closely associated with
+                    food, passion, and vitality, making it an ideal color to stimulate appetite and draw users'
+                    attention. Its high visibility allows it to highlight key buttons, icons, or promotional areas,
+                    ensuring important content stands out instantly. Soft Apricot Orange (#F5A623) is chosen as the
+                    secondary color because it conveys warmth, friendliness, and optimism. This color supports a
+                    welcoming and energetic community atmosphere, encouraging user engagement and participation. It
+                    complements the primary red beautifully, adding depth and visual harmony to the overall design. Dark
+                    Cocoa Brown (#3E2723)serves as the text color, providing excellent contrast against the light
+                    background. It maintains readability and eye comfort, while giving the website a natural, grounded,
+                    and trustworthy tone—ideal for long-form recipe reading or discussions. Light Cream Beige (#FAF3E0)
+                    is selected as the background color to create a cozy and inviting visual environment
+                    reminiscent of a home kitchen. Its soft tone reduces eye strain and balances the intensity of the
+                    warmer hues, ensuring a pleasant browsing experience. Together, this color palette builds a warm,
+                    appetizing, and community-oriented atmosphere, allowing users to feel both energized and
+                    comfortable as they explore recipes, share experiences, and connect with others.</p>
+            </section>
+        </article>
+        <article class="m-y-6">
+            <section class="typography-section">
                 <h2>Typography</h2>
                 <p>
-                    Type scale, weights, line-height and mapping to elements
-                    (h1–h6, p, buttons...)
+                    Typography choices are ....
                 </p>
-            </article>
-        </main>
+                <ul>
+                    <li><b>H1:</b> 4.25rem, bold (Page titles)</li>
+                    <li>
+                        <b>H2:</b> 3rem, semi-bold (Section headings)
+                    </li>
+                    <li><b>H3:</b> 2rem, medium (Sub-sections)</li>
+                    <li>
+                        <b>Paragraph:</b> 1.5rem, normal (Body text)
+                    </li>
+                    <li><b>Caption:</b> 1.2rem, light</li>
+                </ul>
+                <p>
+                    ......
+                </p>
+            </section>
+        </article>
+    </main>
+    <script type="module" src="js/visceral_design.js"></script>
+</body>
 
-        <!-- 页面入口脚本 -->
-        <script type="module" src="js/visceral_design.js"></script>
-    </body>
 </html>

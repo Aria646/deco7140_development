@@ -1,4 +1,3 @@
-/* 确认全局设置避免三列被 padding 撑爆 */
 *, *::before, *::after { box-sizing: border-box; }
 
 html,

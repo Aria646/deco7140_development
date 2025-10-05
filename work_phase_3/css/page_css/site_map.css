@@ -1,16 +1,14 @@
 @import "../component_skeletons/accordion.css";
 
 .responsive-img {
-display: block;
-max-width: 100%;
-height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-/* site_map.css */
 @media (min-width: 768px) {
-.card {
-width: calc(33.33% - 14px); /* Approximately 3 cards per row with
-gap considered */
-margin-bottom: 20px; /* Add bottom margin for wrapped rows */
-}
+    .card {
+        width: calc(33.33% - 14px);
+        margin-bottom: 20px;
+    }
 }

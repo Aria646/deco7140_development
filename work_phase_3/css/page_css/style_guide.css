@@ -1,29 +1,24 @@
-/* 文件：css/page_css/style_guide.css */
 @import url("../component_skeletons/card.css");
 
-/* 主页皮肤/交互（可按需调整） */
 .card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     overflow: hidden;
 }
-/* 选一类轻量效果：按钮/卡片阴影/亮度，而不是缩放 */
+
 .card:hover {
-  box-shadow: 0 6px 14px rgba(0,0,0,.12);
-  transform: translateY(-2px);  /* 仅卡片轻微浮起，不影响图片尺寸 */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
-/* 移动端：1 列（默认 100% 宽） */
 .card {
     width: 100%;
 }
 
-/* 桌面端：≈ 三列，使用 calc() 让出卡片之间的空隙 */
-/* css/page_css/style_guide.css */
 @media (min-width: 768px) {
     .card-container {
         flex-direction: row;
-        flex-wrap: wrap; /* 必须有，确保能分行 */
-        gap: 1rem; /* 列间距，建议用 gap 管理 */
+        flex-wrap: wrap;
+        gap: 1rem;
     }
     .card {
         width: calc(33.33% - 14px);
@@ -31,12 +26,11 @@
     }
 }
 
-/* 你的卡片图片类名是 .card-media */
-/* 禁用卡片图片放大效果 */
 .card-media {
     transition: none;
 }
+
 .card-media:hover {
     transform: none;
-    filter: brightness(0.98)
-} /* 强制不缩放 */
+    filter: brightness(0.98);
+} 

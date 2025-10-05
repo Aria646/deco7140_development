@@ -1,269 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Reflective Design</title>
-        <link rel="stylesheet" href="css/base.css" />
-        <link rel="stylesheet" href="css/layout.css" />
-        <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/reflective_design.css" />
-    </head>
-    <body>
-        <header>
-            <nav id="nav-desktop" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="site_map.html">Site Map</a></li>
-                    <li><a href="style_guide.html">Style Guide</a></li>
-                    <li><a href="visceral_design.html">Visceral Guide</a></li>
-                    <li>
-                        <a href="behavioural_design.html">Behavioural Guide</a>
-                    </li>
-                    <li>
-                        <a href="reflective_design.html" aria-current="page"
-                            >Reflective Design</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </header>
 
-        <main class="container p-x-2">
-            <h1 class="page-title m-y-2">Style Guide – Reflective Design</h1>
-            <p class="hero-text">
-                This page presents <strong>reflective-level</strong> design:
-                values mapping, imagery &amp; tone, language &amp; expression,
-                and dynamic community content.
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflective Design</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/reflective_design.css" />
+</head>
+
+<body>
+    <header>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="visceral_design.html">Visceral Guide</a></li>
+                <li>
+                    <a href="behavioural_design.html">Behavioural Guide</a>
+                </li>
+                <li>
+                    <a href="reflective_design.html" aria-current="page">Reflective Design</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container p-x-2">
+        <h1 class="page-title m-y-2">Style Guide – Reflective Design</h1>
+        <p class="hero-text">
+            This page presents <strong>reflective-level</strong> design:
+            values mapping, imagery &amp; tone, language &amp; expression,
+            and dynamic community content.
+        </p>
+
+        <!-- 粘性分区导航 -->
+        <nav class="section-nav m-y-2" aria-label="Section Navigation">
+            <ul>
+                <li><a href="#values">Values Mapping</a></li>
+                <li><a href="#imagery-tone">Imagery & Tone</a></li>
+                <li><a href="#language">Language & Expression</a></li>
+                <li><a href="#community">Dynamic Community</a></li>
+                <li><a href="#a11y-audit">Accessibility Audit</a></li>
+                <li><a href="#client-response">Client Response</a></li>
+            </ul>
+        </nav>
+
+        <!-- SA1: Values Mapping（表格+注释） -->
+        <section id="values" class="block m-y-3" aria-labelledby="values-title">
+            <h2 id="values-title">Values Mapping（价值映射）</h2>
+            <p class="note">
+                将“价值 → 设计含义 →
+                具体元素”一一对应，并写注释解释为什么与如何体现（可提及相关
+                WCAG）。
             </p>
-
-            <!-- 粘性分区导航 -->
-            <nav class="section-nav m-y-2" aria-label="Section Navigation">
-                <ul>
-                    <li><a href="#values">Values Mapping</a></li>
-                    <li><a href="#imagery-tone">Imagery & Tone</a></li>
-                    <li><a href="#language">Language & Expression</a></li>
-                    <li><a href="#community">Dynamic Community</a></li>
-                    <li><a href="#a11y-audit">Accessibility Audit</a></li>
-                    <li><a href="#client-response">Client Response</a></li>
-                </ul>
-            </nav>
-
-            <!-- SA1: Values Mapping（表格+注释） -->
-            <section
-                id="values"
-                class="block m-y-3"
-                aria-labelledby="values-title"
-            >
-                <h2 id="values-title">Values Mapping（价值映射）</h2>
-                <p class="note">
-                    将“价值 → 设计含义 →
-                    具体元素”一一对应，并写注释解释为什么与如何体现（可提及相关
-                    WCAG）。
+            <!-- 你可在表格下方为每行补充注释段落 -->
+            <table class="table m-y-2" aria-describedby="values-desc">
+                <caption id="values-desc" class="sr-only">
+                    Values–Implications–Elements mapping table
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Value（价值）</th>
+                        <th>Design Implication（设计含义）</th>
+                        <th>Specific Element（具体元素）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Belonging（归属）</td>
+                        <td>展示多元群体的正向互动，避免刻板化</td>
+                        <td>
+                            首页 hero 图：不同年龄/背景/能力的人一起活动
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Empowerment（赋能）</td>
+                        <td>使用行动导向、积极自我主导的语言</td>
+                        <td>CTA：“Start Your Journey / 加入社区”按钮</td>
+                    </tr>
+                    <tr>
+                        <td>Respect（尊重）</td>
+                        <td>采用包容与肯定式表述，避免标签化</td>
+                        <td>
+                            欢迎语：“Connecting Older People Across
+                            Communities”
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="note">
+                <p>
+                    <strong>注释示例（Belonging）：</strong>归属是客户使命核心，首屏图像呈现真实互动，帮助用户看到自己的位置；与可访问性（替代文本/对比度/不以偏概全）共同支撑包容体验。
                 </p>
-                <!-- 你可在表格下方为每行补充注释段落 -->
-                <table class="table m-y-2" aria-describedby="values-desc">
-                    <caption id="values-desc" class="sr-only">
-                        Values–Implications–Elements mapping table
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th>Value（价值）</th>
-                            <th>Design Implication（设计含义）</th>
-                            <th>Specific Element（具体元素）</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Belonging（归属）</td>
-                            <td>展示多元群体的正向互动，避免刻板化</td>
-                            <td>
-                                首页 hero 图：不同年龄/背景/能力的人一起活动
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Empowerment（赋能）</td>
-                            <td>使用行动导向、积极自我主导的语言</td>
-                            <td>CTA：“Start Your Journey / 加入社区”按钮</td>
-                        </tr>
-                        <tr>
-                            <td>Respect（尊重）</td>
-                            <td>采用包容与肯定式表述，避免标签化</td>
-                            <td>
-                                欢迎语：“Connecting Older People Across
-                                Communities”
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="note">
-                    <p>
-                        <strong>注释示例（Belonging）：</strong
-                        >归属是客户使命核心，首屏图像呈现真实互动，帮助用户看到自己的位置；与可访问性（替代文本/对比度/不以偏概全）共同支撑包容体验。
-                    </p>
-                </div>
+            </div>
+            <p class="note">
+                （依据 SA1 要求整理你的 3–5 个核心价值并注释。）
+            </p>
+        </section>
+
+        <!-- SA2: Imagery & Tone（身份/情绪基调、3–4 图 + 首页文案 + 注释） -->
+        <section id="imagery-tone" class="block m-y-3" aria-labelledby="it-title">
+            <h2 id="it-title">
+                Meaning through Imagery & Tone（图像与语气）
+            </h2>
+            <p class="note">
+                说明你的网站要投射的身份（identity）与情绪基调（tone），并给出
+                3–4 张首页图像示例与 1
+                段首页文案，解释它们如何共同支持使命与长期意义。
+            </p>
+            <h3>Identity & Tone（身份与基调）</h3>
+            <ul class="note">
+                <li>身份：Belonging, Empowerment, Trust</li>
+                <li>基调：Welcoming, Supportive, Confident</li>
+            </ul>
+
+            <h3 class="m-y-1">Homepage Imagery（示例）</h3>
+            <div class="gallery">
+                <figure>
+                    <img class="img-fluid" src="assets/reflective/hero-1.jpg"
+                        alt="Intergenerational group cooking together" />
+                    <figcaption>跨代同行，强调连接与互助。</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="assets/reflective/hero-2.jpg" alt="Two neighbors chatting outdoors" />
+                    <figcaption>日常真实关系，降低疏离感。</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="assets/reflective/hero-3.jpg"
+                        alt="Volunteer helping with digital skills" />
+                    <figcaption>赋能与支持，传达可达性。</figcaption>
+                </figure>
+            </div>
+
+            <h3 class="m-y-1">Homepage Text（示例）</h3>
+            <blockquote class="note">
+                “Connecting neighbors through shared stories, skills, and
+                support.”（欢迎语草案：通过故事、技能与互助连接邻里）
+            </blockquote>
+            <p class="note">
+                注释：视觉与语言一致传达“归属+赋能”，避免花哨却疏离的反差。（按
+                SA2 要求撰写你自己的版本）
+            </p>
+        </section>
+
+        <!-- SA3: Language & Expression（语言清单 + 原文 + 改写 + 注释） -->
+        <section id="language" class="block m-y-3" aria-labelledby="lang-title">
+            <h2 id="lang-title">Language & Expression（语言与表达）</h2>
+            <h3>Inclusive Language Checklist（示例）</h3>
+            <ul class="note">
+                <li>
+                    称谓：用 “older people” 而非 “the elderly”；避免标签化。
+                </li>
+                <li>残障表述：用 “person with a disability”。</li>
+                <li>
+                    可读性：短句 Plain English，符合 WCAG 3.1.1 可读性。
+                </li>
+            </ul>
+            <div class="m-y-2">
+                <h3>Original（原文）</h3>
                 <p class="note">
-                    （依据 SA1 要求整理你的 3–5 个核心价值并注释。）
+                    “The elderly should sign up to receive help.”
                 </p>
-            </section>
-
-            <!-- SA2: Imagery & Tone（身份/情绪基调、3–4 图 + 首页文案 + 注释） -->
-            <section
-                id="imagery-tone"
-                class="block m-y-3"
-                aria-labelledby="it-title"
-            >
-                <h2 id="it-title">
-                    Meaning through Imagery & Tone（图像与语气）
-                </h2>
+                <h3>Revised（改写）</h3>
                 <p class="note">
-                    说明你的网站要投射的身份（identity）与情绪基调（tone），并给出
-                    3–4 张首页图像示例与 1
-                    段首页文案，解释它们如何共同支持使命与长期意义。
+                    “Older people can join to share skills and get support.”
                 </p>
-                <h3>Identity & Tone（身份与基调）</h3>
-                <ul class="note">
-                    <li>身份：Belonging, Empowerment, Trust</li>
-                    <li>基调：Welcoming, Supportive, Confident</li>
-                </ul>
-
-                <h3 class="m-y-1">Homepage Imagery（示例）</h3>
-                <div class="gallery">
-                    <figure>
-                        <img
-                            class="img-fluid"
-                            src="assets/reflective/hero-1.jpg"
-                            alt="Intergenerational group cooking together"
-                        />
-                        <figcaption>跨代同行，强调连接与互助。</figcaption>
-                    </figure>
-                    <figure>
-                        <img
-                            class="img-fluid"
-                            src="assets/reflective/hero-2.jpg"
-                            alt="Two neighbors chatting outdoors"
-                        />
-                        <figcaption>日常真实关系，降低疏离感。</figcaption>
-                    </figure>
-                    <figure>
-                        <img
-                            class="img-fluid"
-                            src="assets/reflective/hero-3.jpg"
-                            alt="Volunteer helping with digital skills"
-                        />
-                        <figcaption>赋能与支持，传达可达性。</figcaption>
-                    </figure>
-                </div>
-
-                <h3 class="m-y-1">Homepage Text（示例）</h3>
-                <blockquote class="note">
-                    “Connecting neighbors through shared stories, skills, and
-                    support.”（欢迎语草案：通过故事、技能与互助连接邻里）
-                </blockquote>
                 <p class="note">
-                    注释：视觉与语言一致传达“归属+赋能”，避免花哨却疏离的反差。（按
-                    SA2 要求撰写你自己的版本）
+                    <strong>注释：</strong>去除“should”与标签化称谓，改为自愿且赋能的语气，符合包容语言与可读性要求。（按
+                    SA3 要求写你的版本）
                 </p>
-            </section>
+            </div>
+        </section>
 
-            <!-- SA3: Language & Expression（语言清单 + 原文 + 改写 + 注释） -->
-            <section
-                id="language"
-                class="block m-y-3"
-                aria-labelledby="lang-title"
-            >
-                <h2 id="lang-title">Language & Expression（语言与表达）</h2>
-                <h3>Inclusive Language Checklist（示例）</h3>
-                <ul class="note">
-                    <li>
-                        称谓：用 “older people” 而非 “the elderly”；避免标签化。
-                    </li>
-                    <li>残障表述：用 “person with a disability”。</li>
-                    <li>
-                        可读性：短句 Plain English，符合 WCAG 3.1.1 可读性。
-                    </li>
-                </ul>
-                <div class="m-y-2">
-                    <h3>Original（原文）</h3>
-                    <p class="note">
-                        “The elderly should sign up to receive help.”
-                    </p>
-                    <h3>Revised（改写）</h3>
-                    <p class="note">
-                        “Older people can join to share skills and get support.”
-                    </p>
-                    <p class="note">
-                        <strong>注释：</strong
-                        >去除“should”与标签化称谓，改为自愿且赋能的语气，符合包容语言与可读性要求。（按
-                        SA3 要求写你的版本）
-                    </p>
-                </div>
-            </section>
+        <!-- IA2: Seeing Ourselves（动态内容） -->
+        <section id="community" class="block m-y-3" aria-labelledby="comm-title">
+            <h2 id="comm-title">Dynamic Community（动态社区内容）</h2>
+            <p class="note">
+                从 API GET 已提交的成员数据并展示（姓名/留言/照片）。
+            </p>
+            <section id="community-list" aria-live="polite"></section>
+        </section>
 
-            <!-- IA2: Seeing Ourselves（动态内容） -->
-            <section
-                id="community"
-                class="block m-y-3"
-                aria-labelledby="comm-title"
-            >
-                <h2 id="comm-title">Dynamic Community（动态社区内容）</h2>
-                <p class="note">
-                    从 API GET 已提交的成员数据并展示（姓名/留言/照片）。
-                </p>
-                <section id="community-list" aria-live="polite"></section>
-            </section>
+        <!-- IA3: Accessibility Audit（放审计结果简报） -->
+        <section id="a11y-audit" class="block m-y-3" aria-labelledby="a11y-title">
+            <h2 id="a11y-title">Accessibility Audit（可访问性审计简报）</h2>
+            <ol class="note">
+                <li>
+                    <strong>问题 1：</strong>（描述） |
+                    <em>WCAG：</em>（编号） | <em>影响：</em>（对用户） |
+                    <em>修复：</em>（计划）
+                </li>
+                <li><strong>问题 2：</strong>…</li>
+                <li><strong>问题 3：</strong>…</li>
+            </ol>
+            <p class="note">
+                （使用 IBM Equal Access 扫描
+                <code>behavioural_design.html</code>，挑 3
+                个问题做简明呈现。）
+            </p>
+        </section>
 
-            <!-- IA3: Accessibility Audit（放审计结果简报） -->
-            <section
-                id="a11y-audit"
-                class="block m-y-3"
-                aria-labelledby="a11y-title"
-            >
-                <h2 id="a11y-title">Accessibility Audit（可访问性审计简报）</h2>
-                <ol class="note">
-                    <li>
-                        <strong>问题 1：</strong>（描述） |
-                        <em>WCAG：</em>（编号） | <em>影响：</em>（对用户） |
-                        <em>修复：</em>（计划）
-                    </li>
-                    <li><strong>问题 2：</strong>…</li>
-                    <li><strong>问题 3：</strong>…</li>
-                </ol>
-                <p class="note">
-                    （使用 IBM Equal Access 扫描
-                    <code>behavioural_design.html</code>，挑 3
-                    个问题做简明呈现。）
-                </p>
-            </section>
+        <!-- IA4: Client Response（Newsletter 插件伦理回应大纲） -->
+        <section id="client-response" class="block m-y-3" aria-labelledby="cr-title">
+            <h2 id="cr-title">
+                Response to Client – Newsletter Plugin（伦理回应大纲）
+            </h2>
+            <h3>Context（情境）</h3>
+            <p class="note">
+                客户目标 / 利益相关方 / 伦理风险（隐私、同意、信任等）
+            </p>
+            <h3>Analysis（分析）</h3>
+            <p class="note">关联 ACS 原则、后果评估、替代方案与权衡</p>
+            <h3>Decision（决策）</h3>
+            <p class="note">推荐做法与理由</p>
+            <h3>Communication（沟通）</h3>
+            <p class="note">
+                尊重式表述、回应可能顾虑、强调用户信任与品牌收益
+            </p>
+        </section>
 
-            <!-- IA4: Client Response（Newsletter 插件伦理回应大纲） -->
-            <section
-                id="client-response"
-                class="block m-y-3"
-                aria-labelledby="cr-title"
-            >
-                <h2 id="cr-title">
-                    Response to Client – Newsletter Plugin（伦理回应大纲）
-                </h2>
-                <h3>Context（情境）</h3>
-                <p class="note">
-                    客户目标 / 利益相关方 / 伦理风险（隐私、同意、信任等）
-                </p>
-                <h3>Analysis（分析）</h3>
-                <p class="note">关联 ACS 原则、后果评估、替代方案与权衡</p>
-                <h3>Decision（决策）</h3>
-                <p class="note">推荐做法与理由</p>
-                <h3>Communication（沟通）</h3>
-                <p class="note">
-                    尊重式表述、回应可能顾虑、强调用户信任与品牌收益
-                </p>
-            </section>
+        <footer class="m-y-3">
+            <p class="note">© 2025 Reflective Design Showcase.</p>
+        </footer>
+    </main>
 
-            <footer class="m-y-3">
-                <p class="note">© 2025 Reflective Design Showcase.</p>
-            </footer>
-        </main>
+    <script type="module" src="js/reflective_design.js"></script>
+</body>
 
-        <script type="module" src="js/reflective_design.js"></script>
-    </body>
 </html>

@@ -1,29 +1,16 @@
-/* ===== 页面基础 ===== */
-:root {
-    /* 已在 base.css 定义色板；此处只做必要扩展 */
-    --ring: 2px solid color-mix(in srgb, var(--accent-color) 60%, #0000);
-}
+@import url("../component_skeletons/breadcrumb.css");
 
-.sr-only {
-    position: absolute !important;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-/* 粘性分区导航：避免与固定顶栏重叠（你的 body 有 56px 顶部内边距） */
 .section-nav {
     position: sticky;
     top: 56px;
     z-index: 5;
     background: var(--surface-color, #fff);
     border-bottom: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+
 .section-nav ul {
     display: flex;
     gap: 1rem;
@@ -31,18 +18,19 @@
     list-style: none;
     margin: 0;
 }
+
 .section-nav a {
     padding: 0.25rem 0.5rem;
     border-radius: 6px;
     text-decoration: none;
     color: var(--text-color);
 }
+
 .section-nav a[data-active="true"],
 .section-nav a[aria-current="true"] {
     background: color-mix(in srgb, var(--secondary-color) 25%, #0000);
 }
 
-/* 区块容器 */
 .block {
     background: var(--surface-color, #fff);
     border: 1px solid #e5e7eb;
@@ -50,12 +38,12 @@
     padding: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
+
 .note {
     color: var(--muted-text-color);
     font-size: 0.95rem;
 }
 
-/* Links 演示 */
 .demo-row {
     display: flex;
     flex-wrap: wrap;
@@ -73,10 +61,8 @@
 .demo-link.external::after {
     content: "↗";
     margin-left: 0.35rem;
-    aria-hidden: true;
 }
 
-/* Mini 菜单演示 */
 .mini-menu {
     display: flex;
     gap: 0.75rem;
@@ -94,7 +80,6 @@
     border-color: var(--accent-color);
 }
 
-/* Cards */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -127,7 +112,6 @@
     font-size: 1.1rem;
 }
 
-/* Buttons */
 .button {
     --btn-bg: #fff;
     --btn-fg: var(--text-color);
@@ -178,7 +162,6 @@
     --btn-bg-hover: color-mix(in srgb, var(--primary-color) 10%, #ffffff 90%);
 }
 
-/* Forms */
 .field {
     display: grid;
     gap: 0.35rem;
@@ -209,23 +192,26 @@ input:focus-visible {
     align-items: center;
     flex-wrap: wrap;
 }
+
 .live {
     margin-top: 0.75rem;
     font-weight: 600;
 }
+
 .live.ok {
     color: #047857;
-} /* 绿色：成功 */
+}
+
 .live.error {
     color: #b91c1c;
-} /* 红色：失败 */
+}
 
-/* 图片样机 */
 .img-fluid {
     max-width: 100%;
     height: auto;
     display: block;
 }
+
 .mock {
     margin: 0.75rem 0;
 }
