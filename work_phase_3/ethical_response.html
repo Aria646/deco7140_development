@@ -1,37 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- CSS Linking -->
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/base.css" />
-        <link rel="stylesheet" href="css/layout.css" />
-        <link rel="stylesheet" href="css/components.css" />
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico"><!-- NEW -->
-    
-        <title>Ethical Response</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-    </head>
-    <body>
-        <!-- START PAGE STRUCTURE -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/page_css/ethical_response.css" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <title>Ethics Response</title>
+</head>
+
+<body>
+    <header>
         <nav id="nav-mobile" aria-label="Main Navigation">
-        
+            <ul>
+                <li><a href="../index.html"><span class="icon">🏠</span> Home</a></li>
+                <li><a href="site_map.html"><span class="icon">🗺️</span> Site Map</a></li>
+                <li><a href="style_guide.html"><span class="icon">📘</span> Style Guide</a></li>
+                <li><a href="ethical_response.html"><span class="icon">⚖️</span> Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span> GenAI MT Acknowledgement</a>
+                </li>
+            </ul>
         </nav>
 
         <nav id="nav-desktop" aria-label="Main Navigation">
-        
+            <ul>
+                <li><a href="../index.html" aria-current="page">Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledge.html">GenAI MT</a></li>
+            </ul>
         </nav>
+    </header>
 
-        <main>
-            <div class="container">
-                <h1>Ethical Response</h1>
-            </div>
-            
-        </main>
-        <!-- END PAGE STRUCTURE -->
-    </body>
+    <main class="container">
+        <h1>Ethics Response</h1>
+        <section class="block m-t-2 m-b-3">
+            <h2>Ethical Summary</h2>
+            <p class="p-t-2">The developer designed the subscription plug-in for a recipe-sharing website to enhance
+                user engagement through community updates and personalised content. While the feature improves
+                interactivity, it also introduces ethical challenges related to data minimisation, privacy,
+                transparency, and user autonomy.</p>
+            <p>In the ethical review stage, the developer identified that collecting information beyond what is
+                necessary for subscription — such as names, demographics, or personal preferences — would violate the
+                public interest principle of the ACS Code of Ethics. To address this, only essential data, specifically
+                users' email addresses, are collected. This ensures compliance with data minimisation and reduces
+                privacy risks.</p>
+            <p>To promote informed consent, the developer implemented a double opt-in mechanism. Users must confirm
+                their subscription via email before activation, and any unverified data are automatically deleted after
+                90 days. This guarantees that participation is both voluntary and verifiable.</p>
+            <p>Transparency and honesty are also prioritised. The interface clearly describes the email frequency and
+                content — for example, "Weekly Digest: 3-5 recipes, one meal plan, and seasonal tips". Users can
+                unsubscribe or modify their preferences at any time through visible links placed at the top of every
+                email.</p>
+            <p>The design additionally reflects respect for diversity and inclusion by allowing users to choose dietary
+                tags such as vegetarian, halal, or nut-free, and by avoiding culturally biased or unverifiable health
+                claims. These decisions align with ACS principles of respect for diversity, honesty, and public welfare.
+            </p>
+            <p>Overall, the ethical foundation of this plug-in lies in privacy protection, informed consent,
+                accessibility, and cultural sensitivity. The implementation demonstrates how individual developers can
+                integrate professional ethics into interface design, ensuring both usability and social responsibility.
+            </p>
+        </section>
+
+        <section class="block m-y-3">
+            <h2>Ethical Decision and Reasoning</h2>
+            <p class="p-t-2">The developer's ethical reasoning follows professional and philosophical frameworks,
+                including
+                Consequentialism, Deontological ethics, and Virtue ethics, combined with the ACS Code of Professional
+                Conduct. These frameworks guided decision-making throughout the design and development process.</p>
+            <h3 class="p-t-1 p-b-1">Application of Ethical Frameworks</h3>
+            <ul>
+                <li>✔ <strong>Consequentialism</strong>: The developer assessed possible outcomes of design choices and
+                    prioritised those that maximise user benefit and minimise harm. Over-collection of personal data
+                    could lead to privacy breaches and reputational loss, whereas a minimal-data model protects users
+                    and strengthens trust.</li>
+                <li>✔ <strong>Deontological Ethics</strong>: From a duty-based perspective, the developer recognised an
+                    ethical obligation to protect user privacy even when stricter data control required extra
+                    implementation effort. The adoption of double opt-in verification, visible unsubscribe links, and
+                    secure deletion reflects a commitment to moral duty over convenience.</li>
+                <li>✔ <strong>Virtue Ethics</strong>: Throughout the process, the developer acted with integrity and
+                    empathy, ensuring clear communication, inclusive tone, and accessibility for all user groups. These
+                    actions reflect professional virtues expected of ethical computing practice.</li>
+            </ul>
+
+            <h3 class="p-t-2">Alignment with ACS Ethical Principles</h3>
+            <table class="table m-y-1" aria-describedby="values-desc">
+                <caption caption id="values-desc" class="sr-only">ACS Principle-Applied Ethical Action</caption>
+                <thead>
+                    <tr>
+                        <th>ACS Principl</th>
+                        <th>Applied Ethical Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Public Interest</td>
+                        <td>Prioritised user welfare and autonomy; avoided manipulative subscription flows.</td>
+                    </tr>
+                    <tr>
+                        <td>Honesty</td>
+                        <td>Used plain language to describe data collection and subscription frequency.</td>
+                    </tr>
+                    <tr>
+                        <td>Competence</td>
+                        <td>Followed secure coding practices and maintained technical reliability.</td>
+                    </tr>
+                    <tr>
+                        <td>Privacy</td>
+                        <td>Collected minimal data; ensured encrypted storage and deletion after 90 days.</td>
+                    </tr>
+                    <tr>
+                        <td>Respect for Diversity</td>
+                        <td>Allowed inclusive dietary options; avoided discriminatory or culturally insensitive content.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Professionalism</td>
+                        <td>Documented design rationale and validated accessibility through WCAG 2.2 testing.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>This mapping demonstrates how ethical principles can be translated into concrete design
+                requirements and measurable development outcomes.</p>
+
+            <h3 class="p-t-2 p-b-1">Balancing Technical and Ethical Priorities</h3>
+            <p>Rather than treating accessibility and privacy as compliance add-ons, the developer integrated them as
+                core design priorities. Elements such as &lt;fieldset&lt; grouping for related inputs, visible keyboard
+                focus indicators, and compliant colour contrast ratios ensure that users relying on screen readers or
+                keyboard navigation have equal access. These actions fulfil WCAG 2.2 success criteria, including 1.3.1
+                (Info and Relationships), 2.4.7 (Focus Visible), and 1.4.3 (Contrast Minimum).</p>
+            <p>By addressing both usability and inclusivity at the technical level, the developer ensured that ethical
+                intentions are embedded within functional design decisions.</p>
+
+            <h3 class="p-t-2 p-b-1">Reflection on Ethical Practice</h3>
+            <p>The developer recognises that small technical decisions — such as how consent is requested or how
+                unsubscribe options are presented — can significantly affect user trust and rights. Embedding ethical
+                thinking throughout the process transformed the project from a purely functional task into a reflection
+                of digital responsibility.</p>
+            <p>Ultimately, this ethical approach illustrates that individual designers and developers can uphold
+                fairness, accessibility, and autonomy while achieving professional and creative goals. By aligning
+                design actions with ACS principles and moral reasoning, the subscription plug-in supports sustainable
+                community engagement built on respect and trust.</p>
+        </section>
+
+        <section class="block m-y-3" aria-labelledby="client-letter-title">
+            <h2 id="client-letter-title">Draft Response Letter to the Client</h2>
+            <article class="letter" aria-label="Trust-First Subscription Proposal Letter">
+                <p class="p-t-2 p-b-1"><strong>Subject:</strong> Trust-First Subscription Proposal for CCI Recipes</p>
+                <p><strong>Dear Client,</strong></p>
+                <p>Thank you for inviting us to explore the subscription plug-in for the <strong>CCI Recipes</strong>
+                    platform. We truly appreciate your commitment to creating a warm, community-based space that
+                    connects people through food and shared experiences. Our goal is to help you achieve this vision in
+                    a way that strengthens user trust while ensuring the platform remains ethically sound, transparent,
+                    and inclusive. </p>
+                <p>During our review of the proposed subscription feature, we identified several ethical challenges
+                    that often arise in similar systems. These include the <strong>over-collection of user
+                        data</strong>, <strong>limited transparency</strong> about how that data will be used, and
+                    <strong>insufficient user control</strong> over their preferences or consent.
+                </p>
+                <p>For example, collecting details beyond what is necessary for a subscription—such as names, locations,
+                    or personal interests—may expose users to privacy risks or unwanted profiling. Similarly, unclear
+                    descriptions of subscription frequency or hidden unsubscribe links could lead users to feel deceived
+                    or locked in. Such issues conflict with key principles of the ACS Code of Professional Conduct,
+                    particularly those concerning public interest, honesty, privacy, and respect for diversity. </p>
+                <p>As the developer, I recognise that these risks can erode user confidence and damage the credibility
+                    of an otherwise valuable feature. Therefore, our approach focuses on re-establishing transparency
+                    and empowering users to make informed, voluntary choices.</p>
+                <p>To balance usability with ethical responsibility, we recommend implementing a model that embodies
+                    <strong>consent</strong>, <strong>clarity</strong>, and <strong>accessibility</strong>:
+                </p>
+                <ul class="p-x-2 p-b-1">
+                    <li>
+                        <strong>Double Opt-In (Reliable Consent):</strong> Users subscribe with their email and confirm
+                        via a one-click verification link. Unverified or inactive emails are automatically deleted after
+                        90 days, ensuring participation is both voluntary and accountable.
+                    </li>
+                    <li>
+                        <strong>Data Minimisation:</strong> Only essential information (email) is collected. Optional
+                        dietary tags (e.g., Vegetarian, Halal, Nut-Free) are available for those who wish to personalise
+                        content but can be removed at any time.
+                    </li>
+                    <li>
+                        <strong>Transparency in Frequency and Purpose:</strong> Subscription pages clearly state what
+                        users can expect — for instance: "Weekly Digest: 3-5 recipes, one meal plan, and seasonal
+                        cooking tips". Users can also choose bi-weekly delivery or pause updates for 30 days.
+                    </li>
+                    <li>
+                        <strong>User Control and Accessibility:</strong> Each email includes a visible “Unsubscribe /
+                        Manage Preferences” link at the top, and these options are mirrored in account settings. The
+                        interface follows WCAG 2.2 standards to support screen readers, keyboard navigation, and
+                        inclusive design.
+                    </li>
+                    <li>
+                        <strong>Cultural Sensitivity and Respect:</strong> Content avoids unverified health claims or
+                        culturally biased messages. Users can opt for dietary-specific themes such as Vegetarian, Vegan,
+                        or Low-sodium, reflecting respect for diverse beliefs and lifestyles.
+                    </li>
+                </ul>
+                <p>This design ensures that ethical principles are not treated as afterthoughts, but as integral parts
+                    of user experience and system architecture.</p>
+                <p>From a consequentialist perspective, this model reduces risks and maximises user benefit by
+                    preventing misuse of data and building lasting trust. From a deontological view, it fulfils the
+                    developer's duty to protect privacy and promote user autonomy, even when extra implementation effort
+                    is required. In practice, these measures also align with virtue ethics, reflecting honesty, empathy,
+                    and professional responsibility.</p>
+                <p>By integrating ethical reasoning directly into technical design, the project goes beyond compliance —
+                    it demonstrates how a developer can create a socially responsible digital product that genuinely
+                    respects its users.</p>
+                <p> We recommend beginning with a <strong>two-week pilot (10% of users)</strong> to evaluate opt-in
+                    rates, feedback, and unsubscribe patterns before full rollout. Our team is ready to assist with
+                    technical setup, compliance documentation, and accessibility testing to ensure a smooth and ethical
+                    implementation. </p>
+                <p>Thank you again for entrusting us with this opportunity. We look forward to helping you deliver a
+                    subscription feature that not only enhances user engagement but also sets a standard for ethical,
+                    transparent, and user-first design.</p>
+                <address>
+                    <p><strong>Warm regards,</strong><br>
+                        — Development &amp; Ethics Advisory Team<br>
+                        CCI Recipes Project</p>
+                </address>
+            </article>
+        </section>
+    </main>
+        <script type="module" src="js/"></script>
+</body>
+
 </html>

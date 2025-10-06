@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach((s) => io.observe(s));
     }
 
-    /* 2) 动态内容：Community 列表（IA2 Seeing Ourselves） */
     const list = document.getElementById("community-list");
     if (list) {
         const ENDPOINT =
@@ -54,15 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     const article = document.createElement("article");
                     article.className = "card member-card";
                     article.innerHTML = `
-          <div class="member-media">
+            <div class="member-media">
             <img src="${
                 member.photo_url || "assets/placeholder-avatar.png"
             }" alt="${member.name || "Community member"}"/>
-          </div>
-          <div class="card-body">
+            </div>
+            <div class="card-body">
             <h3 class="card-title">${member.name || "Unnamed"}</h3>
             <p class="note">${member.message || "—"}</p>
-          </div>
+            </div>
         `;
                     frag.appendChild(article);
                 });

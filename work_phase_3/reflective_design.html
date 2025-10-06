@@ -4,231 +4,368 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reflective Design</title>
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/page_css/reflective_design.css" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <title>Reflective Design</title>
 </head>
 
 <body>
     <header>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li><a href="../index.html"><span class="icon">🏠</span>Home</a></li>
+                <li><a href="site_map.html"><span class="icon">🗺️</span>Site Map</a></li>
+                <li><a href="style_guide.html"><span class="icon">📘</span>Style Guide</a></li>
+                <li><a href="ethical_response.html"><span class="icon">⚖️</span>Ethics Analysis</a></li>
+                <li><a href="genai_mt_acknowledgement.html"><span class="icon">🤖</span>GenAI MT Acknowledgement</a>
+                </li>
+            </ul>
+        </nav>
+
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html" aria-current="page">Home</a></li>
                 <li><a href="site_map.html">Site Map</a></li>
                 <li><a href="style_guide.html">Style Guide</a></li>
-                <li><a href="visceral_design.html">Visceral Guide</a></li>
-                <li>
-                    <a href="behavioural_design.html">Behavioural Guide</a>
-                </li>
-                <li>
-                    <a href="reflective_design.html" aria-current="page">Reflective Design</a>
-                </li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledge.html">GenAI MT Acknowledgement</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container p-x-2">
-        <h1 class="page-title m-y-2">Style Guide – Reflective Design</h1>
-        <p class="hero-text">
-            This page presents <strong>reflective-level</strong> design:
-            values mapping, imagery &amp; tone, language &amp; expression,
-            and dynamic community content.
-        </p>
+    <main class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ol>
+                <li><a href="index.html"> WP3 Home</a></li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                </li>
+                <li aria-current="page">Reflective Design</li>
+            </ol>
+        </nav>
+        <h1>Reflective Design</h1>
+        <p>This page presents reflective-level design: values mapping, imagery tone and language expression.</p>
 
-        <!-- 粘性分区导航 -->
         <nav class="section-nav m-y-2" aria-label="Section Navigation">
             <ul>
                 <li><a href="#values">Values Mapping</a></li>
                 <li><a href="#imagery-tone">Imagery & Tone</a></li>
                 <li><a href="#language">Language & Expression</a></li>
-                <li><a href="#community">Dynamic Community</a></li>
                 <li><a href="#a11y-audit">Accessibility Audit</a></li>
                 <li><a href="#client-response">Client Response</a></li>
             </ul>
         </nav>
 
-        <!-- SA1: Values Mapping（表格+注释） -->
         <section id="values" class="block m-y-3" aria-labelledby="values-title">
-            <h2 id="values-title">Values Mapping（价值映射）</h2>
-            <p class="note">
-                将“价值 → 设计含义 →
-                具体元素”一一对应，并写注释解释为什么与如何体现（可提及相关
-                WCAG）。
-            </p>
-            <!-- 你可在表格下方为每行补充注释段落 -->
+            <h2 id="values-title">Values Mapping</h2>
             <table class="table m-y-2" aria-describedby="values-desc">
-                <caption id="values-desc" class="sr-only">
-                    Values–Implications–Elements mapping table
-                </caption>
+                <caption id="values-desc" class="sr-only"> Values - Implications - Elements mapping table </caption>
                 <thead>
                     <tr>
-                        <th>Value（价值）</th>
-                        <th>Design Implication（设计含义）</th>
-                        <th>Specific Element（具体元素）</th>
+                        <th>Value</th>
+                        <th>Design Implication</th>
+                        <th>Specific Element</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Belonging（归属）</td>
-                        <td>展示多元群体的正向互动，避免刻板化</td>
-                        <td>
-                            首页 hero 图：不同年龄/背景/能力的人一起活动
-                        </td>
+                        <td>Efficiency & Time-Saving</td>
+                        <td>Users value minimal cooking time and quick decision-making, so the site must reduce steps
+                            and cognitive load.</td>
+                        <td>Quick-meal filters, 20-minute cooking tags, auto-generated shopping lists, and weekly
+                            reusable meal templates.</td>
                     </tr>
                     <tr>
-                        <td>Empowerment（赋能）</td>
-                        <td>使用行动导向、积极自我主导的语言</td>
-                        <td>CTA：“Start Your Journey / 加入社区”按钮</td>
+                        <td>Accessibility & Inclusivity</td>
+                        <td>All users-including those with visual or motor impairments-should access recipes equally.
+                        </td>
+                        <td>High-contrast themes, screen-reader support, ARIA labels, alt-text, keyboard navigation, and
+                            large-text toggle.</td>
                     </tr>
                     <tr>
-                        <td>Respect（尊重）</td>
-                        <td>采用包容与肯定式表述，避免标签化</td>
-                        <td>
-                            欢迎语：“Connecting Older People Across
-                            Communities”
-                        </td>
+                        <td>Transparency & Trust</td>
+                        <td>Ethical content handling and clear information build user confidence.</td>
+                        <td>Visible authorship, publish date, AI-label disclaimers, and "for reference only" notices for
+                            machine-translated content.</td>
+                    </tr>
+                    <tr>
+                        <td>Health & Family Well-being</td>
+                        <td>Nutrition clarity and family-friendly focus encourage balanced lifestyles.</td>
+                        <td>"Kid-friendly", "low-salt", and "vegetable-rich" filters; clear nutrition labels;
+                            mild-flavour recipe tags.</td>
+                    </tr>
+                    <tr>
+                        <td>Community & Sharing</td>
+                        <td>The website fosters social connection, mutual learning, and contribution.</td>
+                        <td>Forum discussions, "Showcase My Recipes" gallery, chat, event sharing, and nearby-user
+                            discovery.</td>
                     </tr>
                 </tbody>
             </table>
-            <div class="note">
-                <p>
-                    <strong>注释示例（Belonging）：</strong>归属是客户使命核心，首屏图像呈现真实互动，帮助用户看到自己的位置；与可访问性（替代文本/对比度/不以偏概全）共同支撑包容体验。
-                </p>
-            </div>
-            <p class="note">
-                （依据 SA1 要求整理你的 3–5 个核心价值并注释。）
-            </p>
+            <p class="p-t-2">The five core values above form the ethical and experiential framework of the recipe and
+                community platform. Efficiency & Time-Saving responds to behavioural usability principles by minimizing
+                interaction steps and cognitive load. Smart filters, auto-generated shopping lists, and intuitive
+                navigation follow WCAG 2.2 success criterion 2.4.6 (Headings and Labels) and 3.2.3 (Consistent
+                Navigation), ensuring users can predict interface patterns and locate content quickly.</p>
+            <p>Accessibility & Inclusivity operationalize empathy through technical compliance and experiential design.
+                The platform employs semantic HTML and ARIA roles (e.g., role="navigation", aria-label) to meet 1.3.1
+                (Info and Relationships), while providing alt-text for non-text content in accordance with 1.1.1
+                (Non-text Content). Full keyboard access and visible focus indicators uphold 2.1.1 (Keyboard) and 2.4.7
+                (Focus Visible). Adjustable text size and color contrast ratios exceed 1.4.3 (Contrast Minimum) and
+                1.4.4 (Resize Text), ensuring inclusive readability for low-vision users.</p>
+            <p>Transparency & Trust connect ethical communication with accessibility of information. Visible authorship
+                and AI-translation disclaimers follow 3.3.2 (Labels or Instructions) and 3.3.5 (Help), guiding users
+                clearly and preventing misunderstanding. These elements reinforce the credibility and accountability
+                essential for a safe digital environment.</p>
+            <p>Health & Family Well-being merges affective and functional design. Nutrition filters and child-friendly
+                tags comply with 2.4.5 (Multiple Ways) by offering diverse search and discovery paths. Color and
+                iconography maintain 1.4.11 (Non-text Contrast) and 3.3.1 (Error Identification)—for example, warning
+                users about allergen risks or unsuitable ingredients. This promotes informed, balanced decisions for
+                both adults and children.</p>
+            <p>Finally, Community & Sharing embodies inclusivity at the social level. Interactive modules like forums
+                and recipe galleries support 2.4.3 (Focus Order) and 4.1.3 (Status Messages), ensuring screen readers
+                and assistive technologies announce feedback consistently. By enabling emoji reactions, bookmarking, and
+                peer recognition, the platform aligns emotional design with reflective accessibility, sustaining
+                engagement while maintaining clarity and consistency.</p>
+            <p>Together, these five values integrate behavioural efficiency, ethical transparency, and WCAG 2.2
+                compliance, transforming accessibility from a checklist into a lived experience that supports equity,
+                confidence, and joy in every interaction.</p>
         </section>
 
-        <!-- SA2: Imagery & Tone（身份/情绪基调、3–4 图 + 首页文案 + 注释） -->
         <section id="imagery-tone" class="block m-y-3" aria-labelledby="it-title">
             <h2 id="it-title">
-                Meaning through Imagery & Tone（图像与语气）
+                Meaning through Imagery & Tone
             </h2>
-            <p class="note">
-                说明你的网站要投射的身份（identity）与情绪基调（tone），并给出
-                3–4 张首页图像示例与 1
-                段首页文案，解释它们如何共同支持使命与长期意义。
-            </p>
-            <h3>Identity & Tone（身份与基调）</h3>
-            <ul class="note">
-                <li>身份：Belonging, Empowerment, Trust</li>
-                <li>基调：Welcoming, Supportive, Confident</li>
-            </ul>
 
-            <h3 class="m-y-1">Homepage Imagery（示例）</h3>
+            <h3 class="p-t-2 p-b-1">Homepage Imagery</h3>
             <div class="gallery">
                 <figure>
-                    <img class="img-fluid" src="assets/reflective/hero-1.jpg"
-                        alt="Intergenerational group cooking together" />
-                    <figcaption>跨代同行，强调连接与互助。</figcaption>
+                    <img class="img-fluid" src="assets/web1.png" alt="Homepage of Tasty website" />
+                    <figcaption>Homepage of Tasty</figcaption>
                 </figure>
                 <figure>
-                    <img class="img-fluid" src="assets/reflective/hero-2.jpg" alt="Two neighbors chatting outdoors" />
-                    <figcaption>日常真实关系，降低疏离感。</figcaption>
+                    <img class="img-fluid" src="assets/web2.png" alt="Homepage of Cake Wrecks website" />
+                    <figcaption>Homepage of Cake Wrecks</figcaption>
                 </figure>
                 <figure>
-                    <img class="img-fluid" src="assets/reflective/hero-3.jpg"
-                        alt="Volunteer helping with digital skills" />
-                    <figcaption>赋能与支持，传达可达性。</figcaption>
+                    <img class="img-fluid" src="assets/web3.png" alt="Homepage of Smitten Kitchen website" />
+                    <figcaption>Homepage of Smitten Kitchen</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="assets/web4.png" alt="Homepage of 101 Cookbooks website" />
+                    <figcaption>Homepage of 101 Cookbooks</figcaption>
                 </figure>
             </div>
 
-            <h3 class="m-y-1">Homepage Text（示例）</h3>
-            <blockquote class="note">
-                “Connecting neighbors through shared stories, skills, and
-                support.”（欢迎语草案：通过故事、技能与互助连接邻里）
-            </blockquote>
-            <p class="note">
-                注释：视觉与语言一致传达“归属+赋能”，避免花哨却疏离的反差。（按
-                SA2 要求撰写你自己的版本）
-            </p>
+            <h3 class="p-t-3 p-b-1 ">Website Identity</h3>
+            <p>Our website represents the identity of a warm, inclusive, and empowering cooking community that values
+                accessibility, creativity, and cultural diversity. Positioned between the playful energy of Tasty and
+                the calm authenticity of 101 Cookbooks, it blends the joy of discovery with the reassurance of everyday
+                simplicity. This identity highlights cooking as a shared human experience—something that belongs to
+                everyone, regardless of time, skill, or background.</p>
+            <h3 class="p-t-2 p-b-1">Tone of Voice</h3>
+            <p>The tone of voice is friendly, uplifting, and supportive, designed to motivate users while keeping
+                communication simple and relatable. It avoids the irony and exaggeration found in Cake Wrecks, instead
+                adopting the encouraging, conversational tone of Smitten Kitchen. Every phrase aims to make users feel
+                capable ("You've got this!"), welcome ("Let's cook together"), and proud of their own creativity.</p>
+
+            <h3 class="p-t-2 p-b-1">Imagery and Emotional Meaning</h3>
+            <div class="gallery">
+                <figure>
+                    <img class="img-fluid" src="assets/image1.png" alt="Homepage Hero Image" />
+                    <figcaption>A bright kitchen scene where a family cooks together, with warm natural lighting.
+                    </figcaption>
+                    <p>Conveys belonging, safety, and happiness—reinforcing the idea of joyful everyday cooking.</p>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="assets/image2.png" alt="Recipe Card - Colorful Salad" />
+                    <figcaption>Fresh vegetables and vibrant tones arranged with minimalist composition.</figcaption>
+                    <p>Represents health and creativity, showing that cooking can be quick yet fulfilling.</p>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="assets/image3.png" alt="User Showcase Section" />
+                    <figcaption>Users' uploaded dishes displayed with profile icons and friendly comments.</figcaption>
+                    <p>Builds connection and mutual recognition, strengthening community engagement.</p>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="assets/image4.png" alt="Accessibility Features Display" />
+                    <figcaption>Enlarged text, high-contrast color modes, and voice guidance interface.</figcaption>
+                    <p>Embodies inclusivity and equality, ensuring every user can participate confidently.</p>
+                </figure>
+            </div>
+
+            <h3 class="p-t-3 p-b-1">Homepage Welcome Message</h3>
+            <p>"Welcome to QuickBite — your friendly space for fast, healthy, and inclusive cooking. Discover easy
+                20-minute meals, share your favorite recipes, and connect with cooks who believe that good food brings
+                people together."</p>
+
+            <h3 class="p-t-2 p-b-1">Annotation: Alignment of Imagery and Language</h3>
+            <p>The visual tone and written language work together to communicate the client's mission of promoting
+                healthy, joyful, and inclusive cooking. Warm lighting and smiling faces humanize the interface, while
+                bright color palettes and balanced white space express emotional clarity and openness. The welcoming
+                copy ("Let's cook together") reinforces belonging and empowerment, especially for users who may feel
+                excluded from professional cooking environments. Together, the imagery and tone create a long-term
+                identity of a supportive, transparent, and confidence-building community, where design and communication
+                work hand in hand to make cooking accessible and meaningful for everyone.</p>
         </section>
 
-        <!-- SA3: Language & Expression（语言清单 + 原文 + 改写 + 注释） -->
         <section id="language" class="block m-y-3" aria-labelledby="lang-title">
-            <h2 id="lang-title">Language & Expression（语言与表达）</h2>
-            <h3>Inclusive Language Checklist（示例）</h3>
-            <ul class="note">
-                <li>
-                    称谓：用 “older people” 而非 “the elderly”；避免标签化。
-                </li>
-                <li>残障表述：用 “person with a disability”。</li>
-                <li>
-                    可读性：短句 Plain English，符合 WCAG 3.1.1 可读性。
-                </li>
+            <h2 id="lang-title">Language & Expression</h2>
+            <h3 class="p-t-2 p-b-1">Inclusive Language Checklist</h3>
+            <ul>
+                <li>✔ Inclusive and respectful language</li>
+                <li>✔ Plain and readable sentences</li>
+                <li>✔ Reflects key values: efficiency, health, inclusivity, empowerment</li>
+                <li>✔ Encouraging and friendly tone</li>
+                <li>✔ Accessible to screen readers (alt text, structure, semantic HTML)</li>
+                <li>✔ Avoids jargon and culturally biased terms</li>
             </ul>
-            <div class="m-y-2">
-                <h3>Original（原文）</h3>
-                <p class="note">
-                    “The elderly should sign up to receive help.”
-                </p>
-                <h3>Revised（改写）</h3>
-                <p class="note">
-                    “Older people can join to share skills and get support.”
-                </p>
-                <p class="note">
-                    <strong>注释：</strong>去除“should”与标签化称谓，改为自愿且赋能的语气，符合包容语言与可读性要求。（按
-                    SA3 要求写你的版本）
-                </p>
-            </div>
+            <h3 class="p-t-3 p-b-1">Original Text</h3>
+            <p>"Our platform helps people discover recipes and cook faster. Join now to find what to eat today!"</p>
+            <h3 class="p-t-2 p-b-1">Revised Text</h3>
+            <p>"QuickBite welcomes you to cook with confidence and joy. Explore quick, healthy recipes made for real
+                life — from solo meals to family dinners — and share your own creations with others who love good
+                food."</p>
+            <h3 class="p-t-2 p-b-1">Annotation</h3>
+            <p>This revised version emphasizes belonging, joy, and participation rather than only efficiency. It
+                reflects the site's reflective identity as a community-driven, empowering space. The phrase “welcomes
+                you to cook with confidence and joy” replaces directive wording with an inviting emotional tone,
+                consistent with the website's values of inclusivity and encouragement. It also enhances WCAG 3.1.1
+                readability through shorter phrases, plain vocabulary, and clear sentence rhythm, making it accessible
+                for multilingual and screen-reader users.</p>
         </section>
 
-        <!-- IA2: Seeing Ourselves（动态内容） -->
-        <section id="community" class="block m-y-3" aria-labelledby="comm-title">
-            <h2 id="comm-title">Dynamic Community（动态社区内容）</h2>
-            <p class="note">
-                从 API GET 已提交的成员数据并展示（姓名/留言/照片）。
-            </p>
-            <section id="community-list" aria-live="polite"></section>
-        </section>
-
-        <!-- IA3: Accessibility Audit（放审计结果简报） -->
         <section id="a11y-audit" class="block m-y-3" aria-labelledby="a11y-title">
-            <h2 id="a11y-title">Accessibility Audit（可访问性审计简报）</h2>
-            <ol class="note">
-                <li>
-                    <strong>问题 1：</strong>（描述） |
-                    <em>WCAG：</em>（编号） | <em>影响：</em>（对用户） |
-                    <em>修复：</em>（计划）
-                </li>
-                <li><strong>问题 2：</strong>…</li>
-                <li><strong>问题 3：</strong>…</li>
-            </ol>
-            <p class="note">
-                （使用 IBM Equal Access 扫描
-                <code>behavioural_design.html</code>，挑 3
-                个问题做简明呈现。）
-            </p>
+            <h2 id="a11y-title">Accessibility Audit</h2>
+            <article class="p-t-2 p-b-1">
+                <h3 class="p-b-1">Issue 1 - Use the &lt;fieldset&gt; Element to Group Logically Related Input Elements
+                </h3>
+                <h4 class="p-t-1">Why this is important</h4>
+                <p>Groups of related input fields (such as “Name”, “Email”, and “Message”) should be enclosed within a
+                    &lt;fieldset&gt; element accompanied by a &lt;legend&gt;. Without this semantic grouping, screen
+                    readers interpret each input as a separate entity, making it difficult for visually impaired users
+                    to perceive relationships between the fields. This issue violates WCAG 2.2 - Guideline 1.3.1: Info
+                    and Relationships.</p>
+                <h4 class="p-t-1">How to fix</h4>
+                <pre class="pre p-t-1"><code>&lt;fieldset&gt;
+        &lt;legend&gt;Contact Information&lt;/legend&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input id="name" type="text"&gt;
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input id="email" type="email"&gt;
+        &lt;/fieldset&gt;</code></pre>
+                <p class="p-t-1">This correction ensures a clear semantic hierarchy for assistive technologies and
+                    improves overall keyboard navigation.</p>
+                <h4 class="p-t-1">Who is affected</h4>
+                <ul class="ul">
+                    <li>Blind or low-vision users relying on screen readers</li>
+                    <li>Neurodivergent users who benefit from structured and clearly labeled forms</li>
+                </ul>
+            </article>
+
+            <article class="p-t-2 p-b-1">
+                <h3 class="p-b-1">Issue 2 - Keyboard Focus Indicator Visibility When Using CSS Border or Outline</h3>
+                <h4 class="p-t-1">Why this is important</h4>
+                <p>Keyboard users rely on visible focus indicators (usually an outline or highlight) to know which
+                    interface element is active. If the focus indicator is removed or hidden via CSS, users navigating
+                    with a keyboard lose their spatial awareness. This violates WCAG 2.2 - Guideline 2.4.7: Focus
+                    Visible.</p>
+                <h4 class="p-t-1">How to fix</h4>
+                <pre class="pre p-t-1"><code>button:focus,
+    input:focus {
+            outline: 2px solid #1e90ff;
+            outline-offset: 2px;
+            } </code></pre>
+                <p class="p-t-1">This adjustment preserves focus visibility, enhances accessibility, and maintains
+                    design consistency.</p>
+                <h4 class="p-t-1">Who is affected</h4>
+                <ul class="ul">
+                    <li>Users who navigate using keyboard controls (e.g., Tab / Shift + Tab)</li>
+                    <li>Users with motor impairments or temporary injuries who cannot use a mouse</li>
+                </ul>
+            </article>
+
+            <article class="p-t-2 p-b-1">
+                <h3 class="p-b-1">Issue 3 - Text Contrast Below WCAG AA Minimum Requirement</h3>
+                <h4 class="p-t-1">Why this is important</h4>
+                <p>Low contrast between text and its background makes reading difficult for users with low vision or
+                    color-vision deficiencies. According to WCAG 2.2 - Guideline 1.4.3: Contrast (Minimum), normal text
+                    must meet a contrast ratio of 4.5:1 and large text 3:1. The tested text ratio of 2.85:1 fails this
+                    requirement.</p>
+                <h4 class="p-t-1">How to fix</h4>
+                <pre class="pre p-t-1"><code>body {
+        color: #1a1a1a;/* darker text */ 
+        background-color: #ffffff;
+        }</code></pre>
+                <p class="p-t-1">Use accessible color palettes and verify with tools like WebAIM Contrast Checker.</p>
+                <h4 class="p-t-1">Who is affected</h4>
+                <ul class="ul">
+                    <li>Users with low vision or color blindness</li>
+                    <li>Mobile users in strong light environments</li>
+                </ul>
+            </article>
+
+            <article class="p-t-2 p-b-1">
+                <h3 class="p-b-1">Overall Reflection</h3>
+                <p>Through this accessibility evaluation, I discovered how seemingly small front-end design choices—such
+                    as borders, color contrast, and structural grouping—have significant effects on usability and
+                    inclusion. Implementing &lt;fieldset&gt; elements improves semantic comprehension for screen
+                    readers, maintaining visible focus indicators empowers confident keyboard navigation, and optimizing
+                    contrast enhances readability for all users. Moving forward, I will systematically apply WCAG 2.2
+                    principles during every stage of interface development. Each page will be validated using
+                    accessibility checkers and tested with both keyboard and mouse interactions to ensure compliance and
+                    empathy in design.</p>
+            </article>
         </section>
 
-        <!-- IA4: Client Response（Newsletter 插件伦理回应大纲） -->
         <section id="client-response" class="block m-y-3" aria-labelledby="cr-title">
-            <h2 id="cr-title">
-                Response to Client – Newsletter Plugin（伦理回应大纲）
-            </h2>
-            <h3>Context（情境）</h3>
-            <p class="note">
-                客户目标 / 利益相关方 / 伦理风险（隐私、同意、信任等）
-            </p>
-            <h3>Analysis（分析）</h3>
-            <p class="note">关联 ACS 原则、后果评估、替代方案与权衡</p>
-            <h3>Decision（决策）</h3>
-            <p class="note">推荐做法与理由</p>
-            <h3>Communication（沟通）</h3>
-            <p class="note">
-                尊重式表述、回应可能顾虑、强调用户信任与品牌收益
-            </p>
+            <h2 id="cr-title">Ethical Response - Outline</h2>
+            <h3 class="p-t-2 p-b-1">Ethical Summary</h3>
+            <ul class="ul p-x-2 p-b-1">
+                <li>Purpose and Context - The developer created a subscription plug-in for a recipe website to enhance
+                    user</li>
+                <li>Purpose and Context - The developer created a subscription plug-in for a recipe website to enhance
+                    user engagement, while recognising ethical responsibilities involving privacy, transparency, and
+                    accessibility.</li>
+                <li>Core Ethical Issues - Focus on data minimisation, informed consent, user autonomy, and respect for
+                    diversity.</li>
+                <li>Ethical Actions - Implemented double opt-in verification, visible unsubscribe options, and clear
+                    content frequency statements to ensure voluntary and transparent participation.</li>
+                <li>Inclusivity and Accessibility - Provided culturally inclusive dietary options and designed the
+                    interface following WCAG 2.2 guidelines for equal access.</li>
+                <li>Overall Principle - Demonstrates how an individual developer can embed professional ethics—privacy,
+                    honesty, and inclusivity—into design practice.</li>
+            </ul>
+            <h3>Ethical Decision and Reasoning</h3>
+            <ul class="ul p-x-2 p-b-1">
+                <li>Ethical Frameworks Applied - Decisions guided by Consequentialism (outcomes), Deontological ethics
+                    (duty), and Virtue ethics (professional character).</li>
+                <li> ACS Code Alignment - Actions aligned with public interest, honesty, competence, privacy, respect
+                    for diversity, and professionalism.</li>
+                <li>Balancing Ethics and Technology - Accessibility, security, and consent were treated as core
+                    technical priorities rather than secondary features.</li>
+                <li>Practical Outcomes - Features such as double opt-in, visible focus indicators, and data deletion
+                    policies translate ethical values into tangible interface design.</li>
+                <li>Reflection - The project illustrates how ethical awareness in individual development can strengthen
+                    user trust and support socially responsible innovation.</li>
+            </ul>
         </section>
-
-        <footer class="m-y-3">
-            <p class="note">© 2025 Reflective Design Showcase.</p>
-        </footer>
     </main>
-
     <script type="module" src="js/reflective_design.js"></script>
 </body>
 

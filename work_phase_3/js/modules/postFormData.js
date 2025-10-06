@@ -1,4 +1,3 @@
-// js/modules/postFormData.js
 export default async function postFormData(
     formEl,
     endpointUrl,

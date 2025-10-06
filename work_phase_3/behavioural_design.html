@@ -5,8 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -18,6 +16,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 
     <title>Behavioural Guide</title>
 </head>
@@ -57,152 +59,124 @@
             </ol>
         </nav>
         <h1>Behavioural Design</h1>
-        <p>This page presents behavioural-level design: link styles, navigation patterns, cards,
-            buttons (with states), and forms including API submission feedback.</p>
+        <p>This page presents behavioural-level design: link styles, navigation and menus, card Components, icons,
+            buttons, and forms including API submission feedback.</p>
         <nav class="section-nav m-y-1" aria-label="Section Navigation">
             <ul>
-                <li><a href="#links">Links</a></li>
                 <li><a href="#navigation">Navigation</a></li>
                 <li><a href="#cards">Cards</a></li>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#icons">Icons</a></li>
                 <li><a href="#button-styles">Buttons</a></li>
                 <li><a href="#forms">Forms</a></li>
             </ul>
         </nav>
-        <section id="links" class="block m-y-2" aria-labelledby="links-title">
-            <h2 id="links-title" class="m-y-2">Link Styles</h2>
-            <div class="demo-row">
-                <a class="demo-link" href="#cards">Internal Link</a>
-                <a class="demo-link external" href="https://www.example.com" target="_blank" rel="noopener">External
-                    Link</a>
-                <a class="demo-link" href="#forms">Jump to Forms</a>
-            </div>
-            <p class="note m-y-1">
-                下划线与下划线偏移保证可识别；键盘聚焦有可见焦点环；外链以“↗”提示并标注“开新标签”以提升可达性。
-            </p>
-            <figure class="mock">
-                <img class="img-fluid" src="assets/mockups/link-states.png"
-                    alt="Link states mockup: default, hover, visited" />
-                <figcaption class="note">
-                    Figma
-                    样机：不同状态（默认/悬停/访问过）色彩与下划线策略。
-                </figcaption>
-            </figure>
-        </section>
 
         <section id="navigation" class="block m-y-3" aria-labelledby="nav-title">
-            <h2 id="nav-title" class="m-y-2">Navigation/h2>
-                <ul class="mini-menu" role="menubar" aria-label="Mini navigation example">
-                    <li role="none">
-                        <a role="menuitem" href="#links">Links</a>
-                    </li>
-                    <li role="none">
-                        <a role="menuitem" href="#navigation" aria-current="true">Navigation</a>
-                    </li>
-                    <li role="none">
-                        <a role="menuitem" href="#cards">Cards</a>
-                    </li>
-                    <li role="none">
-                        <a role="menuitem" href="#button-styles">Buttons</a>
-                    </li>
-                    <li role="none">
-                        <a role="menuitem" href="#forms">Forms</a>
-                    </li>
-                </ul>
-                <p class="note m-y-1">
-                    使用轻量边框与高亮边框表达当前项；命名简洁且与信息架构一致，可预测用户将去往的内容区域。
-                </p>
-
-                <figure class="mock">
-                    <img class="img-fluid" src="assets/mockups/nav-variants.png"
-                        alt="Navigation pills and tabs mockup" />
-                    <figcaption class="note">
-                        Figma
-                        样机：标签式与胶囊式导航对比；当前项与悬停态对比清晰。
-                    </figcaption>
-                </figure>
+            <h2 id="nav-title" class="m-y-2">Navigation and Menus</h2>
+            <figure class="figure-demo">
+                <img src="assets/Homepage.png" alt="Homepage hero banner with navigation demo">
+                <figcaption>Homepage placed under Navigation and Menus</figcaption>
+            </figure>
+            <p>The navigation menu on this recipe site mirrors its information architecture with clear labels like
+                "Home" and "About". Its visual design, placement, and grouping enhance usability and guide users
+                intuitively to explore recipes and community content.</p>
         </section>
 
-        <!-- ===== Cards 分区 ===== -->
         <section id="cards" class="block m-y-3" aria-labelledby="cards-title">
-            <h2 id="cards-title" class="m-y-2">Cards</h2>
-
-            <div class="card-grid">
-                <!-- Card 1 -->
-                <article class="card" tabindex="0" aria-label="Recipe card">
-                    <div class="card-media" style="background: #eef3ff; height: 140px" aria-hidden="true"></div>
-                    <div class="card-body">
-                        <h3 class="card-title">Quick Pasta</h3>
-                        <p class="note">
-                            简洁信息层级：标题→简述→CTA；卡片 hover
-                            轻微抬升，focus 有可见环。
-                        </p>
-                        <a class="button ghost" href="#" aria-label="Read more about Quick Pasta">Read More</a>
-                    </div>
-                </article>
-
-                <!-- Card 2 -->
-                <article class="card" tabindex="0" aria-label="Community story card">
-                    <div class="card-media" style="background: #fff5e8; height: 140px" aria-hidden="true"></div>
-                    <div class="card-body">
-                        <h3 class="card-title">Community Story</h3>
-                        <p class="note">
-                            一致的内边距/圆角与阴影梯度；CTA
-                            位置一致利于扫读。
-                        </p>
-                        <a class="button primary" href="#" aria-label="Join the community">Join Now</a>
-                    </div>
-                </article>
-
-                <!-- Card 3 -->
-                <article class="card" tabindex="0" aria-label="Tips card">
-                    <div class="card-media" style="background: #eaf8f1; height: 140px" aria-hidden="true"></div>
-                    <div class="card-body">
-                        <h3 class="card-title">Cooking Tips</h3>
-                        <p class="note">
-                            颜色与密度区分内容类型，避免视觉噪音。
-                        </p>
-                        <a class="button" href="#" aria-label="Explore cooking tips">Explore</a>
-                    </div>
-                </article>
+            <h2 id="cards-title" class="m-y-2">Card Components</h2>
+            <div class="cards-grid">
+                <figure class="figure-demo"><img src="assets/Card1.png" alt="Recipe Card 1">
+                    <figcaption>Card 1</figcaption>
+                </figure>
+                <figure class="figure-demo"><img src="assets/Card2.png" alt="Recipe Card 2">
+                    <figcaption>Card 2</figcaption>
+                </figure>
+                <figure class="figure-demo"><img src="assets/Card3.png" alt="Recipe Card 3">
+                    <figcaption>Card 3</figcaption>
+                </figure>
+                <figure class="figure-demo"><img src="assets/Card4.png" alt="Recipe Card 4">
+                    <figcaption>Card 4</figcaption>
+                </figure>
             </div>
+            <p>Recipe-sharing card components use appealing food images and clear call-to-action buttons for
+                interaction. With logical information hierarchy and visual consistency, they enhance usability and
+                reinforce the platform's brand.</p>
+        </section>
 
-            <figure class="mock">
-                <img class="img-fluid" src="assets/mockups/card-variants.png" alt="Card variants mockup" />
-                <figcaption class="note">
-                    Figma 样机：图文卡片的图片比例、标题字号与 CTA
-                    位置的一致性。
-                </figcaption>
+        <section id="links" class="block m-y-3" aria-labelledby="links-title">
+            <h2 id="links-title" class="m-y-2">Link styles</h2>
+            <figure class="figure-demo center">
+                <img src="assets/Link.png" alt="Link interface example">
+                <figcaption>Example of link or hyperlink design</figcaption>
             </figure>
+            <p>Styling link states (normal, hover, visited) focuses on accessibility and clarity. Visual changes in each
+                state help users distinguish link conditions, enhancing navigation and user experience.</p>
+        </section>
+
+        <section id="icons" class="block m-y-3" aria-labelledby="icons-title">
+            <h2 id="icons-title" class="m-y-2">Icons</h2>
+            <figure class="figure-demo center">
+                <img src="assets/icon.png" alt="UI icon showcase">
+                <figcaption>Example of icon usage in interface</figcaption>
+            </figure>
+            <p>Red and orange, as warm-toned colors, evoke strong emotions and attract attention. They enhance visual
+                appeal, guide user interaction, and contribute to brand consistency across the platform.</p>
         </section>
 
         <section id="button-styles" class="block m-y-3" aria-labelledby="btn-title">
-            <h2 id="btn-title" class="m-y-2">
-                Button Styles（按钮样式与状态）
-            </h2>
-            <div class="button-example m-y-2">
-                <h3>Primary Button（主要行动）</h3>
-                <div class="demo-row">
-                    <button class="button primary" type="button">
-                        Join Now
-                    </button>
-                    <button class="button primary" type="button" disabled>
-                        Join Now
-                    </button>
-                </div>
-            </div>
+            <h2 id="btn-title" class="m-y-2">Button Styles</h2>
+            <section class="button-showcase">
+                <div class="button-grid">
+                    <div class="demo-card">
+                        <h3>Primary Button (Default)</h3>
+                        <button class="button primary">Join Now</button>
+                        <p>The main call-to-action for primary user tasks. Uses a high-contrast color and bold label to
+                            draw immediate attention.</p>
+                    </div>
 
-            <div class="button-example m-y-2">
-                <h3>Secondary / Ghost</h3>
-                <div class="demo-row">
-                    <button class="button" type="button">Read More</button>
-                    <a class="button ghost" href="#forms" role="button" aria-label="Jump to forms section">See Form</a>
+                    <div class="demo-card">
+                        <h3>Secondary Button (Default)</h3>
+                        <button class="button secondary">Read More</button>
+                        <p>A lower-priority action. Neutral tones maintain visual hierarchy while providing clear
+                            interactive feedback.</p>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>Danger Button (Default)</h3>
+                        <button class="button danger">Delete</button>
+                        <p>Used for destructive or irreversible actions. The alert color signals caution and demands
+                            deliberate user attention.</p>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>Primary Button (Hover)</h3>
+                        <button class="button primary is-hover">Join Now</button>
+                        <p>Demonstrates the hover state for presentation purposes. Slightly brightened color reinforces
+                            interactivity on focus or pointer hover.</p>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>Secondary Button (Pressed)</h3>
+                        <button class="button secondary is-pressed">Read More</button>
+                        <p>Shows the pressed or active state. A subtle scale-down and shadow reduction convey tactile
+                            feedback when clicked.</p>
+                    </div>
+
+                    <div class="demo-card">
+                        <h3>Danger Button (Disabled)</h3>
+                        <button class="button danger" disabled>Delete</button>
+                        <p>Represents an unavailable or inactive action. Reduced contrast and disabled pointer events
+                            prevent unintended interaction.</p>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
 
-        <!-- ===== Forms 分区（IA4 要求：含 Demo 与 Community API 表单） ===== -->
         <section id="forms" class="block m-y-3" aria-labelledby="forms-title">
-            <h2 id="forms-title" class="m-y-2">Forms</h2>
+            <h2 id="forms-title" class="m-y-1">Forms Demo</h2>
+            <p>The "Community Form" is a registration form for joining the community, where users can enter their name,
+                email, message, and optionally upload a photo, and forms including API submission feedback.</p>
             <article class="m-y-2" aria-labelledby="api-form-title">
                 <h3 id="api-form-title">Community Form</h3>
                 <form id="community-form" enctype="multipart/form-data">
@@ -231,7 +205,7 @@
                 <p id="form-feedback" class="live" role="status" aria-live="polite"></p>
             </article>
         </section>
-    <script type="module" src="js/behavioural_design.js"></script>
+        <script type="module" src="js/behavioural_design.js"></script>
 </body>
 
 </html>
