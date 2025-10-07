@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/";
         const HEADERS = {
             student_number: "s4929713",
-            uqcloud_zone_id: "https://deco7140-0ba79392.uqcloud.net",
+            uqcloud_zone_id: "0ba79392",
         };
         list.innerHTML = `<p class="note">Loading community members…</p>`;
 
