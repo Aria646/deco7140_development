@@ -1,0 +1,31 @@
+:root {
+    --primary-color: #d8a7b1;
+    --secondary-color: #ff8aa5;
+    --accent-color: #fce8e6;
+    --text-color: #1a1a1a;
+}
+
+body {
+    font-family: "Delius", sans-serif;
+}
+
+h1 {
+    font-size: 4.2rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

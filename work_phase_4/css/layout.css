@@ -1,0 +1,19 @@
+.container {
+    min-height: 100vh;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 70vw;
+    }
+}
+
+:root {
+    --spacing-1: 1rem;
+    --spacing-2: 2rem;
+    --spacing-3: 3rem;
+    --spacing-4: 4rem;
+    --spacing-5: 5rem;
+}
