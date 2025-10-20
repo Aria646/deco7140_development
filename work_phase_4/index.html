@@ -1,73 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/page_css/index.css" />
 
-    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+    </style>
+    <title>QuickBite - Homepage</title>
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <h1></h1>
-        </div>
-        <nav aria-label="Main Navigation">
-            <ul class="menu">
-                <li class="nav-avtive"><a href="index.html">Home Page</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="ingredient.html">Ingredients</a></li>
-                <li><a href="food_news.html">Food News</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-            </ul>
-        </nav>
-        <div id="login">
-            <button>Login</button>
-            <a href="sign_up.html"><button>Sign Up</button></a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Return to homepage">QuickBite</a>
+
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open main navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" aria-current="page">Homepage</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="news.html">Food news</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="submit.html">Share You Recipes</a>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-small js-login-trigger">Login</button>
+                <button class="btn btn-small js-signup-trigger">Sign Up</button>
+            </div>
         </div>
     </header>
-    <nav id="nav-mobile" aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html"><span class="icon">🏠</span></a></li>
-            <li><a href="recipes.html"><span class="icon">📖</span></a></li>
-            <li><a href="ingredient.html"><span class="icon">🥕</span></a></li>
-            <li><a href="food_news.html"><span class="icon">📰</span></a></li>
-            <li><a href="forum.html"><span class="icon">💬</span></a></li>
-            <li><a href="about_us.html"><span class="icon">👩‍🍳</span></a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <div>
-                <h2></h2>
-                <p>
-                </p>
+
+    <main class="container" id="main">
+        <section class="hero" aria-label="Homepage Hero Section">
+            <div id="hero-carousel" class="carousel" aria-roledescription="carousel"
+                aria-label="Featured Recommendations">
+                <div class="carousel-inner" role="group" aria-live="polite">
+                    <div class="carousel-item is-active" data-index="0"
+                        style="background-image:url('images/hero1.png')">
+                        <div class="carousel-caption">
+                            <h2>Explore Seasonal Flavors</h2>
+                            <p>Discover the freshest ingredients and the most creative cooking ideas.</p>
+                            <a class="btn_c" href="recipes.html">View Recipes</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="1" style="background-image:url('images/hero2.png')">
+                        <div class="carousel-caption">
+                            <h2>Global Culinary Journey</h2>
+                            <p>Recreate classic dishes from around the world in your own kitchen.</p>
+                            <a class="btn_c" href="news.html">Start Learning</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-index="2" style="background-image:url('images/hero3.png')">
+                        <div class="carousel-caption">
+                            <h2>Join Our Food Community</h2>
+                            <p>Share your cooking stories, learn new tips, and connect with food lovers from everywhere.
+                            </p>
+                            <a class="btn_c" href="forum.html">Visit Forum</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Previous (←)" data-action="prev">&#10094;</button>
+                    <button class="carousel-btn next" aria-label="Next (→)" data-action="next">&#10095;</button>
+                </div>
+
+                <div class="carousel-indicators" role="tablist" aria-label="Carousel indicators"></div>
+            </div>
+        </section>
+
+
+        <section class="featured-recipes container" aria-labelledby="sec-recipes">
+            <h2 id="sec-recipes">Featured Recipes</h2>
+            <div class="recipe-grid">
+                <article class="recipe-card" data-category="Homestyle">
+                    <img src="images/recipes1.jpg"
+                        alt="A black ceramic bowl filled with baked eggplant in tomato sauce, topped with cheese and basil leaves, served with purple cabbage salad on the side."
+                        class="card-img">
+                    <div class="card-body">
+                        <span class="card-category">Homestyle</span>
+                        <h3 class="card-title"><a href="recipe-detail.html">Baked Eggplant with Tomato Sauce</a>
+                        </h3>
+                        <p class="card-excerpt">Rich tomato and herb layers baked to perfection.</p>
+                        <div class="card-meta"><span>30 Minutes</span><span>Serves 3-4</span></div>
+                    </div>
+                </article>
+
+                <article class="recipe-card" data-category="Lunch">
+                    <img src="images/recipes2.png"
+                        alt="A table spread featuring roast duck, BBQ pork, greens, and bowls of rice noodles in clear broth, all with a glossy golden finish."
+                        class="card-img">
+                    <div class="card-body">
+                        <span class="card-category">Lunch</span>
+                        <h3 class="card-title"><a href="recipe-detail.html">Roasted Meat and Rice Noodle Combo</a>
+                        </h3>
+                        <p class="card-excerpt">Crispy roast duck and BBQ pork paired with light noodle soup.</p>
+                        <div class="card-meta"><span>45 Minutes</span><span>Serves 3-4</span></div>
+                    </div>
+                </article>
+
+                <article class="recipe-card" data-category="Side Dish">
+                    <img src="images/recipes3.jpg"
+                        alt="Large glass jars filled with cabbage, carrots, and lemon slices, with a bowl of freshly cut pumpkin nearby."
+                        class="card-img">
+                    <div class="card-body">
+                        <span class="card-category">Side Dish</span>
+                        <h3 class="card-title"><a href="recipe-detail.html">Homemade Pickled Vegetables</a></h3>
+                        <p class="card-excerpt">Light, crisp, and refreshing — perfect as a side or a healthy snack.</p>
+                        <div class="card-meta"><span>30 Minutes</span><span>Keeps for up to one month</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="latest-news container" aria-labelledby="sec-news">
+            <h2 id="sec-news">Latest Food News</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="images/news4.jpg"
+                        alt="A baked eggplant dish with salad served on a wooden board under warm lighting, creating a cozy dining atmosphere."
+                        class="card-img">
+                    <div class="card-body">
+                        <span class="card-category">New Dishes</span>
+                        <h3 class="card-title"><a href="news-article.html">Restaurant Launches New Dishs</a>
+                        </h3>
+                        <p class="card-excerpt">The new menu highlights healthy, homestyle flavours and gains great
+                            reviews.</p>
+                        <div class="card-meta"><time datetime="2024-10-26">26 October 2024</time></div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="images/news5.jpg"
+                        alt="A box neatly arranged with rice cakes and red bean pastries, sprinkled with osmanthus flowers and syrup."
+                        class="card-img">
+                    <div class="card-body">
+                        <span class="card-category">Food Trends</span>
+                        <h3 class="card-title"><a href="news-article.html">Revival of Traditional Chinese
+                                Pastries</a></h3>
+                        <p class="card-excerpt">Handmade sticky rice cakes spark a sweet revival of traditional
+                            desserts.</p>
+                        <div class="card-meta"><time datetime="2024-10-20">20 October 2024</time></div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="images/news6.jpg"
+                        alt="A pot of red spicy hotpot filled with chilies and ingredients, accompanied by sliced lamb rolls and dipping sauce bowls."
+                        class="card-img">
+                    <div class="card-body">
+                        <span class="card-category">Food Trends</span>
+                        <h3 class="card-title"><a href="news-article.html">Hotpot Season Returns</a></h3>
+                        <p class="card-excerpt">A winter essential — spicy broth bubbling with rich aromas.</p>
+                        <div class="card-meta"><time datetime="2024-10-26">26 October 2024</time></div>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
+
     <footer>
         <div class="footer-title">
             <div class="footer-title-left">
-                <img src="images/heart.png" alt="Heart">
-                <span></span>
+                <img src="images/H.png" alt="Heart">
+                <span>QuickBite</span>
             </div>
-            <span></span>
+            <span>Click here to follow us</span>
         </div>
         <div class="footer-bottom">
-            <span></span>
+            <span>© 2021 QuickBite. All rights reserved.</span>
             <div class="social-media">
-                <a href=""><img src="images/icon_f.png" alt="facebook"></a>
-                <a href=""><img src="images/icon_i.png" alt="instagram"></a>
-                <a href=""><img src="images/icon_t.png" alt="twitter"></a>
+                <a href=""><img src="images/FB.png" alt="Facebook"></a>
+                <a href=""><img src="images/INS.png" alt="Instagram"></a>
+                <a href=""><img src="images/X.png" alt="X"></a>
             </div>
     </footer>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="signup-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-signup">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-signup">Join Our Community</h1>
+                    <form id="community-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email:</label>
+                            <input id="signup-email" type="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Photo (optional):</label>
+                            <input id="photo" type="file" name="photo" accept="image/*" />
+                        </div>
+                        <button type="submit" class="btn_l">Submit</button>
+                    </form>
+                    <p class="have-account">
+                        <a href="#" aria-label="Login">Already have an account?</a>
+                    </p>
+                    <p id="form-feedback" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/carousel.js"></script>
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/setting.js"></script>
 </body>
 
 </html>
