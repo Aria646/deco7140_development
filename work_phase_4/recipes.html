@@ -1,73 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/page_css/recipes.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/page_css/index.css">
+    <link rel="stylesheet" href="css/page_css/recipes.css">
 
-    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+    </style>
+    <title>QuickBite - All Recipes</title>
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <h1></h1>
-        </div>
-        <nav aria-label="Main Navigation">
-            <ul class="menu">
-                <li><a href="index.html">Home Page</a></li>
-                <li class="nav-avtive"><a href="recipes.html">Recipes</a></li>
-                <li><a href="ingredient.html">Ingredients</a></li>
-                <li><a href="food_news.html">Food News</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-            </ul>
-        </nav>
-        <div id="login">
-            <button>Login</button>
-            <a href="sign_up.html"><button>Sign Up</button></a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Return to homepage">QuickBite</a>
+
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open main navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+                    <li><a href="news.html">Food news</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="submit.html">Share You Recipes</a>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-small js-login-trigger">Login</button>
+                <button class="btn btn-small js-signup-trigger">Sign Up</button>
+            </div>
         </div>
     </header>
-    <nav id="nav-mobile" aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html"><span class="icon">🏠</span></a></li>
-            <li><a href="recipes.html"><span class="icon">📖</span></a></li>
-            <li><a href="ingredient.html"><span class="icon">🥕</span></a></li>
-            <li><a href="food_news.html"><span class="icon">📰</span></a></li>
-            <li><a href="forum.html"><span class="icon">💬</span></a></li>
-            <li><a href="about_us.html"><span class="icon">👩‍🍳</span></a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>Recipes</h2>
-            <p></p>
-        </section>
+
+    <main id="main" class="container">
+        <header class="page-header">
+            <h1>All Recipes</h1>
+            <p class="page-intro">Filter by category and discover your next inspiration.</p>
+        </header>
+
+        <div class="filter-controls" role="toolbar" aria-label="Recipe Filter">
+            <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="breakfast" aria-pressed="false">Breakfast</button>
+            <button class="filter-btn" data-filter="homestyle" aria-pressed="false">Homestyle</button>
+            <button class="filter-btn" data-filter="Popular" aria-pressed="false">Popular</button>
+            <button class="filter-btn" data-filter="Baking" aria-pressed="false">Baking</button>
+            <button class="filter-btn" data-filter="For Kids" aria-pressed="false">For Kids</button>
+        </div>
+
+        <div class="recipe-grid" id="recipe-grid">
+            <article class="recipe-card" data-category="breakfast">
+                <img src="images/Breakfast1.png" alt="Japanese Egg Rice Set" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Breakfast</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Japanese Egg Rice Set</a></h3>
+                    <p class="card-excerpt">Warm rice with a fluffy omelette, paired with miso soup and beans — a
+                        comforting start
+                        to your day.</p>
+                    <div class="card-meta"><span>15 min</span><span>1 serving</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="breakfast">
+                <img src="images/Breakfast3.png" alt="Avocado Egg Toast" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Breakfast</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Avocado Egg Toast</a></h3>
+                    <p class="card-excerpt">A crisp slice of bread topped with creamy avocado and sunny-side eggs —
+                        simple yet full of morning energy.</p>
+                    <div class="card-meta"><span>10 min</span><span>2 servings</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="breakfast">
+                <img src="images/Breakfast2.png" alt="Soy Milk and Fried Dough" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Breakfast</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Soy Milk & Fried Dough</a></h3>
+                    <p class="card-excerpt">Classic Chinese breakfast combo — silky soy milk with crispy fried dough
+                        sticks for a
+                        satisfying bite.</p>
+                    <div class="card-meta"><span>12 min</span><span>2 servings</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="homestyle">
+                <img src="images/Homestyle1.png" alt="Stir-Fried Chicken with Green Peppers" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Homestyle</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Stir-Fried Chicken with Green Peppers</a></h3>
+                    <p class="card-excerpt">
+                        Tender chicken pieces stir-fried with crisp green peppers and bamboo shoots in a savory chili
+                        sauce — a
+                        classic home-style favorite full of spice and flavor.
+                    </p>
+                    <div class="card-meta"><span>20 min</span><span>2 servings</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="Popular">
+                <img src="images/Popular1.png" alt="Homemade Hotpot" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Popular</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Homemade Hotpot</a></h3>
+                    <p class="card-excerpt">A hearty pot of soup with fresh ingredients — everything prepared by hand
+                        for the
+                        perfect cozy meal.</p>
+                    <div class="card-meta"><span>60 min</span><span>4 servings</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="homestyle">
+                <img src="images/Homestyle2.png" alt="Mapo Tofu" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Homestyle</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Mapo Tofu</a></h3>
+                    <p class="card-excerpt">
+                        Soft tofu simmered in spicy Sichuan sauce with minced meat and green onions — rich, fragrant,
+                        and
+                        comforting, perfect with a bowl of steamed rice.
+                    </p>
+                    <div class="card-meta"><span>25 min</span><span>3 servings</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="Popular">
+                <img src="images/Popular2.png" alt="Braised Pork Belly" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Popular</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Braised Pork Belly</a></h3>
+                    <p class="card-excerpt">Tender pork belly slow-cooked in rich soy sauce until golden, fragrant, and
+                        melt-in-your-mouth delicious.</p>
+                    <div class="card-meta"><span>90 min</span><span>3-4 servings</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="Baking">
+                <img src="images/Baking.png" alt="Blueberry Cake" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">Baking</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Blueberry Cake</a></h3>
+                    <p class="card-excerpt">Soft and fluffy sponge cake with bursts of fresh blueberries — a sweet
+                        balance of tart
+                        and creamy flavors.</p>
+                    <div class="card-meta"><span>45 min</span><span>8 slices</span></div>
+                </div>
+            </article>
+
+            <article class="recipe-card" data-category="For Kids">
+                <img src="images/For Kids.png" alt="Pumpkin Millet Porridge" class="card-img" />
+                <div class="card-body">
+                    <span class="card-category">For Kids</span>
+                    <h3 class="card-title"><a href="recipe-detail.html">Pumpkin Millet Porridge</a></h3>
+                    <p class="card-excerpt">Smooth, sweet, and golden — this nutritious porridge combines pumpkin and
+                        millet for a
+                        comforting family meal.</p>
+                    <div class="card-meta"><span>30 min</span><span>2 bowls</span></div>
+                </div>
+            </article>
+        </div>
+        <div class="footer-spacer"></div>
     </main>
-    <div class="mobile-footer-spacer"></div>
+
+
     <footer>
         <div class="footer-title">
             <div class="footer-title-left">
-                <img src="images/heart.png" alt="Heart">
-                <span></span>
+                <img src="images/H.png" alt="Heart">
+                <span>QuickBite</span>
             </div>
-            <span></span>
+            <span>Click here to follow us</span>
         </div>
         <div class="footer-bottom">
-            <span></span>
+            <span>© 2021 QuickBite. All rights reserved.</span>
             <div class="social-media">
-                <a href=""><img src="images/icon_f.png" alt="Facebook"></a>
-                <a href=""><img src="images/icon_i.png" alt="instagram"></a>
-                <a href=""><img src="images/icon_t.png" alt="twitter"></a>
+                <a href=""><img src="images/FB.png" alt="Facebook"></a>
+                <a href=""><img src="images/INS.png" alt="Instagram"></a>
+                <a href=""><img src="images/X.png" alt="X"></a>
             </div>
     </footer>
-    <script type="module" src="js/recipes.js"></script>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="signup-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-signup">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-signup">Join Our Community</h1>
+                    <form id="community-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email:</label>
+                            <input id="signup-email" type="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Photo (optional):</label>
+                            <input id="photo" type="file" name="photo" accept="image/*" />
+                        </div>
+                        <button type="submit" class="btn_l">Submit</button>
+                    </form>
+                    <p class="have-account">
+                        <a href="#" aria-label="Login">Already have an account?</a>
+                    </p>
+                    <p id="form-feedback" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/filters.js"></script>
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/setting.js"></script>
 </body>
 
 </html>
