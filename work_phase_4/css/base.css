@@ -2,12 +2,14 @@
     --primary-color: #ff8c42;
     --secondary-color: #1a1a1a;
     --accent-color: #81c784;
-    --text-color-1: #FDF5E6;
+    --text-color-1: #fdf5e6;
     --color-bottom: #909090;
     --color-bottom-2: #e5e5e5;
 
     --font-heading: "Ruthie", serif;
     --font-body: "Gloria Hallelujah", sans-serif;
+    --font-text:"Comic Relief", sans-serif;
+    --font-title:"Courgette", sans-serif;
 
     --radius: 10px;
     --space: 8px;
@@ -20,7 +22,7 @@
 body {
     background: var(--color-background);
     color: var(--color-text);
-    font-family: var(--font-body);
+    font-family: var(--font-text);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -35,8 +37,11 @@ a:hover {
     color: var(--accent-color);
 }
 
-h1, h2, h3, h4 {
-    font-family: var(--font-heading);
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-title);
     line-height: 1.25;
 }
 
@@ -60,8 +65,10 @@ h1, h2, h3, h4 {
 }
 
 .btn-small {
-    padding: 8px 12px;
-    font-size: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.85rem;
+    font-size: 1.25rem;
+    line-height: 1;
 }
 
 .page-header {
