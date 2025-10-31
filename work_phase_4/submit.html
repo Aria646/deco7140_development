@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/page_css/index.css" />
+    <link rel="stylesheet" href="css/page_css/submit.css" />
+    <link rel="stylesheet" href="css/page_css/recipes.css" />
+    <link rel="stylesheet" href="css/page_css/forum.css" />
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
@@ -18,6 +21,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
     </style>
+
     <title>QuickBite - Share You Recipes</title>
 </head>
 
@@ -50,8 +54,75 @@
         </div>
     </header>
 
-    <main class="container" id="main">
+    <section class="sub-hero">
+        <div class="container sub-hero-inner">
+            <div class="emoji" aria-hidden="true">📖🥄</div>
+            <div>
+                <h1>Share Your Creation</h1>
+                <p class="lead">Upload your proudest recipe or food story and let more people see your inspiration.</p>
+            </div>
+        </div>
+    </section>
 
+    <main id="main" class="container submit-grid">
+        <section class="card submit-card" aria-labelledby="form-title">
+            <h2 id="form-title" class="card-title">Submission Form</h2>
+
+            <form id="submission-form" novalidate>
+                <div class="form-row">
+                    <label for="title">Title<span aria-hidden="true"> *</span></label>
+                    <input type="text" id="title" name="title" required minlength="3" aria-describedby="title-help" />
+                    <div class="help" id="title-help">At least 3 characters</div>
+                    <span class="error" id="title-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-row">
+                    <label for="category">Category<span aria-hidden="true"> *</span></label>
+                    <select id="category" name="category" required>
+                        <option value="">Please select</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                    <span class="error" id="category-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-row">
+                    <label for="content">Content<span aria-hidden="true"> *</span></label>
+                    <textarea id="content" name="content" rows="8" required minlength="20"
+                        aria-describedby="content-help"></textarea>
+                    <div class="help" id="content-help">At least 20 characters; recipe steps recommended.</div>
+                    <span class="error" id="content-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- image -->
+                <div class="form-row">
+                    <span class="label">Image (optional)</span>
+                    <label class="dropzone" id="dropzone" for="photo">
+                        <input type="file" id="photo" name="photo" accept="image/*" />
+                        <div class="dz-inner">
+                            <div class="dz-icon" aria-hidden="true">📸</div>
+                            <p class="dz-text">Drag an image here, or <span class="dz-link">click to choose</span></p>
+                            <p class="dz-hint">Supports JPG/PNG, &lt; 5 MB</p>
+                        </div>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn_cn">Submit</button>
+                <div class="status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <aside class="card preview-card" aria-labelledby="preview-title">
+            <h2 id="preview-title" class="card-title">Live Preview</h2>
+            <figure class="preview-figure">
+                <img id="preview-img" src="../assets/images/placeholder.jpg" alt="Preview image" />
+                <figcaption id="preview-cat" class="pill">Uncategorized</figcaption>
+            </figure>
+            <h3 id="preview-title-text" class="preview-title">Your title will appear here</h3>
+            <p id="preview-excerpt" class="preview-excerpt">The first few lines of your content will appear here so you
+                can check layout and line breaks.</p>
+        </aside>
     </main>
 
     <footer>
@@ -130,6 +201,8 @@
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/modal.js"></script>
     <script type="module" src="js/setting.js"></script>
+    <script type="module" src="js/form-validation.js"></script>
+    <script type="module" src="js/submit.js"></script>
 </body>
 
 </html>

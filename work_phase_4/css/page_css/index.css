@@ -155,12 +155,13 @@
     font-size: 2.25rem;
 }
 
-.btn_l {
+.btn_l,
+.btn_t {
     display: block;
     margin: 1rem auto; 
     width: 20vw;
     text-align: center;
-    color: var(--text-color-1);
+    color: var(--secondary-color);
     border: 0;
     padding: 12px 0;
     font-weight: 600;
@@ -172,8 +173,15 @@
     transition: background var(--transition), transform var(--transition);
 }
 
-.btn_l:hover {
+.btn_t{
+        width: 60vw;
+}
+
+.btn_l:hover,
+.btn_t:hover {
     background: var(--accent-color);
     color: var(--text-color-1);
     transform: translateY(-1px);
 }
+
+

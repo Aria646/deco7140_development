@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/page_css/index.css" />
+    <link rel="stylesheet" href="css/page_css/forum.css" />
+        <link rel="stylesheet" href="css/page_css/recipes.css" />
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
@@ -50,9 +52,179 @@
         </div>
     </header>
 
-    <main class="container" id="main">
+    <main id="main" class="container forum-grid">
+        <section class="forum-main">
+            <header class="page-header">
+                <h1>Community Forum</h1>
+                <p class="page-intro">Browse discussions by section. Click a category to expand / collapse its thread
+                    list.</p>
+            </header>
 
+            <section class="accordion" data-single="true">
+                <!-- Cooking Tips -->
+                <div class="acc-item">
+                    <h2 class="acc-header">
+                        <button id="acc-btn-1" class="acc-trigger" aria-expanded="true" aria-controls="acc-panel-1">
+                            Cooking Tips <span class="count">23 topics</span>
+                        </button>
+                    </h2>
+                    <div id="acc-panel-1" class="acc-panel" role="region" aria-labelledby="acc-btn-1">
+                        <div class="thread-list">
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Mastering sourdough starter</a></h3>
+                                <p class="thread-meta">12 replies · Last reply 3 h ago · Posted by BreadGeek</p>
+                            </article>
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Why your omelette tears</a></h3>
+                                <p class="thread-meta">8 replies · Last reply 45 min ago · Posted by SunnySideUp</p>
+                            </article>
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Low-temp poaching cheat sheet</a></h3>
+                                <p class="thread-meta">5 replies · Last reply 10 min ago · Posted by SousVideSensei</p>
+                            </article>
+                        </div>
+                        <div class="acc-actions">
+                            <button class="btn_cn">Post New Topic</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Recommendations -->
+                <div class="acc-item">
+                    <h2 class="acc-header">
+                        <button id="acc-btn-2" class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-2">
+                            Restaurant Recommendations <span class="count">18 topics</span>
+                        </button>
+                    </h2>
+                    <div id="acc-panel-2" class="acc-panel" role="region" aria-labelledby="acc-btn-2" hidden>
+                        <div class="thread-list">
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Sydney: best pho under $15</a></h3>
+                                <p class="thread-meta">14 replies · Last reply 2 h ago · Posted by NoodleHunter</p>
+                            </article>
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Tokyo ramen crawl 2025 update</a></h3>
+                                <p class="thread-meta">19 replies · Last reply 1 day ago · Posted by SlurpKing</p>
+                            </article>
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Brisbane vegan brunch spots</a></h3>
+                                <p class="thread-meta">7 replies · Last reply 25 min ago · Posted by PlantPowered</p>
+                            </article>
+                        </div>
+                        <div class="acc-actions">
+                            <button class="btn_cn">Post New Topic</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase -->
+                <div class="acc-item">
+                    <h2 class="acc-header">
+                        <button id="acc-btn-3" class="acc-trigger" aria-expanded="false" aria-controls="acc-panel-3">
+                            Showcase <span class="count">32 topics</span>
+                        </button>
+                    </h2>
+                    <div id="acc-panel-3" class="acc-panel" role="region" aria-labelledby="acc-btn-3" hidden>
+                        <div class="thread-list">
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">72-layer croissant with chocolate swirl</a></h3>
+                                <p class="thread-meta">28 replies · Last reply 8 min ago · Posted by PastryPilot</p>
+                            </article>
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Galaxy mirror-glaze entremet</a></h3>
+                                <p class="thread-meta">11 replies · Last reply 3 h ago · Posted by CakeCosmos</p>
+                            </article>
+                            <article class="thread-item">
+                                <h3 class="thread-title"><a href="#">Weekend sushi platter (nigiri & rolls)</a></h3>
+                                <p class="thread-meta">18 replies · Last reply 6 h ago · Posted by RollWithIt</p>
+                            </article>
+                        </div>
+                        <div class="acc-actions">
+                            <button class="btn_cn">Post New Topic</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="latest-threads">
+                <h2 class="lt-title">Latest Threads</h2>
+                <ul class="lt-list" role="list">
+                    <li class="lt-item">
+                        <a href="#" class="lt-link">Quick 15-minute spicy tofu stir-fry</a>
+                        <span class="lt-meta">· 5 min ago · 2 replies</span>
+                    </li>
+                    <li class="lt-item">
+                        <a href="#" class="lt-link">Buying a decent knife set under $100</a>
+                        <span class="lt-meta">· 30 min ago · 9 replies</span>
+                    </li>
+                    <li class="lt-item">
+                        <a href="#" class="lt-link">Melbourne coffee guide: hidden laneway roasters</a>
+                        <span class="lt-meta">· 2 h ago · 4 replies</span>
+                    </li>
+                    <li class="lt-item">
+                        <a href="#" class="lt-link">Homemade kimchi: fermentation timeline and tips</a>
+                        <span class="lt-meta">· 6 h ago · 13 replies</span>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <aside class="forum-side" aria-label="Sidebar">
+            <section class="side-card">
+                <h3>Popular Tags</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag"># Homestyle</a>
+                    <a href="#" class="tag"># Dessert</a>
+                    <a href="#" class="tag"># Low-fat</a>
+                    <a href="#" class="tag"># Late-night</a>
+                    <a href="#" class="tag"># Bread</a>
+                    <a href="#" class="tag"># Seafood</a>
+                </div>
+            </section>
+
+            <section class="side-card_2">
+                <h3>Community Notice</h3>
+                <p class="notice">Feel free to share original content—please credit the source when reposting. Follow
+                    our code of conduct.</p>
+                <a class="btn_cb" href="#">View Rules</a>
+            </section>
+
+            <section class="side-card">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="#">Start a Poll</a></li>
+                    <li><a href="#">This Week's Highlights</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </section>
+        </aside>
     </main>
+
+    <!-- New Thread Form -->
+    <section class="container new-thread">
+        <h2>Post a New Topic</h2>
+        <form id="thread-form" novalidate>
+            <div class="form-row">
+                <label for="thread-category">Category</label>
+                <select id="thread-category" name="category">
+                    <option value="skill">Cooking Tips</option>
+                    <option value="restaurant">Restaurant Recommendations</option>
+                    <option value="showcase">Showcase</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="thread-title">Title</label>
+                <input type="text" id="thread-title" required minlength="3" />
+            </div>
+            <div class="form-row">
+                <label for="thread-content">Content</label>
+                <textarea id="thread-content" rows="6" required minlength="10"></textarea>
+            </div>
+            <button type="submit" class="btn_t">Publish</button>
+            <div id="thread-status" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+    </section>
+
 
     <footer>
         <div class="footer-title">
@@ -130,6 +302,8 @@
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/modal.js"></script>
     <script type="module" src="js/setting.js"></script>
+    <script type="module" src="js/accordion.js"></script>
+    <script type="module" src="js/forum-post.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/page_css/index.css" />
+    <link rel="stylesheet" href="css/page_css/recipes.css" />
+    <link rel="stylesheet" href="css/page_css/submit.css" />
+    <link rel="stylesheet" href="css/page_css/forum.css" />
+    <link rel="stylesheet" href="css/page_css/news.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    </style>
+    <title>QuickBite - Homepage</title>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Return to homepage">QuickBite</a>
+
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open main navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+                    <li><a href="news.html">Food news</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="submit.html">Share You Recipes</a>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-small js-login-trigger">Login</button>
+                <button class="btn btn-small js-signup-trigger">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <article class="recipe-detail">
+            <header class="recipe-hero" style="background-image:url('images/Breakfast1.png')">
+                <div class="recipe-hero__mask"></div>
+                <div class="container recipe-hero_inner">
+                    <p class="recipe-tag">Breakfast</p>
+                    <h1>Japanese Egg Rice Set</h1>
+                    <p class="recipe-meta">Prep: 15 min · Cook: 15 min · Serves 1</p>
+                </div>
+            </header>
+
+            <div class="container recipe-body">
+                <section aria-labelledby="ing-title" class="recipe-panel">
+                    <h2 id="ing-title">Ingredients</h2>
+                    <ul class="ing-list">
+                        <li>Warm steamed rice, 1 bowl</li>
+                        <li>2 eggs (for a fluffy omelette)</li>
+                        <li>1 bowl miso soup (with tofu and spring onion)</li>
+                        <li>1 small portion of mixed beans or side dish</li>
+                        <li>Black sesame, soy sauce to taste</li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="steps-title" class="recipe-panel recipe-panel--main">
+                    <h2 id="steps-title">Directions</h2>
+                    <ol class="step-list">
+                        <li>Cook the rice first and keep it warm.</li>
+                        <li>Beat the eggs with a pinch of salt, then pan-fry on low heat to make a soft omelette.</li>
+                        <li>Plate: put the rice in a bowl, place the omelette on top and sprinkle black sesame.</li>
+                        <li>Serve with hot miso soup and the bean/side dish.</li>
+                    </ol>
+                </section>
+
+                <section aria-labelledby="tips-title" class="recipe-panel recipe-panel--full">
+                    <h2 id="tips-title">Tips</h2>
+                    <p>To match the warm, painterly look of the image, you can add a little carrot, pumpkin, or yellow
+                        miso to bring out warmer tones.</p>
+                </section>
+            </div>
+        </article>
+    </main>
+
+
+    <footer>
+        <div class="footer-title">
+            <div class="footer-title-left">
+                <img src="images/H.png" alt="Heart">
+                <span>QuickBite</span>
+            </div>
+            <span>Click here to follow us</span>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2021 QuickBite. All rights reserved.</span>
+            <div class="social-media">
+                <a href=""><img src="images/FB.png" alt="Facebook"></a>
+                <a href=""><img src="images/INS.png" alt="Instagram"></a>
+                <a href=""><img src="images/X.png" alt="X"></a>
+            </div>
+    </footer>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="signup-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-signup">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-signup">Join Our Community</h1>
+                    <form id="community-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email:</label>
+                            <input id="signup-email" type="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Photo (optional):</label>
+                            <input id="photo" type="file" name="photo" accept="image/*" />
+                        </div>
+                        <button type="submit" class="btn_l">Submit</button>
+                    </form>
+                    <p class="have-account">
+                        <a href="#" aria-label="Login">Already have an account?</a>
+                    </p>
+                    <p id="form-feedback" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/carousel.js"></script>
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/setting.js"></script>
+</body>
+
+</html>
