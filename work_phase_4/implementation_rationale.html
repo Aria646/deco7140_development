@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/page_css/index.css" />
+    <link rel="stylesheet" href="css/page_css/news.css" />
+    <link rel="stylesheet" href="css/page_css/forum.css" />
+    <link rel="stylesheet" href="css/page_css/recipes.css" />
+    <link rel="stylesheet" href="css/page_css/genai_mt_acknowledgement.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    </style>
+    <title>QuickBite - Homepage</title>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Return to homepage">QuickBite</a>
+
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open main navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="news.html">Food news</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="submit.html">Share You Recipes</a>
+                    <li><a href="implementation_rationale.html" aria-current="page">Implementation</a>
+                    <li><a href="genai_mt_acknowledgement.html">GenAi</a>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-small js-login-trigger">Login</button>
+                <button class="btn btn-small js-signup-trigger">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <div class="article-layout">
+            <article class="main-article">
+                <h2>Implementation Rationale</h2>
+                <h3>Alignment with Client and User Needs</h3>
+                <p>This community-based recipe and food-sharing platform was developed under the framework set in the A3
+                    Design Proposal and was informed by user insights gathered during the A2 research phase. The overall
+                    design follows a <em>value-need-feature</em> alignment approach: maintaining visual consistency and
+                    multi-device responsiveness on the one hand, and delivering an inclusive digital experience for real
+                    community scenarios on the other.</p>
+                <p>The project primarily targets three user groups:</p>
+                <ul>
+                    <li>time-constrained office workers;</li>
+                    <li>users with visual impairments or who rely on assistive technologies;</li>
+                    <li>busy parents.</li>
+                </ul>
+                <p>A2 findings showed that these users commonly prioritise: clear and predictable navigation,
+                    mobile-friendly layouts, fast access to core content, and community features that support
+                    interaction and sharing.</p>
+                <p>The final implementation also aligns with the three key priorities of the Connect Communities
+                    Initiative (CCI):</p>
+                <ul>
+                    <li> <strong>Social Cohesion:</strong> public forums and discussion areas allow users to ask
+                        questions, share cooking tips, and post local events, extending online interaction into offline
+                        community participation.</li>
+                    <li> <strong>Cultural Inclusivity:</strong> food ingredients, imagery, and copy include
+                        multicultural elements, encouraging users to upload personal or family recipes and to build a
+                        shared space that respects diversity.</li>
+                    <li><strong>Digital Inclusion:</strong> the site follows WCAG 2.2 AA, using semantic HTML,
+                        keyboard-accessible layouts, descriptive alt text, and reserving the ability to add multilingual
+                        support in the future.</li>
+                </ul>
+                <p>To operationalise these goals, the final interface includes:</p>
+                <ul>
+                    <li>shortcut entries in the homepage carousel (e.g. “View Recipes”, “Start Learning”, “Visit Forum”)
+                        to lower the entry barrier for first-time visitors;</li>
+                    <li>open access to browsing and reading tasks without forcing login; login is only required when
+                        users create content (comment, submit recipe), balancing accessibility with security/identity;
+                    </li>
+                    <li>comment and recipe-submission components to support user-generated content;</li>
+                    <li>full mobile-responsive optimisation so navigation, cards, and modals remain usable on small
+                        screens.</li>
+                </ul>
+                <p>Overall, the platform's functionality, information architecture, and visual tone are consistent with
+                    CCI's social mission: by combining inclusive technology with culturally sensitive UI, it promotes
+                    connection, increases participation, and creates a sustained sense of belonging.</p>
+
+                <h3>Accessibility and Ethical Considerations</h3>
+                <p>Accessibility and ethics were positioned as front-loaded principles from the A2 stage and were
+                    further refined in A3, reflecting an emphasis on fairness, inclusion, and transparency.</p>
+                <h4>Accessibility Strategies</h4>
+                <ul>
+                    <li><strong>WCAG 2.2 AA compliance:</strong> structured heading levels, clear form labels, and
+                        colour contrast meeting 4.5:1;</li>
+                    <li><strong>Alt text completion:</strong> meaningful alternative descriptions for icons, food
+                        photos, and other visual elements, to avoid “visible but semantically missing” content;</li>
+                    <li><strong>Colour contrast testing:</strong> verified with IBM's accessibility checker for key
+                        foreground/background pairs;</li>
+                    <li><strong>Semantic HTML and ARIA roles:</strong> semantic tags and appropriate ARIA attributes
+                        help assistive technologies recognise page hierarchy and regions;</li>
+                    <li><strong>Keyboard accessibility:</strong> all major interactive areas can be accessed without a
+                        mouse.</li>
+                </ul>
+                <h4>Ethical Design Practices</h4>
+                <ul>
+                    <li><strong>Open access policy:</strong> reading content (recipes, stories, forum posts) is
+                        available by default without login;</li>
+                    <li><strong>Minimal data collection:</strong> only basic data (email, nickname) is collected when
+                        users actively contribute, avoiding excessive data gathering;</li>
+                    <li><strong>Clear notice and consent:</strong> users are shown explicit privacy/usage information
+                        before registration or submission;</li>
+                    <li><strong>No dark patterns:</strong> no forced pop-ups, misleading buttons, or auto-subscriptions,
+                        so user decisions remain voluntary.</li>
+                </ul>
+                <p>These measures ensure coherence between UX and ethics: the platform satisfies course-level
+                    accessibility requirements while also respecting real users' autonomy and privacy.</p>
+
+                <h3>Variations from the A3 Design Proposal and Justifications</h3>
+                <p>The A3 proposal was more demonstrative and conceptual, whereas the final build had to respond to real
+                    constraints such as multiple pages, maintainability, actual code structure, and automated
+                    accessibility audits. For that reason, the design was intentionally narrowed in iconography, colour
+                    scheme, feature scope, and navigation.</p>
+
+                <h4>Icon and Colour Strategy Adjustments</h4>
+                <p>The final visual style shifted from the initial "high-saturation colours + simple icons" to a
+                    "unified palette + expressive but reusable graphic language". Early versions used highly saturated
+                    icons (e.g. red heart), which drew attention but clashed with large text sections, dark navigation,
+                    or light beige backgrounds. In the final implementation:</p>
+                <ul>
+                    <li>social/operational icons use an orange tone consistent with the overall site;</li>
+                    <li>category information is presented mainly as text inside pill-shaped containers, to stay readable
+                        on mobile;</li>
+                    <li>labels are unified in English to align with the current HTML and possible future multilingual
+                        switching.</li>
+                </ul>
+                <p>Because the current primary tone is dark, the overall palette was also slightly darkened to reduce
+                    visual fatigue and to match a content-heavy layout. All icons were given text alternatives so they
+                    can be read by screen readers.</p>
+
+                <h4>Colour Strategy Evolution</h4>
+                <p><strong>Early scheme (high-saturation, attention-first):</strong> the earliest mockups used a palette
+                    common in food/event landing pages: primary red <code>#f44336</code>, secondary orange
+                    <code>#ff9800</code>, text black <code>#000000</code>, and beige background <code>#f5f5dc</code>.
+                    This made demoing easy and clearly signalled “food / heat / sharing”. However, once more pages
+                    (recipes, forum, implementation rationale, login modal) appeared, repeating red/orange highlights
+                    across sections caused unstable hierarchy and made all parts look equally important; the high
+                    saturation was also less suitable for long scrolling.
+                </p>
+                <p><strong>Current scheme (dark-first, orange-accent, content-oriented):</strong> in the implementation
+                    phase, the palette was converged to one suitable for a multi-page content site: deep charcoal
+                    <code>#1a1a1a</code> as the main/title colour, warm orange <code>#ff8c42</code> as the single
+                    high-saturation accent, light beige <code>#fdf5e6</code> as the background, and <code>#1a1a1a</code>
+                    as the primary text. The aim is to stabilise structure, improve readability, and limit the number of
+                    emphasis points. Dark tones can be reused for navigation, forum lists, and explanatory pages; orange
+                    appears only on actionable elements (buttons, tags, prompts), avoiding the “everything is
+                    highlighted” issue from the early scheme; light beige softens the contrast, supports a
+                    lifestyle/community mood, and works well with warm-toned food images. This shift from a
+                    display-oriented palette to a structure-oriented one is a necessary convergence as the information
+                    architecture matured, and it explains the small but deliberate deviation from the A3 proposal.
+                </p>
+
+                <h4>Feature Scope Refinements</h4>
+                <ul>
+                    <li>private chat was removed and replaced with public forum interaction to simplify moderation and
+                        improve safety;</li>
+                    <li>the gallery dropped complex interactive filters and was changed to a lighter, grid-based layout
+                        that works better with screen readers;</li>
+                    <li>multilingual support was deferred, but the current flat text-image composition and clear English
+                        labels still provide basic comprehensibility for users from different cultural backgrounds.</li>
+                </ul>
+                <p>These choices reduced development complexity without sacrificing the main use cases and left room for
+                    future extensions.</p>
+
+                <h4>Navigation and Structural Optimisation</h4>
+                <p>The A3 version emphasised a large top navigation and hero banner, which works on desktop but takes
+                    too much space on mobile. In the final build:</p>
+                <ul>
+                    <li>the above-the-fold section on the homepage was enriched so that users can immediately recognise
+                        the platform type and main entry points;</li>
+                    <li>search and filtering on the recipes page were integrated into a single view, allowing in-place
+                        category filtering;</li>
+                    <li>below 767px, a collapsed/folded navigation pattern is used, hiding non-essential elements to
+                        keep the small-screen layout clean.</li>
+                </ul>
+
+                <h4>Link Styling and Interactive Feedback</h4>
+                <p>In A3, link styling was mostly single-state hover. In the final version, link types were separated
+                    into body links, navigation links, button-like links, and footer links:</p>
+                <ul>
+                    <li>top navigation shows an underline on hover and keeps the active state on the current page;</li>
+                    <li>recipe cards slightly lift and the title colour changes on hover, signalling “the whole card is
+                        clickable”;</li>
+                    <li>the footer reserves positions for social media icons for future sharing integration.</li>
+                </ul>
+
+                <h3>Challenges and Strategies</h3>
+                <p><strong>Problem:</strong> at different viewport widths, some sections suffered from layout breaks,
+                    text being covered, or images overflowing, especially in mixed text-image pages and multi-card
+                    grids.</p>
+                <p><strong>Strategy:</strong></p>
+                <ul>
+                    <li>define key breakpoints at 768px and 1024px to control column count, card width, and text
+                        wrapping;</li>
+                    <li>apply <code>max-width</code> and proportional scaling to images to keep visual consistency in
+                        different containers.</li>
+                </ul>
+                <p><strong>Outcome:</strong> layouts remain stable and readable on mobile, tablet, and desktop, meeting
+                    the course requirements for responsiveness and accessibility.</p>
+
+                <h3>4. Accessibility Findings</h3>
+                <p>
+                    This section reports the accessibility issues identified on three pages of the QuickBite website:
+                    <strong>Recipes</strong>, <strong>Forum</strong>, and <strong>Implementation Rationale</strong>.
+                    The issues are grouped by WCAG-related concern and include cause and remediation.
+                </p>
+                <div class="article-figure-group">
+                    <figure class="article-figure">
+                        <div class="figure-img-box">
+                            <img src="images/1.png"
+                                alt="Image 1: The homepage carousel container uses aria-label and aria-roledescription on a plain &gt;div&gt;, so the tool reports an ARIA/element mismatch.">
+                        </div>
+                    </figure>
+                    <figure class="article-figure">
+                        <div class="figure-img-box">
+                            <img src="images/2.png"
+                                alt="Image 2: There is a skip link at the top, but the main content is not wrapped in a &gt;main&gt; or other landmark element, so its flagged as “Content is not within a landmark element.">
+                        </div>
+                    </figure>
+                    <figure class="article-figure">
+                        <div class="figure-img-box">
+                            <img src="images/3.png"
+                                alt="Image 3: The recipes page shows the same issue — main content should be inside &gt;main&gt; or a landmark.">
+                        </div>
+                    </figure>
+                    <figure class="article-figure">
+                        <div class="figure-img-box">
+                            <img src="images/4.png"
+                                alt="Image 4: The “Login / Sign Up” buttons in the navbar have insufficient color contrast against the background, so they don't meet WCAG AA.">
+                        </div>
+                    </figure>
+                    <figure class="article-figure">
+                        <div class="figure-img-box">
+                            <img src="images/5.png"
+                                alt="Image 5: The food news page has the same contrast issue on those two buttons.">
+                        </div>
+                    </figure>
+                    <figure class="article-figure">
+                        <div class="figure-img-box">
+                            <img src="images/6.png"
+                                alt="Image 6: On the forum page, the “Sign Up” button needs a visible keyboard focus; the tool warns it may be overridden by CSS border/outline.">
+                        </div>
+                    </figure>
+                </div>
+                <h4>Insufficient colour contrast in primary action buttons</h4>
+                <ul>
+                    <li><strong>Location:</strong> Global header (e.g. <code>Login</code>, <code>Sign Up</code>) as
+                        rendered on Recipes and Forum pages.</li>
+                    <li><strong>Issue:</strong> The orange background and white text produce a contrast ratio of
+                        <strong>2.13:1</strong>, which does not meet WCAG 2.1 AA requirements for normal text (min.
+                        4.5:1) or for large/bold text (min. 3:1).
+                    </li>
+                    <li><strong>Cause:</strong> A light accent colour was applied to a high-priority control without
+                        recalculating text–background contrast.</li>
+                    <li><strong>Risk/Impact:</strong> Users with low vision, colour-vision deficiencies or those
+                        viewing on low-contrast displays may not perceive the control as actionable, which directly
+                        affects access to authentication.</li>
+                    <li>
+                        <strong>Remediation:</strong>
+                        <ol>
+                            <li>Darken the button background (e.g. a darker shade of the brand orange),
+                                <strong>or</strong>
+                            </li>
+                            <li>Change button text to a dark colour (<code>#000</code> / <code>#1A1A1A</code>), then
+                            </li>
+                            <li>Revalidate the final colour pair against WCAG AA.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h4>Incorrect use of ARIA attributes on carousel container</h4>
+                <ul>
+                    <li><strong>Location:</strong> Homepage hero carousel
+                        (<code>&lt;div id="hero-carousel" class="carousel"&gt;</code>).</li>
+                    <li><strong>Issue:</strong> ARIA attributes such as
+                        <code>aria-label="Featured Recommendations"</code> and
+                        <code>aria-roledescription="carousel"</code> were applied to a generic
+                        <code>&lt;div&gt;</code> that does not declare a suitable landmark or widget role.
+                    </li>
+                    <li><strong>Cause:</strong> ARIA was added to describe intent (“this is a carousel”) but the
+                        element still exposes the implicit generic role, so the attribute set is not valid for this
+                        element.</li>
+                    <li><strong>Risk/Impact:</strong> Assistive technologies may announce inconsistent information
+                        or fail to identify the region as an interactive carousel.</li>
+                    <li>
+                        <strong>Remediation (one of):</strong>
+                        <ol>
+                            <li>Declare an appropriate role (e.g. <code>role="region"</code> or a complete carousel
+                                pattern) and keep the ARIA, <strong>or</strong></li>
+                            <li>Remove the non-essential ARIA attributes if the section is primarily visual and
+                                already introduced in surrounding content.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h4>4.3 Main content not exposed through a landmark</h4>
+                <ul>
+                    <li><strong>Location:</strong> Homepage, Recipes, and other content pages that use a skip link
+                        (<code>&lt;a href="#main" class="skip-link"&gt;</code>).</li>
+                    <li><strong>Issue:</strong> A skip link points to <code>#main</code>, but the page does not
+                        include a corresponding <code>&lt;main id="main"&gt;</code> (or <code>role="main"</code>)
+                        wrapper.</li>
+                    <li><strong>Cause:</strong> The page template defines navigation and skip link, but the main
+                        content area was left as unsectioned <code>&lt;div&gt;</code>s.</li>
+                    <li><strong>Risk/Impact:</strong> Keyboard and screen-reader users cannot reliably bypass
+                        repeated navigation; page structure is harder to understand.</li>
+                    <li>
+                        <strong>Remediation:</strong>
+                        <p>Wrap each page’s primary content in:</p>
+                        <pre><code>&lt;main id="main"&gt;
+&lt;!-- page-specific content --&gt;
+&lt;/main&gt;
+</code></pre>
+                        <p>and apply this change to all pages that expose the skip link.</p>
+                    </li>
+                </ul>
+
+                <h4>4.4 Keyboard focus indicator not visible on custom buttons</h4>
+                <ul>
+                    <li><strong>Location:</strong> Header actions (<code>.btn.btn-small</code>), Forum interactive
+                        elements.</li>
+                    <li><strong>Issue:</strong> Custom button styling suppresses or visually hides the default focus
+                        outline.</li>
+                    <li><strong>Cause:</strong> Button styles likely reset <code>outline</code> or set borders that
+                        blend with the background without adding an alternative focus style.</li>
+                    <li><strong>Risk/Impact:</strong> Keyboard-only users cannot see which element currently has
+                        focus, making navigation unreliable.</li>
+                    <li>
+                        <strong>Remediation:</strong>
+                        <p>Add a visible focus style, for example:</p>
+                        <pre><code>&lt;style&gt;
+.btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+&lt;/style&gt;
+</code></pre>
+                        <p>(colour to be adjusted to maintain contrast against the header background).</p>
+                    </li>
+                </ul>
+
+                <h4>4.5 Repeated contrast issue across pages</h4>
+                <ul>
+                    <li><strong>Location:</strong> Recipes page header actions (same components as in §4.1).</li>
+                    <li><strong>Issue:</strong> The contrast failure recurs because the same button component is
+                        reused.</li>
+                    <li><strong>Observation:</strong> This indicates a <strong>component-level</strong> rather than
+                        <strong>page-level</strong> defect.
+                    </li>
+                    <li><strong>Remediation:</strong> Fix the colour/focus in the shared button class so that all
+                        pages inherit the compliant style.</li>
+                </ul>
+
+                <h4>4.6 Structural consistency</h4>
+                <ul>
+                    <li><strong>Observation:</strong> The “content not within a landmark element” warning appears on
+                        multiple pages. This confirms the issue is in the shared layout, not in individual page
+                        content.</li>
+                    <li><strong>Remediation:</strong> Update the base layout (<code>&lt;header&gt;</code> →
+                        <code>&lt;main&gt;</code> → <code>&lt;footer&gt;</code>) once; re-run the audit to verify
+                        that Recipes, Forum and Implementation Rationale all expose a single main landmark.
+                    </li>
+                </ul>
+                <h1 class="different">GitHub Repository</h1>
+                <div class="btn-center">
+                    <a class="btn_git" href="https://github.com/Aria646/deco7140_development" target="_blank"
+                        rel="noopener noreferrer">
+                        Go to GitHub
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-title">
+            <div class="footer-title-left">
+                <img src="images/H.png" alt="Heart">
+                <span>QuickBite</span>
+            </div>
+            <span>Click here to follow us</span>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2021 QuickBite. All rights reserved.</span>
+            <div class="social-media">
+                <a href=""><img src="images/FB.png" alt="Facebook"></a>
+                <a href=""><img src="images/INS.png" alt="Instagram"></a>
+                <a href=""><img src="images/X.png" alt="X"></a>
+            </div>
+    </footer>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="signup-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-signup">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-signup">Join Our Community</h1>
+                    <form id="community-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email:</label>
+                            <input id="signup-email" type="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Photo (optional):</label>
+                            <input id="photo" type="file" name="photo" accept="image/*" />
+                        </div>
+                        <button type="submit" class="btn_l">Submit</button>
+                    </form>
+                    <p class="have-account">
+                        <a href="#" aria-label="Login">Already have an account?</a>
+                    </p>
+                    <p id="form-feedback" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/carousel.js"></script>
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/setting.js"></script>
+</body>
+
+</html>

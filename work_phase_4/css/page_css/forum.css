@@ -349,7 +349,8 @@ body {
 }
 
 .btn_cn,
-.btn_cb {
+.btn_cb,
+.btn_git {
     display: inline-block;
     color: var(--secondary-color);
     border: 0;
@@ -372,9 +373,79 @@ body {
     background: var(--secondary-color);
 }
 
+.btn-center {
+    display: flex;
+    justify-content: center;
+}
+
+.different {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.btn_git {
+    display: inline-block;
+    width: auto;
+}
+
 .btn_cn:hover,
-.btn_cb:hover {
+.btn_cb:hover,
+.btn_git:hover {
     background: var(--accent-color);
     color: var(--text-color-1);
     transform: translateY(-1px);
 }
+
+/* 手机适配 Forum */
+@media (max-width: 768px) {
+    /* 整体左右留白小一点 */
+    .container.forum-grid {
+        max-width: 100vw;
+        padding: 0 1rem;
+    }
+
+    /* 手风琴标题太大了，缩 */
+    .acc-trigger {
+        font-size: 1.25rem;
+        gap: 0.5rem;
+        padding: 12px 14px;
+    }
+    .acc-trigger .count {
+        font-size: 1rem;
+    }
+
+    /* 贴边的按钮改成居中一行 */
+    .acc-actions {
+        justify-content: center;
+    }
+
+    /* 侧边栏改成一行一块 */
+    .forum-side {
+        margin-top: 1.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    /* 最新帖子里一行太挤，改成上下排 */
+    .lt-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 新建帖子表单撑满屏 */
+    .new-thread {
+        width: 100%;
+        padding: 14px;
+    }
+    .new-thread label {
+        margin-left: 0;
+    }
+    .new-thread input[type="text"],
+    .new-thread select,
+    .new-thread textarea {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
