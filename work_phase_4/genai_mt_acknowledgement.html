@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/page_css/index.css" />
+    <link rel="stylesheet" href="css/page_css/news.css" />
+    <link rel="stylesheet" href="css/page_css/forum.css" />
+    <link rel="stylesheet" href="css/page_css/recipes.css" />
+    <link rel="stylesheet" href="css/page_css/genai_mt_acknowledgement.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    </style>
+    <title>QuickBite - Homepage</title>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Return to homepage">QuickBite</a>
+
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open main navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="news.html" aria-current="page">Food news</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="submit.html">Share You Recipes</a>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-small js-login-trigger">Login</button>
+                <button class="btn btn-small js-signup-trigger">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <div class="article-layout">
+            <article class="main-article">
+                <h2>GenAI and Machine Translation Usage Statement & Reflection</h2>
+                <h3>Tools Used and Purposes</h3>
+                <p>
+                    In this project, I intentionally used Generative AI and machine translation tools to support
+                    frontend development and documentation writing. The main tools were:
+                </p>
+                <ul>
+                    <li><strong>ChatGPT:</strong> used to generate and explain JavaScript examples, clarify certain
+                        syntax patterns, provide ideas for responsive image layouts, and help me locate and fix several
+                        accessibility issues. It was also used to polish the language of this reflection and the
+                        <em>Implementation Rationale</em> so that the expression was clearer and more formal.
+                    </li>
+                    <li><strong>Machine translation tools</strong> (such as built-in browser translation or online MT):
+                        mainly used to help me understand English materials or double-check the meaning of sentences,
+                        but not to directly replace my own writing.</li>
+                </ul>
+                <p>It should be noted that I positioned these tools as <strong>assistive</strong> tools for development
+                    and writing, not as tools to directly produce final deliverables. All content was reviewed and
+                    edited by me before submission.</p>
+
+                <h3>Prompting Style and Interaction Process with AI</h3>
+                <p>In practice, I used multi-turn, multi-step prompting rather than asking AI to write everything in one
+                    prompt. My usual workflow was:
+                </p>
+                <ol>
+                    <li>First, ask a concrete question, for example: <em>"How can I make my carousel move? I have
+                            already written the HTML and CSS. Can you give me some JavaScript examples?"</em></li>
+                    <li>If the code suggested by AI didn't match the interaction I wanted, or it didn't run at all, I
+                        would first try to fix it myself and test it in the browser.</li>
+                    <li>If the problem still existed, I would ask again with the code I had modified, including theerror
+                        message,screenshots, or even the full HTML, and ask it to explain: <em>“(About the carousel) Why
+                            is the carousel not working after I added the JS? Please explain in detail why thiserror
+                            occurs and give examples. (Here is the code I changed.)”</em></li>
+                </ol>
+                <p>In this project there was a typical case: for the carousel JS, ChatGPT gave me several solutions, but
+                    none of them some JavaScript and then spent several days learning it again for this issue. This
+                    shows that AI's answers can be used as sources of ideas, but they are not always the final, fully
+                    working code.
+                </p>
+                <p>I used the same method for the login, commenting, and posting features. At first, AI suggested
+                    putting them on separate pages, but the scope and structure of this assignment did not allow adding
+                    extra pages. So I asked again whether they could be embedded with JavaScript in the existing pages.
+                    I finally integrated these features smoothly by combining AI's suggestions, the assignment
+                    requirements, and knowledge from other courses.
+                </p>
+                <p>When dealing with accessibility issues, the first time I used the IBM Equal Access Accessibility
+                    Checker I didn't really understand the warnings. I sent the screenshots and HTML to ChatGPT and
+                    asked it to "translate" the messages. Most of the time the explanations were straightforward, and I
+                    could pass the check quickly by following them. As the project moved forward, I realised I could
+                    read many of the errors and HTML/CSS issues by myself and didn't have to ask AI each time. This
+                    means the early AI explanations actually played a "teaching/decomposition" role.</p>
+
+                <h3>Critical Evaluation of AI Outputs</h3>
+                <p>Although AI is convenient, it does make a lot of mistakes — and sometimes they are very "confident"
+                    mistakes. So my rule is: every AI suggestion must be verified in both the browser and the code.</p>
+                <ul>
+                    <li>First, right-click in the browser → Inspect, to see the real DOM structure and CSS.</li>
+                    <li>Then compare it with ChatGPT's suggestion and test it temporarily in the DevTools.</li>
+                    <li>If the result looks correct, then apply it to the actual source files.</li>
+                </ul>
+                <p>The benefit is that changes made in the browser disappear after refresh, so they will not break the
+                    original files, and one wrong AI suggestion will not mess up the whole page.</p>
+                <p>I also found that letting AI “directly rewrite my code” is actually unreliable: if it doesn't
+                    understand what I really want, or if I don't have enough judgement, I may just follow it blindly and
+                    waste time, and even start to doubt my own ability.
+                </p>
+                <p> For example, when I was working on the <em>Share Your Recipes</em> page, one of the cards overflowed
+                    the page. I asked ChatGPT and it said the problem was in the header settings. But that didn't make
+                    sense, because the issue only happened on this single page — other pages were fine. So I didn't
+                    follow that answer, went back to check the CSS myself, and quickly found the real cause.</p>
+                <p>Out of curiosity, I asked AI again with the corrected code, and it still wouldn't admit the previous
+                    answer was wrong. My conclusion is: a web page is an integrated system; even if you give AI
+                    screenshots, HTML, and CSS, as long as there is one piece of context it doesn't fully understand, it
+                    may still “invent a very reasonable answer” — and say it confidently. This is exactly what we need
+                    to be cautious about.</p>
+                <p>Therefore my current stance is:</p>
+                <ul>
+                    <li>Web development cannot rely on AI all the time;</li>
+                    <li>AI cannot be more careful than you are;</li>
+                    <li>Your page structure, class names, and file paths are best understood by you, not by AI.</li>
+                </ul>
+                <p>In terms of colour palettes, AI often suggested options that looked nice but did not meet WCAG 2.2
+                    contrast requirements, so I did not adopt those palettes and adjusted them manually. </p>
+                <p>When writing the <em>Implementation Rationale</em> and this GenAI reflection, I deliberately choseto
+                    let AI help me with polishing and tone, instead of asking it to “summarise everything.” This is
+                    because:</p>
+                <ul>
+                    <li>AI tends to fabricate or over-simplify when summarising;</li>
+                    <li>Even if you give it all the files, the summary is often generic and surface-level;</li>
+                    <li>I wanted the reflection to show <strong>my own decision-making process</strong>, not something
+                        that “sounds like AI wrote it.”</li>
+                </ul>
+
+                <h3>Problems Encountered and Solutions</h3>
+                <p>The biggest problem I encountered was not “I can't code,” but that AI sometimes gives very fluent,
+                    very confident, but actually wrong answers. To deal with this, I summarised a 3-step strategy:</p>
+                <ol>
+                    <li><strong>Ask again:</strong> if I suspected my prompt was unclear, I cleared the conversation and
+                        asked again with a more precise prompt, including context, page structure, and error messages.
+                    </li>
+                    <li><strong>Self-check:</strong> if AI was still off, I checked HTML/CSS/JS myself, especially
+                        common mistakes like wrong class names, missing file imports, wrong paths, or conflicting
+                        styles. </li>
+                    <li><strong>Ask the teaching team:</strong> if I had already tried AI + self-debugging and it still
+                        didn't work, I asked the course teaching team to confirm whether the issue was caused by
+                        assignment constraints, browser environment, or the project structure.</li>
+                </ol>
+                <p>This order helps me avoid blindly trusting AI while also not overusing teaching resources.</p>
+
+                <h3>Impact on Efficiency and Creativity</h3>
+                <p>Even with the above issues, AI still improved my overall efficiency. Especially in the early stage
+                    when I was not very familiar with CSS, ChatGPT helped me:</p>
+                <ul>
+                    <li>shorten long and repetitive CSS;</li>
+                    <li>remind me which styles could be abstracted into shared utilities;</li>
+                    <li>give layout ideas (responsive image grids, card layouts, embedded sections).</li>
+                </ul>
+                <p> This allowed me to spend more time on parts that really needed my own judgement, such as interaction
+                    logic, page structure, and how to integrate login/comment/post features into the existing pages.</p>
+                <p> Most of the time I didn't open many AI tools at once — I mainly used ChatGPT to draft structure,
+                    generate/adjust code, and polish language. This kept both the technical part and the writing style
+                    consistent, and made it clear in the documentation where AI was used.</p>
+                <p>For me, the most valuable part of AI was that when I couldn't understand other people's CSS/JS, it
+                    could first explain it in words I understood. After that, I didn't need to ask AI for every single
+                    step.</p>
+
+                <h3>Future Professional Use and Ethical Reflection</h3>
+                <p>This project made it clearer to me that AI works best in an <strong>assist/augment</strong> role,
+                    not a <strong>replace</strong> role. Well-designed prompts can significantly improve output quality
+                    and help me understand things I used to just copy, such as JS event handling, DOM operations, layout
+                    grids, and ARIA/Accessibility semantics.</p>
+                <p> In future work I will:</p>
+                <ul>
+                    <li>Write prompts more strategically, with task, context, and goals;</li>
+                    <li>Clearly document where AI / MT was used, for what purpose, and whether it was edited;</li>
+                    <li>Keep reflecting on ethical issues such as bias, inclusiveness, transparency, originality, and
+                        attribution;</li>
+                    <li>Always manually verify AI outputs before using them, especially for accessibility standards,
+                        assignment requirements, code safety, and WCAG contrast.</li>
+                </ul>
+
+                <h3>Integrity Statement</h3>
+                <p>I confirm that all use of Generative AI and Machine Translation tools in this assignment was in
+                    accordance with the course's <em>GenAI and MT Usage Framework</em>. At no point did I submit
+                    unreviewed AI output. All AI-generated code, explanations, text, and structural suggestions were
+                    judged, tested, and edited by me before being integrated into the final project. I treated AI as a
+                    tool for learning, assistance, and efficiency, not as a tool to complete the assignment on my
+                    behalf, and I take full responsibility for the accuracy, originality, and academic integrity of the
+                    final work.</p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-title">
+            <div class="footer-title-left">
+                <img src="images/H.png" alt="Heart">
+                <span>QuickBite</span>
+            </div>
+            <span>Click here to follow us</span>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2021 QuickBite. All rights reserved.</span>
+            <div class="social-media">
+                <a href=""><img src="images/FB.png" alt="Facebook"></a>
+                <a href=""><img src="images/INS.png" alt="Instagram"></a>
+                <a href=""><img src="images/X.png" alt="X"></a>
+            </div>
+    </footer>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="login-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-login">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-login">Welcome Back</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required autocomplete="username" />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn_l">Login</button>
+                </form>
+                <p class="forgot-password">
+                    <a href="#" aria-label="Reset Password">Forgot your password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="signup-modal" aria-hidden="true">
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title-signup">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-content">
+                <h2 id="modal-title-signup">Join Our Community</h1>
+                    <form id="community-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input id="name" type="text" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email:</label>
+                            <input id="signup-email" type="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Photo (optional):</label>
+                            <input id="photo" type="file" name="photo" accept="image/*" />
+                        </div>
+                        <button type="submit" class="btn_l">Submit</button>
+                    </form>
+                    <p class="have-account">
+                        <a href="#" aria-label="Login">Already have an account?</a>
+                    </p>
+                    <p id="form-feedback" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/carousel.js"></script>
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/setting.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="ai-reflection-block" aria-labelledby="genai-title">
+
+</section>
